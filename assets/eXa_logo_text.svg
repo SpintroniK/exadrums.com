@@ -67,8 +67,8 @@
        id="rect837"
        width="239.92186"
        height="140.43903"
-       x="-7.5483861"
-       y="339.39551" />
+       x="3.4860084"
+       y="325.44281" />
     <g
        transform="matrix(0.74790589,0,0,0.74790589,21.120306,50.750178)"
        id="text4190"
@@ -95,9 +95,12 @@
        id="text841"
        style="font-size:44.7281px;line-height:125%;font-family:sans-serif;-inkscape-font-specification:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4.19326px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1">
       <path
-         d="m 111.64396,293.81472 7.87214,-11.31621 h -4.20444 l -5.63574,8.49834 -5.63574,-8.49834 h -4.249169 l 7.827419,11.49512 -8.2747,11.94241 h 4.24917 l 5.94884,-8.99035 5.85938,8.99035 h 4.33862 z"
+         id="path838"
          style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-family:FreeSans;-inkscape-font-specification:FreeSans;fill:#ffffff;fill-opacity:1;stroke:none;stroke-width:4.19326px"
-         id="path838" />
+         sodipodi:type="inkscape:offset"
+         inkscape:radius="0"
+         inkscape:original="M 99.791016 282.49805 L 107.61914 293.99414 L 99.34375 305.93555 L 103.59375 305.93555 L 109.54102 296.94531 L 115.40039 305.93555 L 119.74023 305.93555 L 111.64453 293.81445 L 119.51562 282.49805 L 115.3125 282.49805 L 109.67578 290.99609 L 104.04102 282.49805 L 99.791016 282.49805 z "
+         d="m 99.791016,282.49805 7.828124,11.49609 -8.27539,11.94141 h 4.25 l 5.94727,-8.99024 5.85937,8.99024 h 4.33984 l -8.0957,-12.1211 7.87109,-11.3164 h -4.20312 l -5.63672,8.49804 -5.63476,-8.49804 z" />
     </g>
   </g>
 </svg>
