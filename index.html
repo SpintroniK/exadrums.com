@@ -6,17 +6,33 @@
     <title>eXaDrums: Open Source Drum Module</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@creativebulma/bulma-tooltip@1.2.0/dist/bulma-tooltip.min.css">
+
+    <style>
+        html 
+        {
+          overflow-y: auto
+        }
+        .subtitle .fa-angle-double-down
+        {
+            transition: transform .2s ease-in-out;
+        }
+        .subtitle:hover .fa-angle-double-down
+        {
+            transform: translate(0, 4px);
+        }
+    </style>
     <script defer src="https://use.fontawesome.com/releases/v5.14.0/js/all.js"></script>
   </head>
   <body>
 <section class="hero is-black is-fullheight">
+
   <!-- Hero head: will stick at the top -->
   <div class="hero-head">
     <header class="navbar">
       <div class="container">
         <div class="navbar-brand">
           <a class="navbar-item has-tooltip-bottom has-tooltip-arrow" data-tooltip="Open Source Drum Module">
-            <img src="./assets/eXa_logo_text.svg" alt="logo" /><span class="is-unselectable is-align-self-center has-text-grey-light">.com</span>
+            <img src="./assets/eXa_logo_text.svg" alt="logo" />
           </a>
         </div>
       </div>
