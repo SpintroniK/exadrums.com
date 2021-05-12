@@ -1,5 +1,112 @@
 <template>
-  
+  <main>
+    <header>
+      <img src="" alt="logo" class="logo" />
+      <input type="checkbox" class="nav-toggle" id="nav-toggle" />
+      <nav>
+        <ul>
+          <li><a href="#casing" data-menu-icon="#">Casing</a></li>
+          <li><a href="#hardware" data-menu-icon="#">Hardware</a></li>
+          <li><a href="#software" data-menu-icon="#">Software</a></li>
+          <li><a href="#about" data-menu-icon="#">About</a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span></span>
+      </label>
+    </header>
+
+    <section class="hero-banner">
+      <div class="hero-animation-container">
+        <img src="" alt="" />
+      </div>
+      <hr />
+      <h1>A cheap alternative to professionnal drum module</h1>
+      <div class="text-container">
+        <p>
+          EXADRUMS is a fully featured e-drum module with professionnal
+          performances that you can build yourself for a low price tag.
+        </p>
+        <p>
+          With a 7 inch touch screen it bring a smealess experience that enable
+          your to focus on your music.
+        </p>
+      </div>
+      <button data-btn-icon="#" class="btn-dark">Build your own</button>
+      <button data-btn-icon="#" class="btn-light">Documentation</button>
+    </section>
+
+    <section class="content">
+      <h1>Title</h1>
+      <img src="" alt="" />
+      <hr />
+      <div class="icons-container">
+        <img src="" alt="" />
+        <img src="" alt="" />
+      </div>
+      <div class="text-container">
+        <p>
+          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore rerum
+          iusto vitae ducimus vel temporibus!
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, iste!
+        </p>
+      </div>
+      <button data-btn-icon="#" class="btn-dark">Toto</button>
+    </section>
+
+    <section class="about">
+      <h1>About</h1>
+      <hr />
+
+      <div class="testimonial-container">
+        <div>
+          <img src="" alt="" />
+          <p>Name</p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+            magni minima, praesentium nostrum provident culpa aperiam.
+          </p>
+        </div>
+
+        <div>
+          <img src="" alt="" />
+          <p>Name</p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+            magni minima, praesentium nostrum provident culpa aperiam.
+          </p>
+        </div>
+
+        <div>
+          <img src="" alt="" />
+          <p>Name</p>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+            magni minima, praesentium nostrum provident culpa aperiam.
+          </p>
+        </div>
+      </div>
+
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam nemo
+        temporibus id tempore neque officia consequatur eius accusantium quidem
+        ipsum?
+      </p>
+
+      <div class="contect-links-container">
+        <p class="e-mail">exadrums@contact.com</p>
+        <div class="external-links-container">
+          <a href="#"><img src="" alt="github" /></a>
+          <a href="#"><img src="" alt="hackaday" /></a>
+          <a href="#"><img src="" alt="youtube" /></a>
+        </div>
+      </div>
+
+      <p class="signature">by Jérémy Oden</p>
+    </section>
+  </main>
 </template>
 
 <style>
