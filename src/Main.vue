@@ -142,6 +142,10 @@ hr {
   margin: 0 auto 0 auto;
 }
 
+.content {
+  padding: calc(3.5 * var(--spacer)) 0;
+}
+
 main {
   margin: 0 auto;
   width: 95%;
