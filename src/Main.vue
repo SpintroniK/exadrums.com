@@ -255,15 +255,16 @@ header label span::after {
 
 nav {
   position: fixed;
-  top: calc(3 * var(--spacer));
-  left: 0;
-  width: 100%;
-  padding: calc(var(--spacer) / 2);
+  top: calc(3.5 * var(--spacer));
+  left: 2.5%;
+  width: 95%;
+  height: 95vw;
   background-color: var(--clr-semi-transparent);
   backdrop-filter: blur(3px);
   opacity: 0;
   visibility: hidden;
   z-index: 10;
+  overflow: hidden;
   transition: opacity calc(var(--delay) / 2) ease calc(1.25 * var(--delay)),
     visibility calc(var(--delay) / 2) ease calc(1.25 * var(--delay));
 }
@@ -277,7 +278,7 @@ nav {
 nav ul {
   display: grid;
   width: 100%;
-  height: calc(100vw - calc(2 * var(--spacer)));
+  height: 100%;
   grid-template-columns: 1fr 1fr;
   gap: calc(var(--spacer) / 2);
 }
@@ -328,14 +329,14 @@ nav a:hover {
 }
 
 .hero-banner {
-  margin-top: calc(3 * var(--spacer));
+  margin-top: calc(3.5 * var(--spacer));
   display: flex;
   flex-direction: column;
 }
 
 .hero-animation-container {
   width: 100%;
-  height: calc(100vw - var(--spacer));
+  height: 95vw;
 }
 
 .hero-animation-container > img {
