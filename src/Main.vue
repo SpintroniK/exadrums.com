@@ -155,8 +155,8 @@ header {
   top: 0;
   width: 95%;
   background-color: var(--clr-background);
-  padding: calc(var(--spacer) / 2) 0;
-  height: calc(3 * var(--spacer));
+  padding: calc(var(--spacer) / 2) 0 var(--spacer) 0;
+  z-index: 10;
 }
 
 header .logo {
