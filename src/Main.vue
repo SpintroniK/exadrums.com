@@ -249,4 +249,35 @@ nav li {
   transition: transform var(--delay) ease calc(1.25 * var(--delay));
 }
 
+nav a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  padding-top: 25%;
+  width: 100%;
+  height: 100%;
+  font-size: 1.25em;
+  font-weight: 600;
+  background: linear-gradient(var(--clr-secondary) 25%, var(--clr-ascent) 75%);
+  background-size: 100% 400%;
+  background-position-y: 0%;
+  color: var(--clr-background);
+  transition: background var(--delay) ease-out;
+}
+
+nav a::before {
+  content: attr(data-menu-icon);
+  position: absolute;
+  top: 33%;
+  left: 50%;
+  font-size: 10vw;
+  transform: translate(-50%, -50%);
+}
+
+nav a:hover {
+  background-position-y: 100%;
+  color: var(--clr-background);
+}
+
 </style>
