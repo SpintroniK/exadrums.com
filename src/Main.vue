@@ -118,6 +118,7 @@
   --clr-background: white;
   --clr-semi-transparent: rgba(255, 255, 255, 0.8);
   --spacer: 1rem;
+  --delay: 0.3s;
 }
 
 *,
@@ -214,7 +215,6 @@ header label span::after {
 }
 
 nav {
-  --delay: 0.3s;
   position: fixed;
   top: calc(3 * var(--spacer));
   left: 0;
