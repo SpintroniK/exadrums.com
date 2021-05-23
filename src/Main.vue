@@ -135,6 +135,12 @@ body {
   scroll-behavior: smooth;
 }
 
+hr {
+  border-top: 0.25rem solid var(--clr-ascent);
+  width: 80%;
+  margin: 0 auto 0 auto;
+}
+
 main {
   margin: 0 auto;
   width: 95%;
