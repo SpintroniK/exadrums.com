@@ -18,7 +18,7 @@
 
     <section class="hero-banner">
       <div class="hero-animation-container">
-        <img src="" alt="" />
+        <img src="assets/hero_img.jpg" alt="" />
       </div>
       <hr />
       <h1>A cheap alternative to professionnal drum module</h1>
@@ -278,6 +278,21 @@ nav a::before {
 nav a:hover {
   background-position-y: 100%;
   color: var(--clr-background);
+}
+
+.hero-banner {
+  margin-top: calc(3 * var(--spacer));
+}
+
+.hero-animation-container {
+  height: clamp(5rem, 50vh, 20rem);
+  width: 100%;
+}
+
+.hero-animation-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 </style>
