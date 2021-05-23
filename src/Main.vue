@@ -155,4 +155,55 @@ header .logo {
   max-height: calc(1.5 * var(--spacer));
 }
 
+header label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.5rem;
+  height: 2rem;
+  cursor: pointer;
+}
+
+header label span,
+header label span::before,
+header label span::after {
+  --bar-spacer: 0.15rem;
+  display: block;
+  position: relative;
+  width: 100%;
+  height: var(--bar-spacer);
+  background-color: transparent;
+  transition: transform 0.2s;
+  border-radius: var(--spacer);
+}
+
+header label span::before,
+header label span::after {
+  content: "";
+  position: absolute;
+  background-color: var(--clr-primary);
+}
+
+header label span::before {
+  top: calc(50% - calc(2 * var(--bar-spacer)));
+}
+
+header label span::after {
+  bottom: calc(50% - calc(2 * var(--bar-spacer)));
+}
+
+.nav-toggle:checked ~ label span::before {
+  transform: translateY(calc(1.5 * var(--bar-spacer))) rotate(45deg);
+  background-color: var(--clr-ascent);
+}
+
+.nav-toggle:checked ~ label span::after {
+  transform: translateY(calc(-1.5 * var(--bar-spacer))) rotate(-45deg);
+  background-color: var(--clr-ascent);
+}
+
+.nav-toggle {
+  display: none;
+}
+
 </style>
