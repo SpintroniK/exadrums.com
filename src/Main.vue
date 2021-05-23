@@ -263,6 +263,7 @@ nav {
   backdrop-filter: blur(3px);
   opacity: 0;
   visibility: hidden;
+  z-index: 10;
   transition: opacity calc(var(--delay) / 2) ease calc(1.25 * var(--delay)),
     visibility calc(var(--delay) / 2) ease calc(1.25 * var(--delay));
 }
