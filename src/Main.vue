@@ -24,11 +24,11 @@
       <h1>A cheap alternative to professionnal drum module</h1>
       <div class="text-container">
         <p>
-          EXADRUMS is a fully featured e-drum module with professionnal
+          EXADRUMS is a fully featured <b>e-drum module</b> with professionnal
           performances that you can build yourself for a low price tag.
         </p>
         <p>
-          With a 7 inch touch screen it bring a smealess experience that enable
+          With a 7 inch <b>touch screen</b> it bring a smealess experience that enable
           your to focus on your music.
         </p>
       </div>
@@ -294,6 +294,21 @@ nav a:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+.hero-banner > h1 {
+  font-size: 2rem;
+  text-align: right;
+  line-height: .9;
+  margin: var(--spacer) 0;
+}
+
+.text-container {
+  padding: var(--spacer) 0;
+}
+
+.text-container p {
+  margin: var(--spacer) 0;
 }
 
 </style>
