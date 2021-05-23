@@ -1,7 +1,7 @@
 <template>
   <main>
     <header>
-      <img src="" alt="logo" class="logo" />
+      <img src="assets/eXa_logo_text.svg" alt="logo" class="logo" />
       <input type="checkbox" class="nav-toggle" id="nav-toggle" />
       <nav>
         <ul>
@@ -132,6 +132,27 @@ body {
   width: 100%;
   height: 100%;
   scroll-behavior: smooth;
+}
+
+main {
+  margin: 0 auto;
+  width: 95%;
+}
+
+header {
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  top: 0;
+  width: 95%;
+  background-color: var(--clr-background);
+  padding: calc(var(--spacer) / 2) 0;
+  height: calc(3 * var(--spacer));
+}
+
+header .logo {
+  max-height: calc(1.5 * var(--spacer));
 }
 
 </style>
