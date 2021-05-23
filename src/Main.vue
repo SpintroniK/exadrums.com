@@ -116,6 +116,7 @@
   --clr-ternary: #eeefed;
   --clr-ascent: #ef2929;
   --clr-background: white;
+  --clr-semi-transparent: rgba(255, 255, 255, 0.8);
   --spacer: 1rem;
 }
 
