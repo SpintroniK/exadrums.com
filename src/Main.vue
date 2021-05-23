@@ -289,23 +289,26 @@ nav a:hover {
 
 .hero-banner {
   margin-top: calc(3 * var(--spacer));
+  display: flex;
+  flex-direction: column;
 }
 
 .hero-animation-container {
-  height: clamp(5rem, 50vh, 20rem);
   width: 100%;
+  height: calc(100vw - var(--spacer));
 }
 
 .hero-animation-container > img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: left center;
 }
 
 .hero-banner > h1 {
-  font-size: 2rem;
+  font-size: 1.5em;
   text-align: right;
-  line-height: .9;
+  line-height: 0.9;
   margin: var(--spacer) 0;
 }
 
@@ -316,5 +319,4 @@ nav a:hover {
 .text-container p {
   margin: var(--spacer) 0;
 }
-
 </style>
