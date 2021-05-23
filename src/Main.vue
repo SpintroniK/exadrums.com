@@ -116,7 +116,7 @@
   --clr-ternary: #eeefed;
   --clr-ascent: #ef2929;
   --clr-background: white;
-  --clr-semi-transparent: rgba(255, 255, 255, 0.8);
+  --clr-semi-transparent: rgba(238, 239, 237, 0.8);
   --spacer: 1rem;
   --delay: 0.3s;
 }
@@ -256,35 +256,41 @@ header label span::after {
 nav {
   position: fixed;
   top: calc(3.5 * var(--spacer));
-  left: 2.5%;
-  width: 95%;
+  left: 0;
+  width: 100%;
   height: 95vw;
   background-color: var(--clr-semi-transparent);
   backdrop-filter: blur(3px);
+  transform: scaleY(0);
+  transform-origin: top;
   opacity: 0;
   visibility: hidden;
   z-index: 10;
   overflow: hidden;
   transition: opacity calc(var(--delay) / 2) ease calc(1.25 * var(--delay)),
-    visibility calc(var(--delay) / 2) ease calc(1.25 * var(--delay));
+    visibility calc(var(--delay) / 2) ease calc(1.25 * var(--delay)),
+    transform calc(var(--delay) / 2) ease calc(1.25 * var(--delay));
 }
 
 .nav-toggle:checked ~ nav {
   opacity: 1;
   visibility: visible;
-  transition: opacity var(--delay) ease;
+  transform: scaleY(1);
+  transition: opacity var(--delay) ease,
+    transform var(--delay) ease;
 }
 
 nav ul {
   display: grid;
-  width: 100%;
+  margin: auto;
+  width: 95%;
   height: 100%;
   grid-template-columns: 1fr 1fr;
-  gap: calc(var(--spacer) / 2);
+  gap: var(--spacer);
+  padding: calc(var(--spacer) / 2);
 }
 
 nav li {
-  color: var(--clr-background);
   transform: scale(1, 0);
   transform-origin: bottom;
   transition: transform calc(var(--delay) / 2) ease calc(var(--delay) / 2);
