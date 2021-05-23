@@ -7,7 +7,7 @@
         <ul>
           <li><a href="#casing" data-menu-icon="#">Casing</a></li>
           <li><a href="#hardware" data-menu-icon="#">Hardware</a></li>
-          <li><a href="#software" data-menu-icon="#">Software</a></li>
+          <li><a href="#software" data-menu-icon="</>">Software</a></li>
           <li><a href="#about" data-menu-icon="#">About</a></li>
         </ul>
       </nav>
@@ -28,16 +28,16 @@
           performances that you can build yourself for a low price tag.
         </p>
         <p>
-          With a 7 inch <b>touch screen</b> it bring a smealess experience that enable
-          your to focus on your music.
+          With a 7 inch <b>touch screen</b> it bring a smealess experience that
+          enable your to focus on your music.
         </p>
       </div>
       <button data-btn-icon="#" class="btn-dark">Build your own</button>
       <button data-btn-icon="#" class="btn-light">Documentation</button>
     </section>
 
-    <section class="content">
-      <h1>Title</h1>
+    <section class="content" id="casing">
+      <h1>Casing</h1>
       <img src="" alt="" />
       <hr />
       <div class="icons-container">
