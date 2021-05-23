@@ -206,4 +206,47 @@ header label span::after {
   display: none;
 }
 
+nav {
+  --delay: 0.3s;
+  position: fixed;
+  top: calc(3 * var(--spacer));
+  left: 0;
+  width: 100%;
+  padding: calc(var(--spacer) / 2);
+  background-color: var(--clr-semi-transparent);
+  backdrop-filter: blur(3px);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity calc(var(--delay) / 2) ease calc(1.25 * var(--delay)),
+    visibility calc(var(--delay) / 2) ease calc(1.25 * var(--delay));
+}
+
+.nav-toggle:checked ~ nav {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity var(--delay) ease;
+}
+
+nav ul {
+  display: grid;
+  width: 100%;
+  height: calc(100vw - calc(2 * var(--spacer)));
+  grid-template-columns: 1fr 1fr;
+  gap: calc(var(--spacer) / 2);
+}
+
+nav li {
+  color: var(--clr-background);
+  transform: scale(1, 0);
+  transform-origin: bottom;
+  transition: transform calc(var(--delay) / 2) ease calc(var(--delay) / 2);
+  border-radius: calc(var(--spacer) / 4);
+}
+
+.nav-toggle:checked ~ nav li {
+  transform: scale(1, 1);
+  transform-origin: bottom;
+  transition: transform var(--delay) ease calc(1.25 * var(--delay));
+}
+
 </style>
