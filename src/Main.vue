@@ -151,6 +151,41 @@ main {
   width: 95%;
 }
 
+button {
+  position: relative;
+  width: 100%;
+  font-size: 1.125em;
+  border: none;
+  margin: calc(var(--spacer) / 4) 0;
+  padding: calc(var(--spacer) / 2);
+  border-radius: calc(var(--spacer) / 2);
+  transition: background calc(var(--delay) / 2), color calc(var(--delay) / 2);
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 1;
+}
+
+button:hover {
+  background-color: var(--clr-ascent);
+  color: var(--clr-ternary);
+}
+
+button::before {
+  content: attr(data-btn-icon);
+  position: absolute;
+  left: calc(3 * var(--spacer));
+}
+
+.btn-dark {
+  color: var(--clr-ternary);
+  background-color: var(--clr-secondary);
+}
+
+.btn-light {
+  color: var(--clr-secondary);
+  background-color: var(--clr-ternary);
+}
+
 header {
   position: fixed;
   display: flex;
