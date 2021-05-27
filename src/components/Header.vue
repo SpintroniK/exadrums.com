@@ -44,9 +44,9 @@
     align-items: center;
     justify-content: space-between;
     top: 0;
-    width: 95%;
+    width: 100%;
     background-color: var(--clr-background);
-    padding: calc(var(--spacer) / 2) 0 var(--spacer) 0;
+    padding: calc(var(--spacer) / 2) 2.5% var(--spacer) 2.5%;
     z-index: 10;
   }
 
