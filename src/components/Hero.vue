@@ -36,14 +36,14 @@ export default {};
   height: 95vw;
 }
 
-.hero-animation-container > img {
+.hero-animation-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: left center;
 }
 
-.hero-banner > h1 {
+.hero-banner h1 {
   font-size: 1.5em;
   text-align: right;
   line-height: 0.9;
