@@ -58,6 +58,25 @@ export default {
 
 <style>
 .content {
-  padding: calc(3.5 * var(--spacer)) 0;
+  padding-top: calc(3.5 * var(--spacer));
 }
+
+.content h1 {
+  text-align: center;
+}
+
+.content hr {
+  margin: var(--spacer) auto;
+}
+
+.content .icons-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.content .icons-container img {
+  height: calc(3 * var(--spacer));
+}
+
 </style>
