@@ -1,27 +1,59 @@
 <template>
-  <section class="content" id="casing">
-    <h1>Casing</h1>
-    <img src="" alt="" />
+  <section
+    class="content"
+    :class="[alignment == 'left' ? 'align-left' : 'align-right']"
+    :id="id"
+  >
+    <h1>{{ title }}</h1>
+    <img :src="image_path" alt="content image" />
     <hr />
     <div class="icons-container">
-      <img src="" alt="" />
-      <img src="" alt="" />
+      <img
+        v-for="icon in icons"
+        :key="icon.name"
+        :src="icon.path"
+        :alt="icon.name"
+      />
     </div>
     <div class="text-container">
-      <p>
-        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolore rerum
-        iusto vitae ducimus vel temporibus!
-      </p>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae, iste!
+      <p v-for="description in descriptions" :key="description.id">
+        {{ description.text}}
       </p>
     </div>
-    <button data-btn-icon="#" class="btn-dark">Toto</button>
+    <button
+      v-for="button in buttons"
+      :key="button.name"
+      :data-btn-icon="button.icon"
+      :class="button.class"
+    >
+      {{ button.name }}
+    </button>
   </section>
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      id: this.id,
+      title: this.title,
+      alignment: this.alignment,
+      icons: this.icons,
+      descriptions: this.descriptions,
+      image_path: this.image_path,
+      buttons: this.buttons,
+    };
+  },
+  props: {
+    id: { type: String, required: true },
+    title: { type: String, required: true },
+    alignment: { type: String, required: true },
+    icons: { type: Array, required: true },
+    descriptions: { type: Array, required: true },
+    image_path: { type: String, required: true },
+    buttons: { type: Array, required: true },
+  },
+};
 </script>
 
 <style>
