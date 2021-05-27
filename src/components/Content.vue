@@ -58,6 +58,10 @@ export default {
 
 <style>
 .content h1 {
+  font-size: 1.75em;
+  margin-bottom: var(--spacer);
+  line-height: 1;
+  font-weight: 600;
   text-align: center;
 }
 
