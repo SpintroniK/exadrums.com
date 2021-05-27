@@ -65,6 +65,10 @@ export default {
   margin: var(--spacer) auto;
 }
 
+.content img {
+  min-width: 100%;
+}
+
 .content .icons-container {
   display: flex;
   align-items: center;
@@ -73,6 +77,7 @@ export default {
 
 .content .icons-container img {
   height: calc(3 * var(--spacer));
+  min-width: auto;
 }
 
 </style>
