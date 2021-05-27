@@ -26,7 +26,6 @@ export default {};
 
 <style>
 .hero-banner {
-  margin-top: calc(3.5 * var(--spacer));
   display: flex;
   flex-direction: column;
 }

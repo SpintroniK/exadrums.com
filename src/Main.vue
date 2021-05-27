@@ -1,5 +1,4 @@
 <template>
-  <main>
     <Header></Header>
     <Hero></Hero>
     <Content v-for="content in contents" :key="content.id"
@@ -12,7 +11,6 @@
     :buttons="content.buttons"
     ></Content>
     <About></About>
-  </main>
 </template>
 
 <script>
@@ -165,14 +163,21 @@ body {
 }
 
 hr {
-  border-top: 0.25rem solid var(--clr-ascent);
+  background-color: var(--clr-ascent);
   width: 80%;
+  height: .25rem;
   margin: 0 auto 0 auto;
 }
 
-main {
-  margin: 0 auto;
-  width: 95%;
+h1 {
+  margin-top: calc(1.5 * var(--spacer));
+}
+
+section {
+  padding-top: calc(3.5 * var(--spacer));
+  padding-bottom: var(--spacer);
+  margin-left: 2.5%;
+  margin-right: 2.5%;
 }
 
 button {

@@ -57,10 +57,6 @@ export default {
 </script>
 
 <style>
-.content {
-  padding-top: calc(3.5 * var(--spacer));
-}
-
 .content h1 {
   text-align: center;
 }
