@@ -44,4 +44,56 @@ export default {
 </script>
 
 <style>
+.about {
+  margin: auto 0;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  min-height: 100vh;
+}
+
+.about h1 {
+  font-size: 1.75em;
+  margin-bottom: calc(var(--spacer) / 2);
+  line-height: 1;
+  font-weight: 600;
+  text-align: center;
+}
+
+.e-mail {
+  text-align: center;
+  font-size: 8vw;
+  color: var(--clr-ascent);
+  margin: var(--spacer) auto;
+}
+
+.contact-links-container span {
+  display: block;
+  text-align: center;
+}
+
+.external-links-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: calc(2 * var(--spacer)) auto;
+}
+
+.external-links-container a {
+  width: calc(2.5 * var(--spacer));
+  height: calc(2.5 * var(--spacer));
+  background-color: var(--clr-ternary);
+  border-radius: 25%;
+  display: flex;
+  justify-content:center;
+  align-items: center;
+}
+
+.external-links-container a img {
+  height: calc(1.25 * var(--spacer));
+  min-width: auto;
+}
+
+.signature {
+  text-align: center;
+}
 </style>
