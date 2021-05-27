@@ -1,6 +1,6 @@
 <template>
   <header>
-    <img src="assets/eXa_logo_text.svg" alt="logo" class="logo" />
+    <a href="#"><img src="assets/eXa_logo_text.svg" alt="logo" class="logo" onclick="#" /></a>
     <input type="checkbox" class="nav-toggle" id="nav-toggle" ref="menu" />
     <nav>
       <ul>
