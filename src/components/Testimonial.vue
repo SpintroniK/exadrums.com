@@ -36,18 +36,27 @@ export default {
 <style>
 .testimonial-container {
   display: flex;
-  gap: calc(var(--spacer));
-  max-width: 100%;
-  overflow: hidden;
-  margin: var(--spacer) auto;
+  justify-content: space-between;
+  align-items: stretch;
+  width: 100%;
+  margin: calc(2 * var(--spacer)) auto;
+}
+
+.prev-testimonial,
+.next-testimonial {
+  text-align: center;
+  align-self: center;
+  width: 3rem;
+  font-size: 2em;
+  color: var(--clr-ascent);
+  cursor: pointer;
 }
 
 .profil-container {
   display: flex;
   flex-direction: column;
   align-items: center;
-  min-width: 66vw;
-  padding: var(--spacer);
+  width: clamp(15ch, 66vw, 30ch);
 }
 
 .profil-picture {
@@ -57,7 +66,9 @@ export default {
   justify-content:center;
   align-items: center;
   width: 66vw;
+  max-width: 30ch;
   height: 66vw;
+  max-height: 30ch;
   background-repeat: no-repeat;
   background-position: center;
   background-size: 90%;
@@ -68,6 +79,7 @@ export default {
   content: attr(data-name);
   position: absolute;
   bottom: 0;
+  font-weight: 400;
 }
 
 .profil-picture img {
@@ -82,6 +94,6 @@ export default {
 
 .profile-comment {
   font-size: .8em;
-  font-weight: 200;
+  font-weight: 300;
 }
 </style>
