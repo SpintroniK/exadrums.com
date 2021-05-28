@@ -1,11 +1,13 @@
 <template>
   <div class="testimonial-container" ref="testimonial">
-    <div class="profil-container" v-for="testimonial in testimonials" :key="testimonial.name" ref="testimonialElement">
-      <div class="profil-picture" :style="{ backgroundImage: `url('./assets/sticks.svg')`}" :data-name="testimonial.name">
-        <img :src="testimonial.image_path" alt="testimonial image" />
+    <div class="prev-testimonial" @click="previousTestimonial">❮</div>
+    <div class="profil-container"  ref="testimonialElement">
+      <div class="profil-picture" :style="{ backgroundImage: `url('./assets/sticks.svg')`}" :data-name="testimonials[current].name">
+        <img :src="testimonials[current].image_path" alt="testimonial image" />
       </div>
-      <p class="profile-comment">{{ testimonial.comment }}</p>
+      <p class="profile-comment">{{ testimonials[current].comment }}</p>
     </div>
+    <div class="next-testimonial" @click="nextTestimonial">❯</div>
   </div>
 </template>
 
@@ -14,11 +16,20 @@ export default {
   data() {
     return {
       testimonials: this.testimonials,
+      current: 0
     };
   },
   props: {
     testimonials: { type: Array, required: true },
   },
+  methods: {
+    nextTestimonial() {
+      this.current < this.testimonials.length - 1 ? this.current += 1 : this.current = 0
+    },
+    previousTestimonial() {
+      this.current > 0 ? this.current -= 1 : this.current = this.testimonials.length - 1
+    }
+  }
 };
 </script>
 
