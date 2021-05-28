@@ -69,6 +69,7 @@ export default {
 
 <style>
 .about {
+  position: relative;
   margin: auto 0;
   padding-left: 2.5%;
   padding-right: 2.5%;
@@ -103,21 +104,47 @@ export default {
 }
 
 .external-links-container a {
-  width: calc(2.5 * var(--spacer));
-  height: calc(2.5 * var(--spacer));
+  width: 10vw;
+  height: 10vw;
   background-color: var(--clr-ternary);
   border-radius: 25%;
+  position: relative;
   display: flex;
-  justify-content:center;
+  justify-content: center;
   align-items: center;
+  transition: box-shadow var(--delay);
 }
 
-.external-links-container a img {
-  height: calc(1.25 * var(--spacer));
+.external-links-container a:hover {
+  box-shadow: 0 0 0em .15em var(--clr-ascent);
+}
+
+.external-links-container a::after {
+  content: attr(data-link) " ";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 100%);
+  font-size: 0.8em;
+  font-weight: 300;
+  color: var(--clr-secondary);
+  text-decoration: none;
+  transition: color var(--delay);
+}
+
+.external-links-container a:hover::after {
+  color: var(--clr-ascent);
+}
+
+.external-links-container img {
+  height: 6vw;
   min-width: auto;
 }
 
 .signature {
+  position: absolute;
+  bottom: 0;
+  width: 95%;
   text-align: center;
 }
 </style>
