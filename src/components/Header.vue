@@ -1,6 +1,6 @@
 <template>
   <header>
-    <a href="#"><img src="assets/eXa_logo_text.svg" alt="logo" class="logo" onclick="#" /></a>
+    <a href="#" @click="closeMenu"><img src="assets/eXa_logo_text.svg" alt="logo" class="logo" onclick="#" /></a>
     <input type="checkbox" class="nav-toggle" id="nav-toggle" ref="menu" />
     <nav>
       <ul>
@@ -145,7 +145,6 @@
     transform: scale(1, 0);
     transform-origin: bottom;
     transition: transform calc(var(--delay) / 2) ease calc(var(--delay) / 2);
-    border-radius: calc(var(--spacer) / 4);
   }
 
   .nav-toggle:checked ~ nav li {
@@ -168,6 +167,7 @@
     background-size: 100% 400%;
     background-position-y: 0%;
     color: var(--clr-background);
+    border-radius: calc(var(--spacer) / 4);
     transition: background var(--delay) ease-out;
   }
 
