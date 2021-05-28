@@ -125,7 +125,6 @@ export default {
       ]
     };
   },
-  methods() {},
   components: {
     Header,
     Hero,
