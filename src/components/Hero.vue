@@ -3,7 +3,7 @@
     <div class="hero-animation-container">
       <img src="assets/hero_img.jpg" alt="" />
     </div>
-    <hr />
+    <hr>
     <h1>A cheap alternative to professionnal drum module</h1>
     <div class="text-container">
       <p>

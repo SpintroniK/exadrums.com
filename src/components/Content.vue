@@ -6,7 +6,7 @@
   >
     <h1>{{ title }}</h1>
     <img :src="image_path" alt="content image" />
-    <hr />
+    <hr>
     <div class="icons-container">
       <img
         v-for="icon in icons"
