@@ -44,6 +44,7 @@ export default {};
 
 .hero-banner h1 {
   font-size: 1.5em;
+  font-weight: 600;
   text-align: right;
   line-height: 0.9;
   margin: var(--spacer) 0;
