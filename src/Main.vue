@@ -202,10 +202,10 @@ h1 {
 
 button {
   position: relative;
-  width: 100%;
+  width: 90%;
   font-size: 1.125em;
   border: none;
-  margin: calc(var(--spacer) / 4) 0;
+  margin: calc(var(--spacer) / 4) auto;
   padding: calc(var(--spacer) / 2);
   border-radius: calc(var(--spacer) / 2);
   transition: background calc(var(--delay) / 2), color calc(var(--delay) / 2);
