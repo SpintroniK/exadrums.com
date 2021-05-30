@@ -1,12 +1,14 @@
 <template>
   <section
-    class="content"
+    class="content-section"
     :class="[alignment == 'left' ? 'align-left' : 'align-right']"
     :id="id"
   >
     <h1>{{ title }}</h1>
-    <img :src="image_path" alt="content image" />
-    <hr>
+    <div class="image-container">
+      <img :src="image_path" alt="content-section image" />
+    </div>
+    <hr />
     <div class="icons-container">
       <img
         v-for="icon in icons"
@@ -60,25 +62,35 @@ export default {
 
 <style>
 
+.content-section {
+  display: flex;
+  flex-direction: column;
 }
 
-.content hr {
+.content-section hr {
   margin: var(--spacer) auto;
 }
 
-.content img {
-  min-width: 100%;
+.image-container {
+  width: 100%;
+  height: 33vh;
 }
 
-.content .icons-container {
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+.content-section .icons-container {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 
-.content .icons-container img {
+.content-section .icons-container img {
   height: calc(3 * var(--spacer));
   min-width: auto;
 }
-
 </style>
