@@ -71,8 +71,6 @@ export default {
 .about {
   position: relative;
   margin: auto 0;
-  padding-left: 2.5%;
-  padding-right: 2.5%;
   min-height: 100vh;
 }
 

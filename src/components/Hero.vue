@@ -47,7 +47,7 @@ export default {};
   font-weight: 400;
   text-align: right;
   line-height: 0.9;
-  margin: var(--spacer) 0;
+  margin: var(--spacer) 2.5%;
 }
 
 .text-container {

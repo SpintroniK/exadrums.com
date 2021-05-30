@@ -151,6 +151,7 @@ export default {
   --clr-background: white;
   --clr-semi-transparent: rgba(238, 239, 237, 0.66);
   --spacer: 1rem;
+  --content-margin: 2.5%;
   --delay: 0.3s;
 }
 
@@ -168,6 +169,11 @@ body {
   height: 100%;
   scroll-behavior: smooth;
   font-weight: 300;
+}
+
+section {
+  padding-top: calc(3.5 * var(--spacer));
+  padding-bottom: var(--spacer);
 }
 
 hr {
