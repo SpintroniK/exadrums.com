@@ -6,11 +6,11 @@
     <hr>
     <h1>A cheap alternative to professionnal drum module</h1>
     <div class="text-container">
-      <p>
+      <p class="plain-text">
         EXADRUMS is a fully featured <b>e-drum module</b> with professionnal
         performances that you can build yourself for a low price tag.
       </p>
-      <p>
+      <p class="plain-text">
         With a 7 inch <b>touch screen</b> it bring a smealess experience that
         enable your to focus on your music.
       </p>
