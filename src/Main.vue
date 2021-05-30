@@ -1,7 +1,9 @@
 <template>
-    <Header></Header>
-    <Hero></Hero>
-    <Content v-for="content in contents" :key="content.id"
+  <Header></Header>
+  <Hero></Hero>
+  <Content
+    v-for="content in contents"
+    :key="content.id"
     :id="content.id"
     :title="content.title"
     :alignment="content.alignment"
@@ -9,8 +11,8 @@
     :descriptions="content.descriptions"
     :image_path="content.image_path"
     :buttons="content.buttons"
-    ></Content>
-    <About></About>
+  ></Content>
+  <About></About>
 </template>
 
 <script>
@@ -29,31 +31,33 @@ export default {
           alignment: "right",
           icons: [
             {
-              name: '3d-printed',
-              path: './assets/3d_printed.png'
+              name: "3d-printed",
+              path: "./assets/3d_printed.png",
             },
-            { 
-              name: 'thingiverse',
-              path: './assets/thingiverse.png'
-            }
+            {
+              name: "thingiverse",
+              path: "./assets/thingiverse.png",
+            },
           ],
           descriptions: [
             {
               id: 1,
-              text: 'Casing, lorem toto ipsum tutu dolor tata. Titi lorem toto ipsum tutu dolor tata.'
+              text:
+                "Casing, lorem toto ipsum tutu dolor tata. Titi lorem toto ipsum tutu dolor tata.",
             },
             {
               id: 2,
-              text: 'Casing, titi lorem toto ipsum tutu dolor tata. Titi lorem toto ipsum tutu dolor tata.'
+              text:
+                "Casing, titi lorem toto ipsum tutu dolor tata. Titi lorem toto ipsum tutu dolor tata.",
             },
           ],
-          image_path: './assets/casing.png',
+          image_path: "./assets/casing.png",
           buttons: [
             {
-              name: 'Toto',
-              icon: '⎔',
-              class: 'btn-dark'
-            }
+              name: "Toto",
+              icon: "⎔",
+              class: "btn-dark",
+            },
           ],
         },
         {
@@ -62,27 +66,29 @@ export default {
           alignment: "left",
           icons: [
             {
-              name: 'Raspberry pi',
-              path: './assets/raspberry_pi.png'
+              name: "Raspberry pi",
+              path: "./assets/raspberry_pi.png",
             },
           ],
           descriptions: [
             {
               id: 1,
-              text: 'Hardware, lorem toto ipsum tutu dolor tata. Lorem toto ipsum tutu dolor tata.'
+              text:
+                "Hardware, lorem toto ipsum tutu dolor tata. Lorem toto ipsum tutu dolor tata.",
             },
             {
               id: 2,
-              text: 'Hardware, titi lorem toto ipsum tutu dolor tata. Titi lorem toto ipsum tutu dolor tata.'
+              text:
+                "Hardware, titi lorem toto ipsum tutu dolor tata. Titi lorem toto ipsum tutu dolor tata.",
             },
           ],
-          image_path: './assets/hardware.jpg',
+          image_path: "./assets/hardware.jpg",
           buttons: [
             {
-              name: 'Toto',
-              icon: '⎔',
-              class: 'btn-dark'
-            }
+              name: "Toto",
+              icon: "⎔",
+              class: "btn-dark",
+            },
           ],
         },
         {
@@ -91,38 +97,40 @@ export default {
           alignment: "right",
           icons: [
             {
-              name: 'Linux',
-              path: './assets/tux.png'
+              name: "Linux",
+              path: "./assets/tux.png",
             },
-            { 
-              name: 'Debian',
-              path: './assets/debian.png'
+            {
+              name: "Debian",
+              path: "./assets/debian.png",
             },
-            { 
-              name: 'C++',
-              path: './assets/cpp.png'
-            }
+            {
+              name: "C++",
+              path: "./assets/cpp.png",
+            },
           ],
           descriptions: [
             {
               id: 1,
-              text: 'Software, lorem toto ipsum tutu dolor tata. Lorem toto ipsum tutu dolor tata.'
+              text:
+                "Software, lorem toto ipsum tutu dolor tata. Lorem toto ipsum tutu dolor tata.",
             },
             {
               id: 2,
-              text: 'Software, titi lorem toto ipsum tutu dolor tata. Titi lorem toto ipsum tutu dolor tata.'
+              text:
+                "Software, titi lorem toto ipsum tutu dolor tata. Titi lorem toto ipsum tutu dolor tata.",
             },
           ],
-          image_path: './assets/software.png',
+          image_path: "./assets/software.png",
           buttons: [
             {
-              name: 'Toto',
-              icon: '⎔',
-              class: 'btn-dark'
-            }
+              name: "Toto",
+              icon: "⎔",
+              class: "btn-dark",
+            },
           ],
-        }
-      ]
+        },
+      ],
     };
   },
   components: {
