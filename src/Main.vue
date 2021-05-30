@@ -227,11 +227,11 @@ button::before {
 
 .btn-dark {
   color: var(--clr-ternary);
-  background-color: var(--clr-secondary);
+  background-color: var(--clr-primary);
 }
 
 .btn-light {
-  color: var(--clr-secondary);
+  color: var(--clr-primary);
   background-color: var(--clr-ternary);
 }
 </style>
