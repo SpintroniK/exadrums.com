@@ -91,7 +91,7 @@ export default {
 .external-links-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
   margin: calc(2 * var(--spacer)) auto;
 }
 

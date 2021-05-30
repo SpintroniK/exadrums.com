@@ -71,7 +71,7 @@ export default {
 .content .icons-container {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
 
 .content .icons-container img {
