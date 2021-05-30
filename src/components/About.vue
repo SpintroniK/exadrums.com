@@ -76,14 +76,6 @@ export default {
   min-height: 100vh;
 }
 
-.about h1 {
-  font-size: 1.75em;
-  margin-bottom: calc(var(--spacer) / 2);
-  line-height: 1;
-  font-weight: 600;
-  text-align: center;
-}
-
 .e-mail {
   text-align: center;
   font-size: 8vw;
