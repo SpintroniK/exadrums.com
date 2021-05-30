@@ -149,7 +149,7 @@ export default {
   --clr-ternary: #eeefed;
   --clr-ascent: #ef2929;
   --clr-background: white;
-  --clr-semi-transparent: rgba(238, 239, 237, 0.8);
+  --clr-semi-transparent: rgba(238, 239, 237, 0.66);
   --spacer: 1rem;
   --delay: 0.3s;
 }
