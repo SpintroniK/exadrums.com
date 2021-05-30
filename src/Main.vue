@@ -179,6 +179,7 @@ hr {
 
 h1 {
   margin-top: calc(1.5 * var(--spacer));
+  font-weight: 400;
 }
 
 section {
