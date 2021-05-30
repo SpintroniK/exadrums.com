@@ -49,12 +49,4 @@ export default {};
   line-height: 0.9;
   margin: var(--spacer) 2.5%;
 }
-
-.text-container {
-  padding: var(--spacer) 0;
-}
-
-.text-container p {
-  margin: var(--spacer) 0;
-}
 </style>

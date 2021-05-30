@@ -192,11 +192,12 @@ h1 {
   font-weight: 400;
 }
 
-section {
-  padding-top: calc(3.5 * var(--spacer));
-  padding-bottom: var(--spacer);
-  margin-left: 2.5%;
-  margin-right: 2.5%;
+.text-container {
+  padding: var(--spacer) 0;
+}
+
+.plain-text {
+  margin: var(--spacer) var(--content-margin);
 }
 
 button {

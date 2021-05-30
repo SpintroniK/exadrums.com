@@ -16,8 +16,10 @@
       />
     </div>
     <div class="text-container">
-      <p v-for="description in descriptions" :key="description.id">
-        {{ description.text}}
+      <p v-for="description in descriptions"
+      :key="description.id"
+      class="plain-text">
+        {{ description.text }}
       </p>
     </div>
     <button
