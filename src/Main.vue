@@ -179,7 +179,7 @@ section {
 hr {
   background-color: var(--clr-ascent);
   width: 80%;
-  height: .25rem;
+  height: 0.25rem;
   margin: 0 auto 0 auto;
 }
 
