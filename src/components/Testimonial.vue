@@ -35,23 +35,32 @@ export default {
     return {
       testimonials: this.testimonials,
       current: 0,
-      number: 2,
-    };
+      number: 1,
+    }
   },
   props: {
     testimonials: { type: Array, required: true },
   },
   computed: {
     currentTestimonials: function () {
-      return new Array(this.testimonials.slice(this.current, this.number));
+      const currentTest = []
+      for (let i = this.current; i < this.current + this.number; i++) {
+        if (i >= 0 && i <= this.testimonials.length - 1) {
+          currentTest.push(this.testimonials[i])
+        }
+        else if (i >= this.testimonials.length) {
+          currentTest.push(this.testimonials[i - this.testimonials.length])
+        }
+      }
+      return new Array(currentTest)
     },
   },
   methods: {
     nextTestimonial() {
-      this.current < this.number ? (this.current += 1) : (this.current = 0);
+      this.current < this.testimonials.length - 1 ? (this.current += 1) : (this.current = 0);
     },
     prevTestimonial() {
-      this.current > 0 ? (this.current -= 1) : (this.current = this.number);
+      this.current > 0 ? (this.current -= 1) : (this.current = this.testimonials.length - 1);
     },
   },
 };
@@ -80,9 +89,10 @@ export default {
 .profiles-container {
   display: flex;
   justify-content: space-around;
-  gap: var(--spacer);
+  gap: calc(var(--spacer) / 2);
   width: 100%;
 }
+
 
 profiles-container:first-child,
 profiles-container:last-child {
@@ -94,7 +104,8 @@ profiles-container:last-child {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  max-width: 20ch;
+  max-width: 22ch;
+  padding: calc(var(--spacer) / 2);
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -102,6 +113,7 @@ profiles-container:last-child {
 }
 
 .profile-picture {
+  position: relative;
   display: flex;
   overflow: hidden;
   background-repeat: no-repeat;
@@ -109,19 +121,18 @@ profiles-container:last-child {
   background-size: contain;
 }
 
+.profile-picture:after {
+  content: "";
+  display: block;
+  padding-bottom: 100%;
+}
+
 .profile-picture img {
   width: 100%;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
-  border: 5px solid var(--clr-background);
-  background-color: var(--clr-background);
-}
-
-.profile-picture:after {
-  content: "";
-  display: block;
-  padding-bottom: 100%;
+  border: 4px solid var(--clr-background);
 }
 
 .profile-name {
