@@ -171,6 +171,14 @@ body {
   font-weight: 300;
 }
 
+li {
+ list-style-type: none; 
+}
+
+a {
+  text-decoration: none;
+}
+
 section {
   padding-top: calc(3.5 * var(--spacer));
   padding-bottom: var(--spacer);
