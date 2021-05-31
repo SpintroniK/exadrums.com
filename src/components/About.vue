@@ -13,7 +13,7 @@
     <div class="external-links-container">
       <a href="#" data-link="github">
         <img src="assets/github.png" alt="github" />
-        </a>
+      </a>
       <a href="#" data-link="hackaday">
         <img src="assets/hackaday.png" alt="hackaday" />
       </a>
@@ -38,21 +38,42 @@ export default {
     return {
       testimonials: [
         {
-          name: "Lorem",
+          name: "Toto1",
           image_path:
             "http://photo-folio.freewebmaster.fr/photos/mammals/dogs/IMG_4814.jpg",
           comment:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
         {
-          name: "Ipsum",
+          name: "Toto2",
           image_path:
             "http://photo-folio.freewebmaster.fr/photos/mammals/dogs/IMG_4814.jpg",
           comment:
             "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         },
         {
-          name: "Dolor",
+          name: "Toto3",
+          image_path:
+            "http://photo-folio.freewebmaster.fr/photos/mammals/dogs/IMG_4814.jpg",
+          comment:
+            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        },
+        {
+          name: "Toto4",
+          image_path:
+            "http://photo-folio.freewebmaster.fr/photos/mammals/dogs/IMG_4814.jpg",
+          comment:
+            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        },
+        {
+          name: "Toto5",
+          image_path:
+            "http://photo-folio.freewebmaster.fr/photos/mammals/dogs/IMG_4814.jpg",
+          comment:
+            "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+        },
+        {
+          name: "Toto6",
           image_path:
             "http://photo-folio.freewebmaster.fr/photos/mammals/dogs/IMG_4814.jpg",
           comment:
@@ -106,7 +127,7 @@ export default {
 }
 
 .external-links-container a:hover {
-  box-shadow: 0 0 0em .15em var(--clr-ascent);
+  box-shadow: 0 0 0em 0.15em var(--clr-ascent);
 }
 
 .external-links-container a::after {
