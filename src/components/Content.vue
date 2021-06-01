@@ -74,6 +74,7 @@ export default {
 .image-container {
   width: 100%;
   height: 33vh;
+  max-height: 40ch;
 }
 
 .image-container img {

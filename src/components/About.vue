@@ -97,7 +97,7 @@ export default {
 
 .e-mail {
   text-align: center;
-  font-size: 8vw;
+  font-size: clamp(1.5em, 8vw, 3em);
   color: var(--clr-ascent);
   margin: var(--spacer) auto;
 }
@@ -115,8 +115,8 @@ export default {
 }
 
 .external-links-container a {
-  width: 10vw;
-  height: 10vw;
+  width: clamp(2rem, 10vw, 4rem);
+  height: clamp(2rem, 10vw, 4rem);
   background-color: var(--clr-ternary);
   border-radius: 25%;
   position: relative;
@@ -148,7 +148,7 @@ export default {
 }
 
 .external-links-container img {
-  height: 6vw;
+  height: clamp(1.5rem, 6vw, 3rem);
   min-width: auto;
 }
 

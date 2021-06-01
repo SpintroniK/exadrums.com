@@ -4,7 +4,7 @@
       <img src="assets/hero_img.jpg" alt="" />
     </div>
     <hr>
-    <h1>A cheap alternative to professionnal drum module</h1>
+    <h1>A cheap alternative to<br>professionnal drum module</h1>
     <div class="text-container">
       <p class="plain-text">
         EXADRUMS is a fully featured <b>e-drum module</b> with professionnal
@@ -33,6 +33,7 @@ export default {};
 .hero-animation-container {
   width: 100%;
   height: 95vw;
+  max-height: 60ch;
 }
 
 .hero-animation-container img {
@@ -43,7 +44,7 @@ export default {};
 }
 
 .hero-banner h1 {
-  font-size: 1.5em;
+  font-size: clamp(1.5em, 5vw, 3em);
   font-weight: 400;
   text-align: right;
   line-height: 0.9;

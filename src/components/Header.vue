@@ -111,6 +111,7 @@
     left: 0;
     width: 100%;
     height: 95vw;
+    max-height: 60ch;
     background-color: var(--clr-semi-transparent);
     backdrop-filter: blur(3px);
     transform: scaleY(0);
