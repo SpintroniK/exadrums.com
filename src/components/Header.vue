@@ -185,4 +185,10 @@
     background-position-y: 100%;
     color: var(--clr-background);
   }
+
+  @media only screen and (min-width: 100ch) {
+  header {
+    max-width: 1024px;
+  }
+}
 </style>
