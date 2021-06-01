@@ -242,4 +242,11 @@ button::before {
   color: var(--clr-primary);
   background-color: var(--clr-ternary);
 }
+
+@media only screen and (min-width: 100ch) {
+  body {
+    max-width: 1024px;
+    margin: auto;
+  }
+}
 </style>
