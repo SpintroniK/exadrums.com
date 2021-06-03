@@ -193,7 +193,7 @@ hr {
 h1 {
   margin-top: calc(1.5 * var(--spacer));
   margin-left: 10%;
-  font-size: 2em;
+  font-size: clamp(2em, 5vw, 3em);
   margin-bottom: var(--spacer);
   line-height: 1;
   font-weight: 400;
