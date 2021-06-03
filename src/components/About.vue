@@ -148,7 +148,7 @@ export default {
 }
 
 .external-links-container img {
-  height: clamp(1.5rem, 6vw, 3rem);
+  height: clamp(1.33rem, 6vw, 2.25rem);
   min-width: auto;
 }
 
