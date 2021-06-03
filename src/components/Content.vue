@@ -124,5 +124,43 @@ export default {
       "image button";
     grid-template-columns: 1fr 0.75fr;
   }
+
+  .content-section .image-container {
+    all: unset;
+    grid-area: image;
+    margin: auto;
+    width: 90%;
+    height: 100%;
+  }
+
+  .content-section h1 {
+    grid-area: title;
+    text-align: center;
+    margin: auto;
+    width: 80%;
+  }
+
+  .content-section hr {
+    grid-area: hr;
+    margin: auto;
+    width: 80%;
+  }
+
+  .content-section .icons-container {
+    margin: auto;
+    width: 80%;
+  }
+
+  .content-section .text-container {
+    grid-area: text;
+    margin: auto;
+    width: 80%;
+  }
+
+  .content-section .btn-dark {
+    grid-area: button;
+    margin: auto;
+    width: 80%;
+  }
 }
 </style>
