@@ -3,8 +3,8 @@
     <div class="hero-animation-container">
       <img src="assets/hero_img.jpg" alt="" />
     </div>
-    <hr>
-    <h1>A cheap alternative to<br>professionnal drum module</h1>
+    <hr />
+    <h1>A cheap alternative to<br />professionnal drum module</h1>
     <div class="text-container">
       <p class="plain-text">
         EXADRUMS is a fully featured <b>e-drum module</b> with professionnal
@@ -19,10 +19,6 @@
     <button data-btn-icon="#" class="btn-light">Documentation</button>
   </section>
 </template>
-
-<script>
-export default {};
-</script>
 
 <style>
 .hero-banner {
@@ -49,5 +45,56 @@ export default {};
   text-align: right;
   line-height: 0.9;
   margin: var(--spacer) 2.5%;
+}
+
+@media only screen and (min-width: 80ch) {
+  .hero-banner {
+    display: grid;
+    grid-template-areas:
+      "title title"
+      "hr image"
+      "text image"
+      "btn-left btn-right";
+    grid-template-rows: 8vw 4rem 1fr 3rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-banner h1 {
+    grid-area: title;
+    text-align: left;
+    color: var(--clr-ternary);
+  }
+
+  .hero-banner hr {
+    grid-area: hr;
+    position: relative;
+    top: 100%;
+    transform: translateY(-100%);
+  }
+
+  .hero-banner .text-container {
+    grid-area: text;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-ternary);
+  }
+
+  .hero-banner .text-container .plain-text {
+    max-width: 45ch;
+  }
+
+  .hero-animation-container {
+    grid-area: image;
+  }
+
+  .hero-banner .btn-dark {
+    grid-area: btn-left;
+  }
+
+  .hero-banner .btn-light {
+    grid-area: btn-right;
+  }
 }
 </style>
