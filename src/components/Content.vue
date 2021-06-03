@@ -95,4 +95,34 @@ export default {
   height: calc(3 * var(--spacer));
   min-width: auto;
 }
+
+@media only screen and (min-width: 80ch) {
+  .content-section {
+    all: unset;
+    display: grid;
+    grid-template-rows: 3rem 2rem 5rem 0fr auto;
+    padding: 25% 0;
+    min-height: 50vh;
+  }
+
+  .align-left {
+    grid-template-areas:
+      "title image"
+      "hr image"
+      "icons image"
+      "text image"
+      "button image";
+    grid-template-columns: 0.75fr 1fr;
+  }
+
+  .align-right {
+    grid-template-areas:
+      "image title"
+      "image hr"
+      "image icons"
+      "image text"
+      "image button";
+    grid-template-columns: 1fr 0.75fr;
+  }
+}
 </style>
