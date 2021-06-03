@@ -136,6 +136,7 @@
     display: grid;
     margin: auto;
     width: 95%;
+    max-width: 1024px;
     height: 100%;
     grid-template-columns: 1fr 1fr;
     gap: var(--spacer);
@@ -186,9 +187,48 @@
     color: var(--clr-background);
   }
 
-  @media only screen and (min-width: 100ch) {
+  @media only screen and (min-width: 80ch) {
   header {
     max-width: 1024px;
+  }
+
+  header label {
+    display: none;
+  }
+
+  nav, nav ul, nav li, nav a, nav a:hover, nav a::before {
+    all: unset;
+  }
+
+  nav {
+    flex-basis: clamp(35ch, 50%, 70ch);
+  }
+
+  nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  nav li {
+    display: block;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+  }
+
+  nav a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    font-weight: 400;
+    color: var(--clr-primary);
+    transition: color var(--delay) ease;
+  }
+
+  nav a:hover {
+    font-weight: 400;
+    color: var(--clr-ascent);
   }
 }
 </style>
