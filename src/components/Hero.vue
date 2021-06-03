@@ -55,7 +55,7 @@
       "hr image"
       "text image"
       "btn-left btn-right";
-    grid-template-rows: 8vw 4rem 1fr 3rem;
+    grid-template-rows: auto 4rem 1fr 5rem;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -91,10 +91,14 @@
 
   .hero-banner .btn-dark {
     grid-area: btn-left;
+    margin: auto;
+    max-height: 3rem;
   }
 
   .hero-banner .btn-light {
     grid-area: btn-right;
+    margin: auto;
+    max-height: 3rem;
   }
 }
 </style>
