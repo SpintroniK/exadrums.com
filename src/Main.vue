@@ -166,13 +166,12 @@ export default {
 html,
 body {
   width: 100%;
-  height: 100%;
   scroll-behavior: smooth;
   font-weight: 300;
 }
 
 li {
- list-style-type: none; 
+  list-style-type: none;
 }
 
 a {
@@ -243,10 +242,22 @@ button::before {
   background-color: var(--clr-ternary);
 }
 
-@media only screen and (min-width: 100ch) {
+@media only screen and (min-width: 80ch) {
   body {
     max-width: 1024px;
     margin: auto;
+        background: rgb(48, 48, 48);
+    background: linear-gradient(
+      135deg,
+      rgba(48, 48, 48, 1) 25%,
+      rgba(204, 204, 204, 1) 25%,
+      rgba(209, 209, 209, 1) 45%,
+      rgba(255, 255, 255, 1) 45%,
+      rgba(255, 255, 255, 1) 100%
+    );
+    background-position: top left;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
   }
 }
 </style>
