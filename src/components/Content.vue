@@ -18,9 +18,11 @@
       />
     </div>
     <div class="text-container">
-      <p v-for="description in descriptions"
-      :key="description.id"
-      class="plain-text">
+      <p
+        v-for="description in descriptions"
+        :key="description.id"
+        class="plain-text"
+      >
         {{ description.text }}
       </p>
     </div>
@@ -61,7 +63,6 @@ export default {
 </script>
 
 <style>
-
 .content-section {
   display: flex;
   flex-direction: column;
@@ -71,13 +72,13 @@ export default {
   margin: var(--spacer) auto;
 }
 
-.image-container {
+.content-section .image-container {
   width: 100%;
   height: 33vh;
   max-height: 40ch;
 }
 
-.image-container img {
+.content-section .image-container img {
   width: 100%;
   height: 100%;
   object-fit: contain;
