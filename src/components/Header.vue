@@ -54,9 +54,14 @@
     justify-content: space-between;
     top: 0;
     width: 100%;
-    background-color: var(--clr-background);
+    background-color: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
     padding: calc(var(--spacer) / 2) 2.5% var(--spacer) 2.5%;
     z-index: 10;
+  }
+
+  header a {
+    display: flex;
   }
 
   header .logo {
