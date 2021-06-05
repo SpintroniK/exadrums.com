@@ -64,7 +64,7 @@
   .hero-banner h1 {
     grid-area: title;
     text-align: left;
-    align-self: center;
+    align-self: end;
     color: var(--clr-background);
   }
 
@@ -95,14 +95,14 @@
 
   .hero-banner .btn-dark {
     grid-area: btn-left;
-    align-self: center;
+    align-self: start;
     justify-self: center;
     max-height: 3rem;
   }
 
   .hero-banner .btn-light {
     grid-area: btn-right;
-    align-self: center;
+    align-self: start;
     justify-self: center;
     max-height: 3rem;
   }
