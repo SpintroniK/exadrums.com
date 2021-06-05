@@ -4,29 +4,26 @@
     <div
       v-for="currents in currentTestimonials"
       :key="currents"
-      class="profiles-container">
+      class="profiles-container"
+    >
       <div
-      v-for="testimonial in currents"
-      :key="testimonial.name"
-      :data-name="testimonial.name"
-      class="profile">
-          <div class="profile-picture" :style="{ backgroundImage: `url('./assets/sticks.svg')`}">
-            <img :src="testimonial.image_path" alt="testimonial image" />
-          </div>
-          <p class="profile-name">{{ testimonial.name }}</p>
-          <p class="profile-comment">{{ testimonial.comment }}</p>
+        v-for="testimonial in currents"
+        :key="testimonial.name"
+        :data-name="testimonial.name"
+        class="profile"
+      >
+        <div
+          class="profile-picture"
+          :style="{ backgroundImage: `url('./assets/sticks.svg')` }"
+        >
+          <img :src="testimonial.image_path" alt="testimonial image" />
+        </div>
+        <p class="profile-name">{{ testimonial.name }}</p>
+        <p class="profile-comment">{{ testimonial.comment }}</p>
       </div>
     </div>
     <div class="next-testimonial" @click="nextTestimonial">❯</div>
   </div>
-  <!--   <div class="testimonial-container" ref="testimonial">
-    <div class="profil-picture" :style="{ backgroundImage: `url('./assets/sticks.svg')`}" :data-name="testimonials[current].name">
-      <div class="prev-testimonial" @click="previousTestimonial">❮</div>
-      <img :src="testimonials[current].image_path" alt="testimonial image" />
-      <div class="next-testimonial" @click="nextTestimonial">❯</div>
-    </div>
-    <p class="profile-comment">{{ testimonials[current].comment }}</p>
-  </div> -->
 </template>
 
 <script>
@@ -36,31 +33,34 @@ export default {
       testimonials: this.testimonials,
       current: 0,
       number: 1,
-    }
+    };
   },
   props: {
     testimonials: { type: Array, required: true },
   },
   computed: {
     currentTestimonials: function () {
-      const currentTest = []
+      const currentTest = [];
       for (let i = this.current; i < this.current + this.number; i++) {
         if (i >= 0 && i <= this.testimonials.length - 1) {
-          currentTest.push(this.testimonials[i])
-        }
-        else if (i >= this.testimonials.length) {
-          currentTest.push(this.testimonials[i - this.testimonials.length])
+          currentTest.push(this.testimonials[i]);
+        } else if (i >= this.testimonials.length) {
+          currentTest.push(this.testimonials[i - this.testimonials.length]);
         }
       }
-      return new Array(currentTest)
+      return new Array(currentTest);
     },
   },
   methods: {
     nextTestimonial() {
-      this.current < this.testimonials.length - 1 ? (this.current += 1) : (this.current = 0);
+      this.current < this.testimonials.length - 1
+        ? (this.current += 1)
+        : (this.current = 0);
     },
     prevTestimonial() {
-      this.current > 0 ? (this.current -= 1) : (this.current = this.testimonials.length - 1);
+      this.current > 0
+        ? (this.current -= 1)
+        : (this.current = this.testimonials.length - 1);
     },
   },
 };
@@ -92,7 +92,6 @@ export default {
   gap: calc(var(--spacer) / 2);
   width: 100%;
 }
-
 
 profiles-container:first-child,
 profiles-container:last-child {
