@@ -131,6 +131,7 @@ profiles-container:last-child {
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
+  background-color: var(--clr-background);
   border: 4px solid var(--clr-background);
 }
 
@@ -145,6 +146,7 @@ profiles-container:last-child {
 
 @media only screen and (min-width: 80ch) {
   .profile-picture img {
+    background-color: var(--clr-secondary);
     border: 4px solid var(--clr-secondary);
   }
 }
