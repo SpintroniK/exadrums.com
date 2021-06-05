@@ -190,7 +190,6 @@ a {
 
 section {
   padding-top: calc(3.5 * var(--spacer));
-  padding-bottom: var(--spacer);
 }
 
 hr {
@@ -273,7 +272,7 @@ h1 {
     );
     background-position: top left;
     background-repeat: no-repeat;
-    background-size: 100% 100%;
+    background-size: 100% 120%;
   }
 
   .btn-light {
