@@ -26,14 +26,18 @@
         {{ description.text }}
       </p>
     </div>
-    <button
-      v-for="button in buttons"
-      :key="button.name"
-      :data-btn-icon="button.icon"
-      :class="button.class"
-    >
-      {{ button.name }}
-    </button>
+    <div class="btn-container">
+      <a
+        v-for="button in buttons"
+        :key="button.name"
+        :data-btn-icon="button.icon"
+        :class="button.class"
+        :href="button.link"
+        class="button"
+      >
+        {{ button.name }}
+      </a>
+    </div>
   </section>
 </template>
 
@@ -101,6 +105,7 @@ export default {
     all: unset;
     display: grid;
     grid-template-rows: auto 2rem 5rem 0fr auto;
+    grid-template-columns: 1fr 1fr;
     padding: 25% 0 10% 0;
     min-height: 50vh;
   }
@@ -112,7 +117,6 @@ export default {
       "icons image"
       "text image"
       "button image";
-    grid-template-columns: 0.75fr 1fr;
   }
 
   .align-right {
@@ -122,7 +126,6 @@ export default {
       "image icons"
       "image text"
       "image button";
-    grid-template-columns: 1fr 0.75fr;
   }
 
   .content-section .image-container {
@@ -157,7 +160,7 @@ export default {
     width: 80%;
   }
 
-  .content-section .btn-dark {
+  .content-section .btn-container {
     grid-area: button;
     margin: auto;
     width: 80%;

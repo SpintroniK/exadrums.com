@@ -15,8 +15,8 @@
         enable your to focus on your music.
       </p>
     </div>
-    <button data-btn-icon="#" class="btn-dark">Build your own</button>
-    <button data-btn-icon="#" class="btn-light">Documentation</button>
+    <a href="#" class="button btn-dark" data-btn-icon="#">Build your own</a>
+    <a href="#" class="button btn-light" data-btn-icon="#">Documentation</a>
   </section>
 </template>
 

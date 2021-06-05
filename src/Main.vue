@@ -57,6 +57,9 @@ export default {
               name: "Toto",
               icon: "⎔",
               class: "btn-dark",
+              link: "#",
+              class: "btn-light",
+              link: "#",
             },
           ],
         },
@@ -88,6 +91,7 @@ export default {
               name: "Toto",
               icon: "⎔",
               class: "btn-dark",
+              link: "#",
             },
           ],
         },
@@ -127,6 +131,7 @@ export default {
               name: "Toto",
               icon: "⎔",
               class: "btn-dark",
+              link: "#",
             },
           ],
         },
@@ -208,7 +213,12 @@ h1 {
   margin: var(--spacer) var(--content-margin);
 }
 
-button {
+.btn-container {
+  width: 100%;
+  text-align: center;
+}
+
+.button {
   position: relative;
   width: 90%;
   font-size: 1.125em;
@@ -222,12 +232,12 @@ button {
   z-index: 1;
 }
 
-button:hover {
+.button:hover {
   background-color: var(--clr-ascent);
   color: var(--clr-ternary);
 }
 
-button::before {
+.button::before {
   content: attr(data-btn-icon);
   position: absolute;
   left: calc(3 * var(--spacer));
