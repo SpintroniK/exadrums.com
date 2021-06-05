@@ -100,8 +100,8 @@ export default {
   .content-section {
     all: unset;
     display: grid;
-    grid-template-rows: 3rem 2rem 5rem 0fr auto;
-    padding: 25% 0;
+    grid-template-rows: auto 2rem 5rem 0fr auto;
+    padding: 25% 0 10% 0;
     min-height: 50vh;
   }
 
@@ -136,7 +136,7 @@ export default {
   .content-section h1 {
     grid-area: title;
     text-align: center;
-    margin: auto;
+    margin: 0 auto;
     width: 80%;
   }
 
