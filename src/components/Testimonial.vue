@@ -142,4 +142,10 @@ profiles-container:last-child {
   font-size: 0.8em;
   font-weight: 300;
 }
+
+@media only screen and (min-width: 80ch) {
+  .profile-picture img {
+    border: 4px solid var(--clr-secondary);
+  }
+}
 </style>
