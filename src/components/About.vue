@@ -10,7 +10,7 @@
       ipsum?
     </p>
 
-    <div class="external-links-container">
+    <div class="social-container">
       <a href="#" data-link="github">
         <img src="assets/github.png" alt="github" />
       </a>
@@ -24,7 +24,10 @@
 
     <hr>
 
-    <Testimonial :testimonials="testimonials"></Testimonial>
+    <Testimonial
+      :testimonials="testimonials"
+      class="testimonials"
+    ></Testimonial>
 
     <p class="signature">by Jérémy Oden</p>
   </section>
@@ -90,33 +93,30 @@ export default {
 
 <style>
 .about {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   margin: auto 0;
   min-height: 100vh;
 }
 
 .e-mail {
   text-align: center;
-  font-size: clamp(1.5em, 8vw, 3em);
+  font-size: clamp(1.2em, 8vw, 2.5em);
   color: var(--clr-ascent);
   margin: var(--spacer) auto;
 }
 
-.contact-links-container span {
-  display: block;
-  text-align: center;
-}
-
-.external-links-container {
+.social-container {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
-  margin: calc(2 * var(--spacer)) auto;
+  margin: calc(2 * var(--spacer)) 0;
 }
 
-.external-links-container a {
-  width: clamp(2rem, 10vw, 4rem);
-  height: clamp(2rem, 10vw, 4rem);
+.social-container a {
+  width: clamp(2rem, 10vw, 3rem);
+  height: clamp(2rem, 10vw, 3rem);
   background-color: var(--clr-ternary);
   border-radius: 25%;
   position: relative;
@@ -126,11 +126,11 @@ export default {
   transition: box-shadow var(--delay);
 }
 
-.external-links-container a:hover {
+.social-container a:hover {
   box-shadow: 0 0 0em 0.15em var(--clr-ascent);
 }
 
-.external-links-container a::after {
+.social-container a::after {
   content: attr(data-link) " ";
   position: absolute;
   bottom: 0;
@@ -143,12 +143,12 @@ export default {
   transition: color var(--delay);
 }
 
-.external-links-container a:hover::after {
+.social-container a:hover::after {
   color: var(--clr-ascent);
 }
 
-.external-links-container img {
-  height: clamp(1.33rem, 6vw, 2.25rem);
+.social-container img {
+  height: clamp(1.33rem, 6vw, 1.75rem);
   min-width: auto;
 }
 
