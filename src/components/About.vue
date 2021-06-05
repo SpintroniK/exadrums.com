@@ -153,9 +153,68 @@ export default {
 }
 
 .signature {
-  position: absolute;
-  bottom: 0;
-  width: 95%;
   text-align: center;
+}
+
+@media only screen and (min-width: 80ch) {
+  .about {
+    all: unset;
+    display: grid;
+    grid-template-areas:
+      "title title"
+      "hr hr"
+      "text text"
+      "email social"
+      "testimonials testimonials"
+      "signature signature";
+    grid-template-columns: 1fr minmax(1fr 30ch);
+    gap: var(--spacer);
+    padding: 10% var(--spacer) var(--spacer) var(--spacer);
+    background-color: var(--clr-secondary);
+    color: var(--clr-background);
+  }
+
+  .about h1 {
+    grid-area: title;
+    margin: var(--spacer) auto;
+  }
+
+  .about hr {
+    grid-area: hr;
+    width: 20ch;
+  }
+
+  .about .plain-text {
+    grid-area: text;
+    max-width: 50ch;
+    margin: var(--spacer) auto;
+    text-align: center;
+    font-size: 1.5em;
+    font-weight: 200;
+    line-height: 1.1;
+  }
+
+  .e-mail {
+    grid-area: email;
+    font-size: clamp(1.33em, 5vw, 3em);
+    color: unset;
+  }
+
+  .social-container {
+    grid-area: social;
+    margin: 0;
+  }
+
+  .social-container a:hover::after {
+    color: var(--clr-ternary);
+  }
+
+  .testimonials {
+    grid-area: testimonials;
+  }
+
+  .signature {
+    grid-area: signature;
+  }
 }
 </style>
