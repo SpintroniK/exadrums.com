@@ -127,6 +127,7 @@ export default {
 }
 
 .social-container a:hover {
+  background-color: var(--clr-background);
   box-shadow: 0 0 0em 0.15em var(--clr-ascent);
 }
 
@@ -148,7 +149,7 @@ export default {
 }
 
 .social-container img {
-  height: clamp(1.33rem, 6vw, 1.75rem);
+  height: clamp(1.25rem, 6vw, 1.4rem);
   min-width: auto;
 }
 
@@ -158,7 +159,6 @@ export default {
 
 @media only screen and (min-width: 80ch) {
   .about {
-    all: unset;
     display: grid;
     grid-template-areas:
       "title title"
@@ -167,21 +167,23 @@ export default {
       "email social"
       "testimonials testimonials"
       "signature signature";
-    grid-template-columns: 1fr minmax(1fr 30ch);
+    grid-template-columns: 1fr 0.5fr;
     gap: var(--spacer);
-    padding: 10% var(--spacer) var(--spacer) var(--spacer);
-    background-color: var(--clr-secondary);
     color: var(--clr-background);
+    background-color: var(--clr-secondary);
   }
 
   .about h1 {
+    margin: unset;
     grid-area: title;
-    margin: var(--spacer) auto;
+    justify-self: center;
+    align-self: center;
   }
 
   .about hr {
     grid-area: hr;
-    width: 20ch;
+    justify-self: center;
+    width: 40%;
   }
 
   .about .plain-text {
@@ -195,14 +197,16 @@ export default {
   }
 
   .e-mail {
-    grid-area: email;
-    font-size: clamp(1.33em, 5vw, 3em);
     color: unset;
+    grid-area: email;
+    font-size: clamp(1.3em, 4vw, 3em);
+    align-self: center;
   }
 
   .social-container {
+    margin: unset;
     grid-area: social;
-    margin: 0;
+    margin: 0 3vw;
   }
 
   .social-container a:hover::after {
