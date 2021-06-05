@@ -145,8 +145,8 @@ export default {
 <style>
 :root {
   --clr-primary: #0e232e;
-  --clr-secondary: #364e59;
-  --clr-ternary: #eeefed;
+  --clr-secondary: #25424f;
+  --clr-ternary: #eeeeec;
   --clr-ascent: #ef2929;
   --clr-background: white;
   --clr-semi-transparent: rgba(238, 239, 237, 0.66);
@@ -246,14 +246,14 @@ button::before {
   body {
     max-width: 1024px;
     margin: auto;
-        background: rgb(48, 48, 48);
+    background: rgb(48, 48, 48);
     background: linear-gradient(
       135deg,
-      rgba(48, 48, 48, 1) 25%,
-      rgba(204, 204, 204, 1) 25%,
-      rgba(209, 209, 209, 1) 45%,
-      rgba(255, 255, 255, 1) 45%,
-      rgba(255, 255, 255, 1) 100%
+      var(--clr-secondary) 25%,
+      var(--clr-ternary) 25%,
+      var(--clr-ternary) 45%,
+      var(--clr-background) 45%,
+      var(--clr-background) 100%
     );
     background-position: top left;
     background-repeat: no-repeat;
