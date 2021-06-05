@@ -275,5 +275,13 @@ h1 {
     background-repeat: no-repeat;
     background-size: 100% 100%;
   }
+
+  .btn-light {
+    box-shadow: inset 0 0 1px 1px var(--clr-secondary);
+  }
+
+  .btn-light:hover {
+    box-shadow: none;
+  }
 }
 </style>
