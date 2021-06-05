@@ -4,9 +4,9 @@
     <input type="checkbox" class="nav-toggle" id="nav-toggle" ref="menu" />
     <nav>
       <ul>
-        <li v-for="m in menu" :key="m.name">
-          <a :href="`#${m.link}`" :data-menu-icon="m.icon" @click="closeMenu">
-            {{ m.name }}
+        <li v-for="menu in menuItems" :key="menu.id">
+          <a :href="`#${menu.id}`" :data-menu-icon="menu.icon" @click="closeMenu">
+            {{ menu.title }}
           </a>
         </li>
       </ul>
@@ -21,20 +21,29 @@
   export default {
     data() {
       return {
-        menu: [
-          { name: 'Casing', link: 'casing', icon: "#" },
-          { name: 'Hardware', link: 'hardware', icon: "#" },
-          { name: 'Sofware', link: 'software', icon: "</>" },
-          { name: 'About', link: 'about', icon: "#" },
-        ],
+        contents: this.contents,
+        about: this.about,
       };
+    },
+    props: {
+      contents: { type: Array, required: true },
+      about: { type: Object, required: true },
     },
     methods: {
       closeMenu() {
         this.$refs.menu.checked = false
       }
     },
-  };
+    computed: {
+      newContents: function () {
+        return [...this.contents]
+        },
+      menuItems: function () {
+        this.newContents.push(this.about)
+        return this.newContents
+      }
+    }
+  }
 </script>
 
 <style>
