@@ -40,7 +40,7 @@
 }
 
 .hero-banner h1 {
-  font-size: clamp(1.5em, 5vw, 3em);
+  font-size: clamp(1.5em, 5vw, 3.5em);
   font-weight: 400;
   text-align: right;
   line-height: 0.9;
@@ -62,7 +62,8 @@
   .hero-banner h1 {
     grid-area: title;
     text-align: left;
-    color: var(--clr-ternary);
+    padding-top: var(--spacer);
+    color: var(--clr-background);
   }
 
   .hero-banner hr {
