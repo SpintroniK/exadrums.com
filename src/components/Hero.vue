@@ -24,6 +24,7 @@
 .hero-banner {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .hero-animation-container {
@@ -55,14 +56,15 @@
       "hr image"
       "text image"
       "btn-left btn-right";
-    grid-template-rows: auto 4rem 1fr 5rem;
+    gap: var(--spacer);
+    grid-template-rows: 1fr 0.5fr auto 1fr;
     grid-template-columns: 1fr 1fr;
   }
 
   .hero-banner h1 {
     grid-area: title;
     text-align: left;
-    padding-top: var(--spacer);
+    align-self: center;
     color: var(--clr-background);
   }
 
@@ -87,18 +89,21 @@
   }
 
   .hero-animation-container {
+    all: unset;
     grid-area: image;
   }
 
   .hero-banner .btn-dark {
     grid-area: btn-left;
-    margin: auto;
+    align-self: center;
+    justify-self: center;
     max-height: 3rem;
   }
 
   .hero-banner .btn-light {
     grid-area: btn-right;
-    margin: auto;
+    align-self: center;
+    justify-self: center;
     max-height: 3rem;
   }
 }
