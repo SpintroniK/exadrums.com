@@ -168,7 +168,7 @@ export default {
       "testimonials testimonials"
       "signature signature";
     grid-template-columns: 1fr 0.5fr;
-    gap: var(--spacer);
+    grid-template-rows: 1fr 2rem auto auto auto 1fr;
     color: var(--clr-background);
     background-color: var(--clr-secondary);
   }
@@ -177,12 +177,13 @@ export default {
     margin: unset;
     grid-area: title;
     justify-self: center;
-    align-self: center;
+    align-self: end;
   }
 
   .about hr {
     grid-area: hr;
     justify-self: center;
+    align-self: center;
     width: 40%;
   }
 
@@ -219,6 +220,7 @@ export default {
 
   .signature {
     grid-area: signature;
+    align-self: center;
   }
 }
 </style>
