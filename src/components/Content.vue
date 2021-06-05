@@ -70,6 +70,7 @@ export default {
 .content-section {
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
 
 .content-section hr {
@@ -102,12 +103,9 @@ export default {
 
 @media only screen and (min-width: 80ch) {
   .content-section {
-    all: unset;
     display: grid;
-    grid-template-rows: auto 2rem 5rem 0fr auto;
+    grid-template-rows: 1fr 2rem 5rem 0fr 1fr;
     grid-template-columns: 1fr 1fr;
-    padding: 25% 0 10% 0;
-    min-height: 50vh;
   }
 
   .align-left {
@@ -138,6 +136,8 @@ export default {
 
   .content-section h1 {
     grid-area: title;
+    align-self: end;
+    justify-self: center;
     text-align: center;
     margin: 0 auto;
     width: 80%;
@@ -145,7 +145,7 @@ export default {
 
   .content-section hr {
     grid-area: hr;
-    margin: auto;
+    justify-self: center;
     width: 80%;
   }
 
@@ -156,13 +156,14 @@ export default {
 
   .content-section .text-container {
     grid-area: text;
-    margin: auto;
+    justify-self: center;
     width: 80%;
   }
 
   .content-section .btn-container {
     grid-area: button;
-    margin: auto;
+    align-self: start;
+    justify-self: center;
     width: 80%;
   }
 }
