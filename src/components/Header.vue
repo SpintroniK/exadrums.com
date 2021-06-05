@@ -4,7 +4,7 @@
     <input type="checkbox" class="nav-toggle" id="nav-toggle" ref="menu" />
     <nav>
       <ul>
-        <li v-for="m in menu" :key="m.name" i>
+        <li v-for="m in menu" :key="m.name">
           <a :href="`#${m.link}`" :data-menu-icon="m.icon" @click="closeMenu">
             {{ m.name }}
           </a>
@@ -202,6 +202,7 @@
 
   nav {
     flex-basis: clamp(35ch, 50%, 70ch);
+    height: 100%;
   }
 
   nav ul {
@@ -211,16 +212,10 @@
   }
 
   nav li {
-    display: block;
-    width: 100%;
-    text-align: center;
     cursor: pointer;
   }
 
   nav a {
-    display: block;
-    width: 100%;
-    height: 100%;
     font-weight: 400;
     color: var(--clr-primary);
     transition: color var(--delay) ease;
