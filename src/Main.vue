@@ -264,7 +264,7 @@ h1 {
   body {
     max-width: 1024px;
     margin: auto;
-    background: rgb(48, 48, 48);
+    background: rgb(255, 255, 255);
     background: linear-gradient(
       135deg,
       var(--clr-secondary) 25%,
