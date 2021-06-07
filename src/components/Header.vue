@@ -1,6 +1,6 @@
 <template>
   <header>
-    <a href="#" @click="closeMenu"><img src="assets/eXa_logo_text.svg" alt="logo" class="logo" onclick="#" /></a>
+    <a href="#" @click="closeMenu" class="logo"><img src="assets/eXa_logo_text.svg" alt="logo" onclick="#" /></a>
     <input type="checkbox" class="nav-toggle" id="nav-toggle" ref="menu" />
     <nav>
       <ul>
@@ -53,7 +53,8 @@
     align-items: center;
     justify-content: space-between;
     top: 0;
-    width: 100%;
+    left: 0;
+    right: 0;
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(5px);
     padding: calc(var(--spacer) / 2) 2.5% var(--spacer) 2.5%;
@@ -64,7 +65,7 @@
     display: flex;
   }
 
-  header .logo {
+  header .logo>img{
     max-height: calc(1.5 * var(--spacer));
   }
 
@@ -202,42 +203,48 @@
   }
 
   @media only screen and (min-width: 80ch) {
-  header {
-    max-width: 1024px;
-  }
+    header {
+      display: grid;
+      grid-template-areas: ". logo nav .";
+      grid-template-columns: 1fr minmax(min-content, 524px) minmax(min-content, 400px) 1fr;
+    }
 
-  header label {
-    display: none;
-  }
+    header label {
+      display: none;
+    }
 
-  nav, nav ul, nav li, nav a, nav a:hover, nav a::before {
-    all: unset;
-  }
+    nav, nav ul, nav li, nav a, nav a:hover, nav a::before {
+      all: unset;
+    }
 
-  nav {
-    flex-basis: clamp(35ch, 50%, 70ch);
-    height: 100%;
-  }
+    .logo {
+      grid-area: logo;
+    }
 
-  nav ul {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
+    nav {
+      grid-area: nav;
+      height: 100%;
+    }
 
-  nav li {
-    cursor: pointer;
-  }
+    nav ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
 
-  nav a {
-    font-weight: 400;
-    color: var(--clr-primary);
-    transition: color var(--delay) ease;
-  }
+    nav li {
+      cursor: pointer;
+    }
 
-  nav a:hover {
-    font-weight: 400;
-    color: var(--clr-ascent);
+    nav a {
+      font-weight: 400;
+      color: var(--clr-primary);
+      transition: color var(--delay) ease;
+    }
+
+    nav a:hover {
+      font-weight: 400;
+      color: var(--clr-ascent);
+    }
   }
-}
 </style>
