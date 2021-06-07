@@ -185,6 +185,7 @@ li {
 }
 
 a {
+  display: inline-block;
   text-decoration: none;
 }
 
@@ -194,6 +195,7 @@ section {
 
 hr {
   background-color: var(--clr-ascent);
+  border: 0px solid transparent;
   width: 80%;
   height: 0.25rem;
   margin: 0 auto 0 auto;
@@ -225,10 +227,11 @@ h1 {
 .button {
   position: relative;
   width: 90%;
-  font-size: 1.125em;
-  border: none;
   margin: calc(var(--spacer) / 4) auto;
   padding: calc(var(--spacer) / 2);
+  text-align: center;
+  font-size: 1.125em;
+  border: none;
   border-radius: calc(var(--spacer) / 2);
   transition: background calc(var(--delay) / 2), color calc(var(--delay) / 2);
   cursor: pointer;
