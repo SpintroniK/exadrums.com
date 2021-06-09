@@ -1,11 +1,15 @@
 <template>
   <header>
-    <a href="#" @click="closeMenu" class="logo"><img src="assets/eXa_logo_text.svg" alt="logo" onclick="#" /></a>
+    <a href="#" @click="closeMenu" class="logo">
+      <img src="assets/eXa_logo_text.svg" alt="logo" onclick="#" />
+    </a>
     <input type="checkbox" class="nav-toggle" id="nav-toggle" ref="menu" />
     <nav>
       <ul>
         <li v-for="menu in menuItems" :key="menu.id">
-          <a :href="`#${menu.id}`" :data-menu-icon="menu.icon" @click="closeMenu">
+          <a :href="`#${menu.id}`"
+            :data-menu-icon="menu.icon"
+            @click="closeMenu">
             {{ menu.title }}
           </a>
         </li>
@@ -32,18 +36,18 @@
     methods: {
       closeMenu() {
         this.$refs.menu.checked = false
-      }
+      },
     },
     computed: {
       newContents: function () {
         return [...this.contents]
-        },
+      },
       menuItems: function () {
         this.newContents.push(this.about)
         return this.newContents
-      }
-    }
-  }
+      },
+    },
+  };
 </script>
 
 <style>
@@ -65,7 +69,7 @@
     display: flex;
   }
 
-  header .logo>img{
+  header .logo > img {
     max-height: calc(1.5 * var(--spacer));
   }
 
@@ -206,30 +210,41 @@
     header {
       display: grid;
       grid-template-areas: ". logo nav .";
-      grid-template-columns: 1fr minmax(min-content, 524px) minmax(min-content, 400px) 1fr;
+      grid-template-columns: 1fr minmax(min-content, 524px) minmax(
+          min-content,
+          400px
+        ) 1fr;
     }
 
     header label {
       display: none;
     }
 
-    nav, nav ul, nav li, nav a, nav a:hover, nav a::before {
-      all: unset;
-    }
-
     .logo {
       grid-area: logo;
     }
 
+    nav,
+    nav ul,
+    nav li,
+    nav a,
+    nav a:hover,
+    nav a::before {
+      all: unset;
+    }
+
     nav {
       grid-area: nav;
-      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
     }
 
     nav ul {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      width: 100%;
+      cursor: pointer;
     }
 
     nav li {
