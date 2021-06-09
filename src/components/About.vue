@@ -168,7 +168,7 @@ export default {
       "testimonials testimonials"
       "signature signature";
     grid-template-columns: 1fr 0.5fr;
-    grid-template-rows: 1fr 2rem auto auto auto 1fr;
+    grid-template-rows: 4rem 2rem auto auto 1fr auto;
     color: var(--clr-background);
     background-color: var(--clr-secondary);
   }
