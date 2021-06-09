@@ -1,5 +1,5 @@
 <template>
-  <div class="testimonial-container">
+  <div class="testimonial-container" ref="container">
     <div class="prev-testimonial" @click="prevTestimonial">❮</div>
     <div
       v-for="currents in currentTestimonials"
@@ -14,7 +14,6 @@
       >
         <div
           class="profile-picture"
-          :style="{ backgroundImage: `url('./assets/sticks.svg')` }"
         >
           <img :src="testimonial.image_path" alt="testimonial image" />
         </div>
@@ -34,6 +33,9 @@ export default {
       current: 0,
       number: 1,
     };
+  },
+  mounted: function () {
+    this.number = this.$refs.container.offsetWidth > 800 ? 3 : 1
   },
   props: {
     testimonials: { type: Array, required: true },
@@ -93,11 +95,6 @@ export default {
   width: 100%;
 }
 
-profiles-container:first-child,
-profiles-container:last-child {
-  opacity: 0.5;
-}
-
 .profile {
   display: flex;
   flex-direction: column;
@@ -105,9 +102,6 @@ profiles-container:last-child {
   width: 100%;
   max-width: 22ch;
   padding: calc(var(--spacer) / 2);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: contain;
   overflow: hidden;
 }
 
@@ -115,6 +109,7 @@ profiles-container:last-child {
   position: relative;
   display: flex;
   overflow: hidden;
+  background-image: url('/assets/sticks.svg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
@@ -145,6 +140,7 @@ profiles-container:last-child {
 }
 
 @media only screen and (min-width: 80ch) {
+
   .profile-picture img {
     background-color: var(--clr-secondary);
     border: 4px solid var(--clr-secondary);
