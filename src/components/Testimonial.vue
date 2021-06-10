@@ -29,7 +29,6 @@
 export default {
   data() {
     return {
-      testimonials: this.testimonials,
       current: 0,
       number: 1,
     };
@@ -140,7 +139,6 @@ export default {
 }
 
 @media only screen and (min-width: 80ch) {
-
   .profile-picture img {
     background-color: var(--clr-secondary);
     border: 4px solid var(--clr-secondary);

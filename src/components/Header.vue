@@ -23,12 +23,6 @@
 
 <script>
   export default {
-    data() {
-      return {
-        contents: this.contents,
-        about: this.about,
-      };
-    },
     props: {
       contents: { type: Array, required: true },
       about: { type: Object, required: true },

@@ -43,17 +43,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      id: this.id,
-      title: this.title,
-      alignment: this.alignment,
-      icons: this.icons,
-      descriptions: this.descriptions,
-      image_path: this.image_path,
-      buttons: this.buttons,
-    };
-  },
   props: {
     id: { type: String, required: true },
     title: { type: String, required: true },
