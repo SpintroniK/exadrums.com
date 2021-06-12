@@ -4,18 +4,16 @@
     <div
       v-for="currents in currentTestimonials"
       :key="currents"
-      class="profiles-container"
-    >
+      class="profiles-container">
       <div
         v-for="testimonial in currents"
         :key="testimonial.name"
         :data-name="testimonial.name"
-        class="profile"
-      >
-        <div
-          class="profile-picture"
-        >
-          <img :src="testimonial.image_path" alt="testimonial image" />
+        class="profile">
+        <div class="profile-picture" >
+          <img
+            :src="testimonial.image_path"
+            alt="testimonial image" />
         </div>
         <p class="profile-name">{{ testimonial.name }}</p>
         <p class="profile-comment">{{ testimonial.comment }}</p>
