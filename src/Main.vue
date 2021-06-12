@@ -3,7 +3,9 @@
     :contents="contents"
     :about="about">
   </Header>
-  <Hero></Hero>
+  <Hero
+    :observer="observer">
+  </Hero>
   <Content
     v-for="content in contents"
     :key="content.id"
@@ -14,8 +16,11 @@
     :descriptions="content.descriptions"
     :image_path="content.image_path"
     :buttons="content.buttons"
-  ></Content>
-  <About></About>
+    :observer="observer">
+  </Content>
+  <About
+    :observer="observer">
+  </About>
 </template>
 
 <script>
@@ -141,6 +146,7 @@ export default {
           ],
         },
       ],
+      observer: null,
     };
   },
   components: {
@@ -149,6 +155,29 @@ export default {
     Content,
     About,
   },
+  created() {
+    this.observer = new IntersectionObserver(this.onElementObserved, {
+      threshold: 1.0,
+    })
+  },
+  mounted() {
+    const animElements = document.querySelectorAll('.lazy-image, .icon, hr, h1');
+    animElements.forEach((element) => {
+      this.observer.observe(element);
+    });
+  },
+  methods: {
+    onElementObserved (entries) {
+      entries.forEach(({ target, isIntersecting }) => {
+        if (!isIntersecting) return
+        this.observer.unobserve(target)
+        
+      });
+    }
+  },
+  destroy() {
+    this.observer.disconnect();
+  }
 };
 </script>
 
