@@ -26,8 +26,8 @@
 
     <Testimonial
       :testimonials="testimonials"
-      class="testimonials"
-    ></Testimonial>
+      class="testimonials">
+    </Testimonial>
 
     <p class="signature">by Jérémy Oden</p>
   </section>
@@ -97,7 +97,6 @@ export default {
   flex-direction: column;
   justify-content: space-between;
   margin: auto 0;
-  min-height: 100vh;
 }
 
 .e-mail {
@@ -155,6 +154,7 @@ export default {
 
 .signature {
   text-align: center;
+  padding: var(--spacer);
 }
 
 @media only screen and (min-width: 80ch) {
@@ -170,7 +170,6 @@ export default {
     grid-template-columns: 1fr 0.5fr;
     grid-template-rows: 4rem 2rem auto auto 1fr auto;
     color: var(--clr-background);
-    background-color: var(--clr-secondary);
   }
 
   .about h1 {
