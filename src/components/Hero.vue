@@ -70,9 +70,7 @@
 
   .hero-banner hr {
     grid-area: hr;
-    position: relative;
-    top: 100%;
-    transform: translateY(-100%);
+    align-self: center;
   }
 
   .hero-banner .text-container {
@@ -95,14 +93,14 @@
 
   .hero-banner .btn-dark {
     grid-area: btn-left;
-    align-self: start;
+    align-self: center;
     justify-self: center;
     max-height: 3rem;
   }
 
   .hero-banner .btn-light {
     grid-area: btn-right;
-    align-self: start;
+    align-self: center;
     justify-self: center;
     max-height: 3rem;
   }
