@@ -2,27 +2,28 @@
   <section
     class="content-section"
     :class="[alignment == 'left' ? 'align-left' : 'align-right']"
-    :id="id"
-  >
+    :id="id">
     <h1>{{ title }}</h1>
     <div class="image-container">
-      <img :src="image_path" alt="content-section image" />
+      <img class="lazy-image"
+        :data-src="image_path"
+        src=""
+        alt="content-section image" />
     </div>
-    <hr />
+    <hr>
     <div class="icons-container">
-      <img
+      <img class="lazy-image"
         v-for="icon in icons"
         :key="icon.name"
-        :src="icon.path"
-        :alt="icon.name"
-      />
+        :data-src="icon.path"
+        src=""
+        :alt="icon.name" />
     </div>
     <div class="text-container">
       <p
         v-for="description in descriptions"
         :key="description.id"
-        class="plain-text"
-      >
+        class="plain-text">
         {{ description.text }}
       </p>
     </div>
@@ -33,8 +34,7 @@
         :data-btn-icon="button.icon"
         :class="button.class"
         :href="button.link"
-        class="button"
-      >
+        class="button">
         {{ button.name }}
       </a>
     </div>
@@ -64,6 +64,7 @@ export default {
 
 .content-section hr {
   margin: var(--spacer) auto;
+  transition-delay: var(--delay);
 }
 
 .content-section .image-container {
@@ -77,6 +78,7 @@ export default {
   height: 100%;
   object-fit: contain;
   object-position: center;
+  transition-delay: var(--delay);
 }
 
 .content-section .icons-container {
@@ -88,6 +90,11 @@ export default {
 .content-section .icons-container img {
   height: calc(3 * var(--spacer));
   min-width: auto;
+  transform: translateY(-25%) scaleY(90%);
+  transform-origin: top;
+  opacity: 0;
+  transition-duration: calc(3 * var(--delay));
+  transition-delay: calc(1.5 * var(--delay));
 }
 
 @media only screen and (min-width: 80ch) {
