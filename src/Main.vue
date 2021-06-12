@@ -265,17 +265,22 @@ h1 {
     max-width: 1024px;
     margin: auto;
     background: rgb(255, 255, 255);
-    background: linear-gradient(
-      135deg,
+    background: radial-gradient(
+      circle at 50% 123%,
+      var(--clr-secondary) 33%,
+      transparent 33.03%,
+      transparent 100%
+    ),
+    radial-gradient(
+      circle at top left,
       var(--clr-secondary) 25%,
-      var(--clr-ternary) 25%,
-      var(--clr-ternary) 45%,
-      var(--clr-background) 45%,
+      var(--clr-ternary) 25.03%,
+      var(--clr-ternary) 50%,
+      var(--clr-background) 50.03%,
       var(--clr-background) 100%
     );
     background-position: top left;
     background-repeat: no-repeat;
-    background-size: 100% 120%;
   }
 
   .btn-light {
