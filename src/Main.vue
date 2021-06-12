@@ -172,6 +172,21 @@ export default {
         if (!isIntersecting) return
         this.observer.unobserve(target)
         
+        if (target.tagName == "IMG") {
+          if (target.classList.contains("lazy-image")) {
+            target.src = target.dataset.src
+          }
+          target.classList.add("slide-in")
+        }
+
+        if (target.tagName == "HR") {
+          target.classList.add("slide-in")
+        }
+
+        if (target.tagName == "H1") {
+          target.classList.add("h1-slide__in")
+        }
+        console.log(`Target type: ${ target.tagName }, intersect: ${ isIntersecting }`);
       });
     }
   },
@@ -209,6 +224,22 @@ body {
   font-weight: 300;
 }
 
+.lazy-image {
+  transform: translateY(5%);
+  opacity: 0;
+  transform-origin: bottom;
+  transition-duration: calc(5 * var(--delay));
+  transition-delay: var(--delay);
+}
+
+.slide-in {
+  transform: scale(1) translate(0, 0) !important;
+  opacity: 1 !important;
+  transition:
+    transform initial ease-in-out,
+    opacity initial linear;
+}
+
 li {
   list-style-type: none;
 }
@@ -228,6 +259,9 @@ hr {
   width: 80%;
   height: 0.25rem;
   margin: 0 auto 0 auto;
+  transform: scaleX(0);
+  transition: transform 1s ease;
+  transition-duration: calc(1.5 * var(--delay));
 }
 
 h1 {
@@ -237,7 +271,17 @@ h1 {
   font-size: clamp(2em, 5vw, 3.5em);
   line-height: 1;
   font-weight: 400;
-  transform: scaleY(1.33);
+  transform: scaleY(1) translateY(2rem);
+  transform-origin: bottom;
+  opacity: 0;
+}
+
+.h1-slide__in {
+  transform: scaleY(1.33) translateY(0);
+  opacity: 1;
+  transition:
+    transform calc(2 * var(--delay)) ease,
+    opacity calc(2 * var(--delay)) ease;
 }
 
 .text-container {
