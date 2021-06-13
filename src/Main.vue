@@ -58,23 +58,23 @@ export default {
           descriptions: [
             {
               id: 1,
-              text: "Software, lorem toto ipsum tutu dolor tata. Lorem toto ipsum tutu dolor tata.",
+              text: "eXaDrums software is fully open source and runs on PC as well as Raspberry Pi.",
             },
             {
               id: 2,
-              text: "Software, titi lorem toto ipsum tutu dolor tata. Titi lorem toto ipsum tutu dolor tata.",
+              text: "It also brings high sound quality and very low latency, that are comparable to those of professional drum modules.",
             },
           ],
           image_path: "./assets/software.png",
           buttons: [
             {
-              name: "Toto",
+              name: "More About the Software",
               icon: "⎔",
               class: "btn-dark",
               link: "#",
             },
             {
-              name: "Titi",
+              name: "More About Performance",
               icon: "⎔",
               class: "btn-light",
               link: "#",
@@ -95,17 +95,21 @@ export default {
           descriptions: [
             {
               id: 1,
-              text: "Hardware, lorem toto ipsum tutu dolor tata. Lorem toto ipsum tutu dolor tata.",
+              text: "eXaDrums runs on multiple platforms, including Raspberry Pi.",
             },
             {
               id: 2,
-              text: "Hardware, titi lorem toto ipsum tutu dolor tata. Titi lorem toto ipsum tutu dolor tata.",
+              text: "The DIY sensor board allows up to 8 triggers, and a 16-trigger version is on its way.",
+            },
+            {
+              id: 3,
+              text: "You can use any Raspberry Pi-compatible soundcard or DAC to achieve the best sound quality you can get.",
             },
           ],
           image_path: "./assets/hardware.jpg",
           buttons: [
             {
-              name: "Toto",
+              name: "More About the Hardware",
               icon: "⎔",
               class: "btn-dark",
               link: "#",
@@ -130,17 +134,13 @@ export default {
           descriptions: [
             {
               id: 1,
-              text: "Casing, lorem toto ipsum tutu dolor tata. Titi lorem toto ipsum tutu dolor tata.",
-            },
-            {
-              id: 2,
-              text: "Casing, titi lorem toto ipsum tutu dolor tata. Titi lorem toto ipsum tutu dolor tata.",
+              text: "You can also make a 3D-printed enclosure, which will make your drum module look great.",
             },
           ],
           image_path: "./assets/casing.png",
           buttons: [
             {
-              name: "Toto",
+              name: "More About the Enclosure",
               icon: "⎔",
               class: "btn-dark",
               link: "#",

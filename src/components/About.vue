@@ -2,12 +2,11 @@
   <section class="about" id="about">
     <h1>About</h1>
 
-    <p class="e-mail">exadrums@contact.com</p>
+    <p class="e-mail">contact@exadrums.com</p>
+
 
     <p class="plain-text">
-      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quibusdam nemo
-      temporibus id tempore neque officia consequatur eius accusantium quidem
-      ipsum?
+      You can find more information or seek help on social media:
     </p>
 
     <div class="social-container">

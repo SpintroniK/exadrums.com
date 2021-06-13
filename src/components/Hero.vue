@@ -4,18 +4,18 @@
       <img src="assets/hero_img.jpg" alt="" />
     </div>
     <hr />
-    <h1>A cheap alternative to<br />professionnal drum module</h1>
+    <h1>An Open Source Drum Module<br />With Professional Specs</h1>
     <div class="text-container">
       <p class="plain-text">
-        EXADRUMS is a fully featured <b>e-drum module</b> with professionnal
-        performances that you can build yourself for a low price tag.
+        EXADRUMS is a fully functional <b>drum module</b>, with professional
+        specs, that you can build yourself and customize.
       </p>
       <p class="plain-text">
-        With a 7 inch <b>touch screen</b> it bring a smealess experience that
-        enable your to focus on your music.
+        With a 7 inch <b>touch screen</b> and a user-friendly interface, it offers a seamless experience that
+        makes drumming a joy.
       </p>
     </div>
-    <a href="#" class="button btn-dark" data-btn-icon="#">Build your own</a>
+    <a href="#" class="button btn-dark" data-btn-icon="#">Make Your Own</a>
     <a href="#" class="button btn-light" data-btn-icon="#">Documentation</a>
   </section>
 </template>
