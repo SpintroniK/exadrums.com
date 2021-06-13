@@ -226,22 +226,6 @@ body {
   font-weight: 300;
 }
 
-.lazy-image {
-  transform: translateY(5%);
-  opacity: 0;
-  transform-origin: bottom;
-  transition-duration: calc(5 * var(--delay));
-  transition-delay: var(--delay);
-}
-
-.slide-in {
-  transform: scale(1) translate(0, 0) !important;
-  opacity: 1 !important;
-  transition:
-    transform initial ease-in-out,
-    opacity initial linear;
-}
-
 li {
   list-style-type: none;
 }
@@ -335,26 +319,34 @@ h1 {
   background-color: var(--clr-ternary);
 }
 
+.lazy-image {
+  transform: translateY(5%);
+  opacity: 0;
+  transform-origin: bottom;
+  transition-duration: calc(5 * var(--delay));
+  transition-delay: var(--delay);
+}
+
+.slide-in {
+  transform: scale(1) translate(0, 0) !important;
+  opacity: 1 !important;
+  transition:
+    transform initial ease-in-out,
+    opacity initial linear;
+}
+
 @media only screen and (min-width: 80ch) {
   body {
-    max-width: 1024px;
-    margin: auto;
     background: rgb(255, 255, 255);
-    background: radial-gradient(
-      circle at 50% 123%,
-      var(--clr-secondary) 33%,
-      transparent 33.03%,
-      transparent 100%
-    ),
-    radial-gradient(
-      circle at top left,
+    background:
+    linear-gradient( 135deg,
       var(--clr-secondary) 25%,
       var(--clr-ternary) 25.03%,
       var(--clr-ternary) 50%,
-      var(--clr-background) 50.03%,
-      var(--clr-background) 100%
+      var(--clr-background) 50.03%
     );
-    background-position: top left;
+    background-position: top right;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
   }
 
