@@ -3,21 +3,23 @@
     :contents="contents"
     :about="about">
   </Header>
-  <Hero
-    :observer="observer">
-  </Hero>
-  <Content
-    v-for="content in contents"
-    :key="content.id"
-    :id="content.id"
-    :title="content.title"
-    :alignment="content.alignment"
-    :icons="content.icons"
-    :descriptions="content.descriptions"
-    :image_path="content.image_path"
-    :buttons="content.buttons"
-    :observer="observer">
-  </Content>
+  <main>
+    <Hero
+      :observer="observer">
+    </Hero>
+    <Content
+      v-for="content in contents"
+      :key="content.id"
+      :id="content.id"
+      :title="content.title"
+      :alignment="content.alignment"
+      :icons="content.icons"
+      :descriptions="content.descriptions"
+      :image_path="content.image_path"
+      :buttons="content.buttons"
+      :observer="observer">
+    </Content>
+  </main>
   <About
     :observer="observer">
   </About>
@@ -354,6 +356,11 @@ h1 {
     );
     background-position: top left;
     background-repeat: no-repeat;
+  }
+
+  main {
+    margin: auto;
+    max-width: 1024px
   }
 
   .btn-light {
