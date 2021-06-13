@@ -250,7 +250,7 @@ a {
 }
 
 section {
-  padding-top: calc(3.5 * var(--spacer));
+  padding-top: calc(4 * var(--spacer));
 }
 
 hr {

@@ -24,7 +24,7 @@
 .hero-banner {
   display: flex;
   flex-direction: column;
-  min-height: 100vh;
+  min-height: 50vh;
 }
 
 .hero-animation-container {
