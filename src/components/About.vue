@@ -161,15 +161,16 @@ export default {
   .about {
     display: grid;
     grid-template-areas:
-      "title title"
-      "hr hr"
-      "text text"
-      "email social"
-      "testimonials testimonials"
-      "signature signature";
-    grid-template-columns: 1fr 0.5fr;
-    grid-template-rows: 4rem 2rem auto auto 1fr auto;
+      ". title title ."
+      ". hr hr ."
+      ". text text ."
+      ". email social ."
+      ". testimonials testimonials ."
+      ". signature signature .";
+    grid-template-columns: auto auto 200px auto;
     color: var(--clr-background);
+    background-color: var(--clr-secondary);
+    min-height: 50vh;
   }
 
   .about h1 {
@@ -206,7 +207,6 @@ export default {
   .social-container {
     margin: unset;
     grid-area: social;
-    margin: 0 3vw;
   }
 
   .social-container a:hover::after {
