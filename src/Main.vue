@@ -276,6 +276,7 @@ h1 {
 
 .plain-text {
   margin: var(--spacer) var(--content-margin);
+  text-align: justify;
 }
 
 .btn-container {
