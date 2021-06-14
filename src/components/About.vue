@@ -170,6 +170,7 @@ export default {
     color: var(--clr-background);
     background-color: var(--clr-secondary);
     min-height: 50vh;
+    margin-top: calc(4 * var(--spacer));
   }
 
   .about h1 {
