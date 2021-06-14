@@ -41,7 +41,7 @@
 }
 
 .hero-banner h1 {
-  font-size: clamp(1.5em, 5vw, 3.5em);
+  font-size: clamp(1.33em, 5vw, 3.5em);
   font-weight: 400;
   text-align: right;
   line-height: 0.9;
