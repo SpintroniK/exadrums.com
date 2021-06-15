@@ -1,7 +1,9 @@
 <template>
   <section class="hero-banner">
     <div class="hero-animation-container">
-      <img src="assets/hero_img.jpg" alt="" />
+      <iframe width="100%" height="100%"
+        src="https://www.youtube.com/embed/EdOBW7xA3Sc?autoplay=1" title="eXaDrums" frameborder="0">
+      </iframe>
     </div>
     <hr />
     <h1>An Open Source Drum Module<br />With Professional Specs</h1>
@@ -33,11 +35,15 @@
   max-height: 60ch;
 }
 
-.hero-animation-container img {
+.hero-animation-container iframe {
   width: 100%;
   height: 100%;
   object-fit: cover;
   object-position: left center;
+  background: url(/assets/hero_img.jpg);
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
 }
 
 .hero-banner h1 {
@@ -89,6 +95,18 @@
   .hero-animation-container {
     all: unset;
     grid-area: image;
+    z-index: 5;
+  }
+
+  .hero-animation-container iframe {
+    cursor: pointer;
+  }
+
+  .hero-animation-container iframe:hover {
+    transform: translateX(calc(-50% - calc(var(--spacer) / 2))) scale(2);
+    transition: transform 0.5s ease,
+                outline 0.35s ease 0.15s;
+    outline: 1000vw solid rgba(0, 0, 0, 0.8);
   }
 
   .hero-banner .btn-dark {
