@@ -321,7 +321,7 @@ h1 {
 }
 
 .lazy-image {
-  transform: translateY(5%);
+  transform: perspective(200px) translateY(5%);
   opacity: 0;
   transform-origin: bottom;
   transition-duration: calc(5 * var(--delay));
@@ -329,7 +329,7 @@ h1 {
 }
 
 .slide-in {
-  transform: scale(1) translate(0, 0) !important;
+  transform: scale(1) translate(0, 0) rotate(0deg) !important;
   opacity: 1 !important;
   transition:
     transform initial ease-in-out,
@@ -362,6 +362,10 @@ h1 {
 
   .btn-light:hover {
     box-shadow: none;
+  }
+
+  .lazy-image {
+    transform: perspective(200px) translateY(0) rotateX(15deg);
   }
 }
 </style>
