@@ -95,6 +95,13 @@ export default {
   opacity: 0;
   transition-duration: calc(3 * var(--delay));
   transition-delay: calc(1.5 * var(--delay));
+  cursor: pointer;
+}
+
+.icons-container img:hover {
+  transform: scale(1.2) !important;
+  transform-origin: center;
+  transition: transform var(--delay);
 }
 
 @media only screen and (min-width: 80ch) {
