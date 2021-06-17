@@ -72,6 +72,7 @@
     text-align: left;
     align-self: end;
     color: var(--clr-background);
+    padding-top: var(--spacer);
   }
 
   .hero-banner hr {
