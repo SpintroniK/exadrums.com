@@ -2,7 +2,7 @@
   <section class="hero-banner">
     <div class="hero-animation-container">
       <iframe width="100%" height="100%"
-        src="https://www.youtube.com/embed/EdOBW7xA3Sc?autoplay=1" title="eXaDrums" frameborder="0">
+        src="https://www.youtube.com/embed/EdOBW7xA3Sc?autoplay=1&mute=1&controls=2&modestbranding" title="eXaDrums" frameborder="0">
       </iframe>
     </div>
     <hr />
