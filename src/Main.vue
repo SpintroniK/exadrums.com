@@ -280,6 +280,7 @@ h1 {
 .plain-text {
   margin: var(--spacer) var(--content-margin);
   text-align: justify;
+  font-size: 1.125em;
 }
 
 .btn-container {
