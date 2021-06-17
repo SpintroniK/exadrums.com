@@ -11,13 +11,13 @@
 
     <div class="social-container">
       <a href="#" data-link="github">
-        <img src="assets/github.png" alt="github" />
+        <img width="30" heigh="30" src="assets/github.png" alt="github" />
       </a>
       <a href="#" data-link="hackaday">
-        <img src="assets/hackaday.png" alt="hackaday" />
+        <img width="30" heigh="30" src="assets/hackaday.png" alt="hackaday" />
       </a>
       <a href="#" data-link="youtube">
-        <img src="assets/youtube.png" alt="youtube" />
+        <img width="30" heigh="30" src="assets/youtube.png" alt="youtube" />
       </a>
     </div>
 
@@ -42,42 +42,42 @@ export default {
         {
           name: "Toto1",
           image_path:
-            "http://photo-folio.freewebmaster.fr/photos/mammals/dogs/IMG_4814.jpg",
+            "assets/tux.png",
           comment:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
         {
           name: "Toto2",
           image_path:
-            "http://photo-folio.freewebmaster.fr/photos/mammals/dogs/IMG_4814.jpg",
+            "assets/tux.png",
           comment:
             "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         },
         {
           name: "Toto3",
           image_path:
-            "http://photo-folio.freewebmaster.fr/photos/mammals/dogs/IMG_4814.jpg",
+            "assets/tux.png",
           comment:
             "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         },
         {
           name: "Toto4",
           image_path:
-            "http://photo-folio.freewebmaster.fr/photos/mammals/dogs/IMG_4814.jpg",
+            "assets/tux.png",
           comment:
             "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         },
         {
           name: "Toto5",
           image_path:
-            "http://photo-folio.freewebmaster.fr/photos/mammals/dogs/IMG_4814.jpg",
+            "assets/tux.png",
           comment:
             "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         },
         {
           name: "Toto6",
           image_path:
-            "http://photo-folio.freewebmaster.fr/photos/mammals/dogs/IMG_4814.jpg",
+            "assets/tux.png",
           comment:
             "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         },
@@ -147,8 +147,8 @@ export default {
 }
 
 .social-container img {
-  height: clamp(1.25rem, 6vw, 1.4rem);
-  min-width: auto;
+  width: clamp(1.25rem, 6vw, 1.4rem);
+  height: auto;
 }
 
 .signature {
@@ -169,8 +169,8 @@ export default {
     grid-template-columns: auto auto 200px auto;
     color: var(--clr-background);
     background-color: var(--clr-secondary);
-    min-height: 50vh;
-    margin-top: calc(4 * var(--spacer));
+    min-height: 100vh;
+    padding-bottom: 0;
   }
 
   .about h1 {

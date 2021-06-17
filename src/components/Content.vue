@@ -6,6 +6,8 @@
     <h1>{{ title }}</h1>
     <div class="image-container">
       <img class="lazy-image"
+        width="300"
+        height="300"
         :data-src="image_path"
         src=""
         alt="content-section image" />
@@ -13,6 +15,8 @@
     <hr>
     <div class="icons-container">
       <img class="lazy-image"
+        width="50"
+        height="50"
         v-for="icon in icons"
         :key="icon.name"
         :data-src="icon.path"
@@ -75,7 +79,7 @@ export default {
 
 .content-section .image-container img {
   width: 100%;
-  height: 100%;
+  height: auto;
   object-fit: contain;
   object-position: center;
   transition-delay: var(--delay);
@@ -88,8 +92,8 @@ export default {
 }
 
 .content-section .icons-container img {
+  width: calc(3 * var(--spacer));
   height: calc(3 * var(--spacer));
-  min-width: auto;
   transform: translateY(-25%) scaleY(90%);
   transform-origin: top;
   opacity: 0;
@@ -107,7 +111,6 @@ export default {
 @media only screen and (min-width: 80ch) {
   .content-section {
     display: grid;
-    grid-template-rows: 1fr 2rem 5rem 0fr 1fr;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -134,7 +137,6 @@ export default {
     grid-area: image;
     margin: auto;
     width: 90%;
-    height: 100%;
   }
 
   .content-section h1 {
