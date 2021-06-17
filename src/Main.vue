@@ -239,7 +239,7 @@ a {
 }
 
 section {
-  padding-top: calc(4 * var(--spacer));
+  padding-top: calc(3.5 * var(--spacer));
 }
 
 hr {
@@ -358,6 +358,10 @@ h1 {
   main {
     margin: auto;
     max-width: 1024px
+  }
+
+  section {
+    padding: 10% 0 10% 0;
   }
 
   .btn-light {
