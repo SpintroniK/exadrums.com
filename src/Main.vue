@@ -188,7 +188,6 @@ export default {
         if (target.tagName == "H1") {
           target.classList.add("h1-slide__in")
         }
-        console.log(`Target type: ${ target.tagName }, intersect: ${ isIntersecting }`);
       });
     }
   },
