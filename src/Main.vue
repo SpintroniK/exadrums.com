@@ -226,6 +226,10 @@ body {
   font-weight: 300;
 }
 
+::selection {
+  background-color: var(--clr-ascent);
+}
+
 li {
   list-style-type: none;
 }
