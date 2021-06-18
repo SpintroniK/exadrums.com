@@ -1,9 +1,10 @@
 <template>
   <section class="hero-banner">
     <div class="hero-animation-container">
-      <iframe width="100%" height="100%"
-        src="https://www.youtube.com/embed/EdOBW7xA3Sc?autoplay=1&mute=1&controls=2&modestbranding" title="eXaDrums" frameborder="0">
-      </iframe>
+      <video width="100%" height="100%" controls muted autoplay>
+        <source src="assets/exadrums_hero_video.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
     </div>
     <hr />
     <h1>An Open Source Drum Module<br />With Professional Specs</h1>
@@ -35,11 +36,11 @@
   max-height: 60ch;
 }
 
-.hero-animation-container iframe {
+.hero-animation-container video {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: left center;
+  object-position: center;
   background: url(/assets/hero_img.jpg);
   background-size: cover;
   background-position: left center;
@@ -99,11 +100,7 @@
     z-index: 5;
   }
 
-  .hero-animation-container iframe {
-    cursor: pointer;
-  }
-
-  .hero-animation-container iframe:hover {
+  .hero-animation-container video:hover {
     transform: translateX(calc(-50% - calc(var(--spacer) / 2))) scale(2);
     transition: transform 0.5s ease,
                 outline 0.35s ease 0.15s;
