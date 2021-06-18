@@ -6,8 +6,8 @@
     <h1>{{ title }}</h1>
     <div class="image-container">
       <img class="lazy-image"
-        width="300"
-        height="300"
+        width="640"
+        height="480"
         :data-src="image_path"
         src=""
         alt="content-section image" />
@@ -73,13 +73,12 @@ export default {
 
 .content-section .image-container {
   width: 100%;
-  height: 33vh;
-  max-height: 40ch;
+  height: auto;
 }
 
 .content-section .image-container img {
   width: 100%;
-  height: auto;
+  max-height: 75vw;
   object-fit: contain;
   object-position: center;
   transition-delay: var(--delay);
