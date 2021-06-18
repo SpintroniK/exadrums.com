@@ -44,15 +44,15 @@ export default {
           icons: [
             {
               name: "Linux",
-              path: "./assets/tux.png",
+              path: "./assets/tux_logo.svg",
             },
             {
               name: "Debian",
-              path: "./assets/debian.png",
+              path: "./assets/debian_logo.svg",
             },
             {
               name: "C++",
-              path: "./assets/cpp.png",
+              path: "./assets/cpp_logo.svg",
             },
           ],
           descriptions: [
@@ -89,7 +89,11 @@ export default {
           icons: [
             {
               name: "Raspberry pi",
-              path: "./assets/raspberry_pi.png",
+              path: "./assets/raspberry_pi_logo.svg",
+            },
+            {
+              name: "Osh Park",
+              path: "./assets/oshpark_logo.svg"
             },
           ],
           descriptions: [
@@ -124,11 +128,11 @@ export default {
           icons: [
             {
               name: "3d-printed",
-              path: "./assets/3d_printed.png",
+              path: "./assets/3d_printed_logo.svg",
             },
             {
               name: "thingiverse",
-              path: "./assets/thingiverse.png",
+              path: "./assets/thingiverse_logo.svg",
             },
           ],
           descriptions: [

@@ -11,13 +11,13 @@
 
     <div class="social-container">
       <a href="#" data-link="github">
-        <img width="30" heigh="30" src="assets/github.png" alt="github" />
+        <img width="30" heigh="30" src="assets/github_logo.svg" alt="github" />
       </a>
       <a href="#" data-link="hackaday">
-        <img width="30" heigh="30" src="assets/hackaday.png" alt="hackaday" />
+        <img width="30" heigh="30" src="assets/hackaday_logo.svg" alt="hackaday" />
       </a>
       <a href="#" data-link="youtube">
-        <img width="30" heigh="30" src="assets/youtube.png" alt="youtube" />
+        <img width="30" heigh="30" src="assets/youtube_logo.svg" alt="youtube" />
       </a>
     </div>
 
@@ -42,42 +42,42 @@ export default {
         {
           name: "Toto1",
           image_path:
-            "assets/tux.png",
+            "assets/tux_logo.svg",
           comment:
             "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         },
         {
           name: "Toto2",
           image_path:
-            "assets/tux.png",
+            "assets/tux_logo.svg",
           comment:
             "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         },
         {
           name: "Toto3",
           image_path:
-            "assets/tux.png",
+            "assets/tux_logo.svg",
           comment:
             "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         },
         {
           name: "Toto4",
           image_path:
-            "assets/tux.png",
+            "assets/tux_logo.svg",
           comment:
             "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         },
         {
           name: "Toto5",
           image_path:
-            "assets/tux.png",
+            "assets/tux_logo.svg",
           comment:
             "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         },
         {
           name: "Toto6",
           image_path:
-            "assets/tux.png",
+            "assets/tux_logo.svg",
           comment:
             "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         },
