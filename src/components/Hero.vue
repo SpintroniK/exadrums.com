@@ -1,7 +1,7 @@
 <template>
   <section class="hero-banner">
     <div class="hero-animation-container">
-      <video width="100%" height="100%" controls muted autoplay>
+      <video width="100%" height="100%" controls muted autoplay loop>
         <source src="assets/exadrums_hero_video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
