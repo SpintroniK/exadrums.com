@@ -1,7 +1,7 @@
 <template>
   <header>
     <a href="#" @click="closeMenu" class="logo">
-      <img src="assets/eXa_logo_text.svg" alt="logo" onclick="#" />
+      <img width="275" height="38" src="assets/eXa_logo_text.svg" alt="logo" onclick="#" />
     </a>
     <input type="checkbox" class="nav-toggle" id="nav-toggle" ref="menu" />
     <nav>
@@ -64,7 +64,8 @@
   }
 
   header .logo > img {
-    max-height: calc(1.5 * var(--spacer));
+    width: clamp(20ch, 10vw, 50ch);
+    height: auto;
   }
 
   header label {
