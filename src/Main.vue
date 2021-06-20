@@ -206,7 +206,7 @@ export default {
   --clr-background: white;
   --clr-semi-transparent: rgba(238, 239, 237, 0.66);
   --spacer: 1rem;
-  --content-margin: 2.5%;
+  --content-margin: 10%;
   --delay: 0.3s;
 }
 
@@ -369,6 +369,10 @@ h1 {
 
   .lazy-image {
     transform: perspective(200px) translateY(0) rotateX(15deg);
+  }
+
+  .plain-text {
+    margin: calc(var(--spacer) / 2) auto;
   }
 }
 </style>
