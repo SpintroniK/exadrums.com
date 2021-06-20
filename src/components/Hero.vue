@@ -18,8 +18,8 @@
         makes drumming a joy.
       </p>
     </div>
-    <a href="#" class="button btn-dark" data-btn-icon="#">Make Your Own</a>
-    <a href="#" class="button btn-light" data-btn-icon="#">Documentation</a>
+    <a href="#" class="button btn-dark" data-btn-icon="">Make Your Own</a>
+    <a href="#" class="button btn-light" data-btn-icon="">Documentation</a>
   </section>
 </template>
 

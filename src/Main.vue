@@ -34,12 +34,12 @@ import About from "./components/About.vue";
 export default {
   data() {
     return {
-      about: { id: "about", title: "About", icon: "#" },
+      about: { id: "about", title: "About", icon: "" },
       contents: [
         {
           id: "software",
           title: "Software",
-          icon: "</>",
+          icon: "",
           alignment: "right",
           icons: [
             {
@@ -69,13 +69,13 @@ export default {
           buttons: [
             {
               name: "More About the Software",
-              icon: "⎔",
+              icon: "",
               class: "btn-dark",
               link: "#",
             },
             {
               name: "More About Performance",
-              icon: "⎔",
+              icon: "",
               class: "btn-light",
               link: "#",
             },
@@ -84,7 +84,7 @@ export default {
         {
           id: "hardware",
           title: "Hardware",
-          icon: "#",
+          icon: "",
           alignment: "left",
           icons: [
             {
@@ -114,7 +114,7 @@ export default {
           buttons: [
             {
               name: "More About the Hardware",
-              icon: "⎔",
+              icon: "",
               class: "btn-dark",
               link: "#",
             },
@@ -123,7 +123,7 @@ export default {
         {
           id: "enclosure",
           title: "Enclosure",
-          icon: "#",
+          icon: "",
           alignment: "right",
           icons: [
             {
@@ -145,7 +145,7 @@ export default {
           buttons: [
             {
               name: "More About the Enclosure",
-              icon: "⎔",
+              icon: "",
               class: "btn-dark",
               link: "#",
             },
@@ -216,6 +216,12 @@ export default {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+}
+
+@font-face {
+  font-family: "exadrums-icons";
+  src: local("exadrums-icons"),
+   url(/assets/icomoon.ttf) format("truetype");
 }
 
 html,

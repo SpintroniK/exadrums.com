@@ -190,6 +190,8 @@
   nav a::before {
     content: attr(data-menu-icon);
     position: absolute;
+    font-family: "exadrums-icons";
+    font-weight: 200;
     top: 33%;
     left: 50%;
     font-size: 10vw;
