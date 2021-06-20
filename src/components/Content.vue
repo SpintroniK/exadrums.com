@@ -63,7 +63,6 @@ export default {
 .content-section {
   display: flex;
   flex-direction: column;
-  min-height: 50vh;
 }
 
 .content-section hr {
@@ -111,6 +110,7 @@ export default {
   .content-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto 0.5fr 0.5fr;
   }
 
   .align-left {
@@ -160,13 +160,14 @@ export default {
 
   .content-section .text-container {
     grid-area: text;
+    align-self: center;
     justify-self: center;
     width: 80%;
   }
 
   .content-section .btn-container {
     grid-area: button;
-    align-self: start;
+    align-self: center;
     justify-self: center;
     width: 80%;
   }
