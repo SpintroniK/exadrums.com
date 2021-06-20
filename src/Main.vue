@@ -178,14 +178,10 @@ export default {
         if (!isIntersecting) return
         this.observer.unobserve(target)
         
-        if (target.tagName == "IMG") {
+        if (target.tagName == "IMG" || target.tagName == "HR") {
           if (target.classList.contains("lazy-image")) {
             target.src = target.dataset.src
           }
-          target.classList.add("slide-in")
-        }
-
-        if (target.tagName == "HR") {
           target.classList.add("slide-in")
         }
 
