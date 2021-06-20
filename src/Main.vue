@@ -240,6 +240,7 @@ a {
 
 section {
   padding-top: calc(3.5 * var(--spacer));
+  min-height: calc(100vh - calc(3.5 * var(--spacer)));
 }
 
 hr {
@@ -354,7 +355,8 @@ h1 {
   }
 
   section {
-    padding: 10% 0 10% 0;
+    padding: 12% 0 12% 0;
+    min-height: unset;
   }
 
   .btn-light {
