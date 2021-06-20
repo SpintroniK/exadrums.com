@@ -106,7 +106,7 @@ export default {
   transition: transform var(--delay);
 }
 
-@media only screen and (min-width: 80ch) {
+@media only screen and (min-width: 85ch) {
   .content-section {
     display: grid;
     grid-template-columns: 1fr 1fr;

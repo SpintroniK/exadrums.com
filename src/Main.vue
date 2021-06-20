@@ -341,7 +341,7 @@ h1 {
     opacity initial linear;
 }
 
-@media only screen and (min-width: 80ch) {
+@media only screen and (min-width: 85ch) {
   html {
     background-image: url('/assets/background.svg');
     background-size: 100%;

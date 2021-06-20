@@ -201,7 +201,7 @@
     color: var(--clr-background);
   }
 
-  @media only screen and (min-width: 80ch) {
+  @media only screen and (min-width: 85ch) {
     header {
       display: grid;
       grid-template-areas: ". logo nav .";

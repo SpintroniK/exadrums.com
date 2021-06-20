@@ -56,7 +56,7 @@
   margin: var(--spacer) 2.5%;
 }
 
-@media only screen and (min-width: 80ch) {
+@media only screen and (min-width: 85ch) {
   .hero-banner {
     display: grid;
     grid-template-areas:

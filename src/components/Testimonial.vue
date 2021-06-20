@@ -137,7 +137,7 @@ export default {
   font-weight: 300;
 }
 
-@media only screen and (min-width: 80ch) {
+@media only screen and (min-width: 85ch) {
   .profile-picture img {
     background-color: var(--clr-secondary);
     border: 4px solid var(--clr-secondary);

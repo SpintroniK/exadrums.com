@@ -156,7 +156,7 @@ export default {
   padding: var(--spacer);
 }
 
-@media only screen and (min-width: 80ch) {
+@media only screen and (min-width: 85ch) {
   .about {
     display: grid;
     grid-template-areas:
