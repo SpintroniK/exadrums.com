@@ -311,8 +311,13 @@ h1 {
 
 .button::before {
   content: attr(data-btn-icon);
+  font-family: "exadrums-icons";
   position: absolute;
-  left: calc(3 * var(--spacer));
+  display: flex;
+  align-items: center;
+  top: 0;
+  bottom: 0;
+  left: 5%;
 }
 
 .btn-dark {
@@ -357,6 +362,10 @@ h1 {
   section {
     padding: 12% 0 12% 0;
     min-height: unset;
+  }
+
+  .button {
+    width: 95%;
   }
 
   .btn-light {
