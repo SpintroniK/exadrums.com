@@ -345,17 +345,10 @@ h1 {
 }
 
 @media only screen and (min-width: 80ch) {
-  body {
-    background: rgb(255, 255, 255);
-    background:
-    linear-gradient( 135deg,
-      var(--clr-secondary) 25%,
-      var(--clr-ternary) 25.03%,
-      var(--clr-ternary) 50%,
-      var(--clr-background) 50.03%
-    );
-    background-position: top right;
-    background-size: 100% 100%;
+  html {
+    background-image: url('/assets/background.svg');
+    background-size: 100%;
+    background-position: top;
     background-repeat: no-repeat;
   }
 
