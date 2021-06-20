@@ -381,7 +381,7 @@ h1 {
   }
 
   .plain-text {
-    margin: calc(var(--spacer) / 2) auto;
+    margin: calc(var(--spacer) / 2) 2%;
   }
 }
 </style>
