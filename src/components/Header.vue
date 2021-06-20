@@ -64,7 +64,7 @@
   }
 
   header .logo > img {
-    width: clamp(20ch, 10vw, 50ch);
+    width: 20ch;
     height: auto;
   }
 
