@@ -1,7 +1,7 @@
 <template>
   <section class="hero-banner">
     <div class="hero-animation-container">
-      <video width="100%" height="100%" controls muted autoplay loop>
+      <video width="100%" height="100%" controls="controls" preload="true" muted autoplay loop poster="/assets/hero_img.jpg">
         <source src="assets/exadrums_hero_video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
@@ -52,6 +52,7 @@
   font-weight: 400;
   text-align: right;
   line-height: 0.9;
+  padding-top: 0.25em;
   margin: var(--spacer) 2.5%;
 }
 
@@ -98,13 +99,26 @@
     all: unset;
     grid-area: image;
     z-index: 5;
+    transform-origin: center;
+    animation: slide-in calc(1.5 * var(--delay)) ease-out both calc(1.5 * var(--delay));
   }
+
+  @keyframes slide-in {
+    from {transform: scale(0.5, 0);
+          opacity: 0;}
+    to {transform: scale(1, 1);
+          opacity: 1}
+  }
+
+   .hero-animation-container video {
+    transition: transform 0.5s ease,
+                outline 0.35s ease 0.15s;
+    outline-color: transparent;
+   }
 
   .hero-animation-container video:hover {
     transform: translateX(calc(-50% - calc(var(--spacer) / 2))) scale(2);
-    transition: transform 0.5s ease,
-                outline 0.35s ease 0.15s;
-    outline: 1000vw solid rgba(0, 0, 0, 0.8);
+    outline: 1000vw solid rgba(0, 0, 0, 0.5);
   }
 
   .hero-banner .btn-dark {
