@@ -32,7 +32,8 @@ export default {
     };
   },
   mounted: function () {
-    this.number = this.$refs.container.offsetWidth > 800 ? 3 : 1
+    this.number = Math.round(this.$refs.container.offsetWidth / 300)
+    console.log(this.number);
   },
   props: {
     testimonials: { type: Array, required: true },
@@ -140,6 +141,27 @@ export default {
   .profile-picture img {
     background-color: var(--clr-secondary);
     border: 4px solid var(--clr-secondary);
+  }
+
+  .profile {
+    opacity: 0.5;
+    transition: var(--delay) ease;
+    cursor: pointer;
+  }
+
+  .profile-picture {
+    background-image: unset;
+  }
+
+  .profile:hover {
+    opacity: 1;
+  }
+
+  .profile:hover > .profile-picture {
+    transform: scale(1.1);
+    transform-origin: bottom;
+    transition: var(--delay) ease;
+    background-image: url('/assets/sticks.svg');
   }
 }
 </style>
