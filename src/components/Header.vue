@@ -55,7 +55,7 @@
     right: 0;
     background-color: rgba(255, 255, 255, 0.95);
     backdrop-filter: blur(5px);
-    padding: calc(var(--spacer) / 2) 2.5% var(--spacer) 2.5%;
+    padding: calc(var(--spacer) / 2);
     z-index: 10;
   }
 
@@ -121,7 +121,7 @@
 
   nav {
     position: fixed;
-    top: calc(3.5 * var(--spacer));
+    top: calc(3 * var(--spacer));
     left: 0;
     width: 100%;
     height: 95vw;
@@ -207,10 +207,7 @@
     header {
       display: grid;
       grid-template-areas: ". logo nav .";
-      grid-template-columns: 1fr minmax(min-content, 524px) minmax(
-          min-content,
-          400px
-        ) 1fr;
+      grid-template-columns: 1fr minmax(min-content, 700px) minmax(min-content, 580px) 1fr;
     }
 
     header label {
@@ -226,7 +223,8 @@
     nav li,
     nav a,
     nav a:hover,
-    nav a::before {
+    nav a::before,
+    nav a:hover::before {
       all: unset;
     }
 
@@ -241,22 +239,25 @@
       display: flex;
       justify-content: space-between;
       width: 100%;
-      cursor: pointer;
     }
 
     nav li {
+      position: relative;
+      height: 100%;
       cursor: pointer;
+    }
+
+    nav li:hover {
+      color: var(--clr-ascent);
     }
 
     nav a {
       font-weight: 400;
-      color: var(--clr-primary);
-      transition: color var(--delay) ease;
+      color: currentColor;
     }
 
     nav a:hover {
-      font-weight: 400;
-      color: var(--clr-ascent);
+      color: currentColor;
     }
   }
 </style>
