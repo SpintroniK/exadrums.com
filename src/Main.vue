@@ -334,7 +334,7 @@ b:hover::before {
   position: relative;
   width: 90%;
   margin: calc(var(--spacer) / 4) auto;
-  padding: calc(var(--spacer) / 2);
+  padding: calc(var(--spacer) / 2) 15%;
   text-align: center;
   font-size: 1.125em;
   border: none;
@@ -343,6 +343,16 @@ b:hover::before {
   cursor: pointer;
   overflow: hidden;
   z-index: 1;
+}
+
+.btn-dark {
+  color: var(--clr-ternary);
+  background-color: var(--clr-primary);
+}
+
+.btn-light {
+  color: var(--clr-primary);
+  background-color: var(--clr-ternary);
 }
 
 .button:hover {
@@ -358,17 +368,7 @@ b:hover::before {
   align-items: center;
   top: 0;
   bottom: 0;
-  left: 5%;
-}
-
-.btn-dark {
-  color: var(--clr-ternary);
-  background-color: var(--clr-primary);
-}
-
-.btn-light {
-  color: var(--clr-primary);
-  background-color: var(--clr-ternary);
+  left: 7.5%;
 }
 
 .lazy-image {
