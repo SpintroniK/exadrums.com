@@ -145,7 +145,7 @@ export default {
 
   .profile {
     opacity: 0.5;
-    transition: var(--delay) ease;
+    transition: opacity var(--delay) ease;
     cursor: pointer;
   }
 
@@ -158,9 +158,7 @@ export default {
   }
 
   .profile:hover > .profile-picture {
-    transform: scale(1.1);
     transform-origin: bottom;
-    transition: var(--delay) ease;
     background-image: url('/assets/sticks.svg');
   }
 }
