@@ -95,7 +95,7 @@ export default {
   transform: translateY(-25%) scaleY(90%);
   transform-origin: top;
   opacity: 0;
-  transition-duration: calc(3 * var(--delay));
+  transition-duration: var(--delay);
   transition-delay: calc(1.5 * var(--delay));
   cursor: pointer;
 }
