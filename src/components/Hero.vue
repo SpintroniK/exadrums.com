@@ -65,7 +65,7 @@
       "text image"
       "btn-left btn-right";
     gap: var(--spacer);
-    grid-template-rows: 1fr 0.5fr auto 1fr;
+    grid-template-rows: auto auto minmax(1fr, 200px) auto;
     grid-template-columns: 1fr 1fr;
   }
 
@@ -74,7 +74,6 @@
     text-align: left;
     align-self: end;
     color: var(--clr-background);
-    padding-top: var(--spacer);
   }
 
   .hero-banner hr {
@@ -108,17 +107,6 @@
           opacity: 0;}
     to {transform: scale(1, 1);
           opacity: 1}
-  }
-
-   .hero-animation-container video {
-    transition: transform 0.5s ease,
-                outline 0.35s ease 0.15s;
-    outline-color: transparent;
-   }
-
-  .hero-animation-container video:hover {
-    transform: translateX(calc(-50% - calc(var(--spacer) / 2))) scale(2);
-    outline: 1000vw solid rgba(0, 0, 0, 0.5);
   }
 
   .hero-banner .btn-dark {
