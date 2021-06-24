@@ -221,11 +221,21 @@ export default {
 @font-face {
   font-family: "exadrums-icons";
   src: local("exadrums-icons"),
-   url(/assets/icomoon.ttf) format("truetype");
+   url(/fonts/exadrums_icons.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "ubuntu";
+  src: local("ubuntu"),
+   url(/fonts/Ubuntu-Light.ttf) format("truetype"),
+   url(/fonts/Ubuntu-Regular.ttf) format("truetype"),
+   url(/fonts/Ubuntu-Medium.ttf) format("truetype"),
+   url(/fonts/Ubuntu-Bold.ttf) format("truetype");
 }
 
 html,
 body {
+  font-family: "ubuntu";
   width: 100%;
   scroll-behavior: smooth;
   font-weight: 300;
