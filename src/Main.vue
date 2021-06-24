@@ -282,6 +282,31 @@ h1 {
   opacity: 0;
 }
 
+b {
+  position: relative;
+}
+
+b::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--clr-ascent);
+  border-radius: 3px;
+  padding: 3px;
+  transform: scaleY(0);
+  transform-origin: top;
+  transition: transform var(--delay);
+  z-index: -1;
+}
+
+b:hover::before {
+  transform: scaleY(1);
+  transform-origin: bottom;
+}
+
 .h1-slide__in {
   transform: scaleY(1.33) translateY(0);
   opacity: 1;
