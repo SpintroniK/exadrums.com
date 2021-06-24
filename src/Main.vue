@@ -255,8 +255,8 @@ a {
 }
 
 section {
-  padding-top: calc(3.5 * var(--spacer));
-  min-height: calc(100vh - calc(3.5 * var(--spacer)));
+  padding-top: calc(3 * var(--spacer));
+  min-height: calc(100vh - calc(3 * var(--spacer)));
 }
 
 hr {
@@ -397,7 +397,7 @@ b:hover::before {
 
   main {
     margin: auto;
-    max-width: 1024px
+    max-width: 1280px
   }
 
   section {
