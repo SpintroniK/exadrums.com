@@ -11,13 +11,13 @@
 
     <div class="social-container">
       <a href="https://github.com/SpintroniK/eXaDrums" data-link="github">
-        <img width="30" heigh="30" src="assets/github_logo.svg" alt="github" />
+        <img width="30" height="30" src="assets/github_logo.svg" alt="github" />
       </a>
       <a href="https://hackaday.io/project/9350-exadrums" data-link="hackaday">
-        <img width="30" heigh="30" src="assets/hackaday_logo.svg" alt="hackaday" />
+        <img width="30" height="30" src="assets/hackaday_logo.svg" alt="hackaday" />
       </a>
       <a href="https://www.youtube.com/channel/UCKlsf7RHYXHVrS000hyja3A" data-link="youtube">
-        <img width="30" heigh="30" src="assets/youtube_logo.svg" alt="youtube" />
+        <img width="30" height="30" src="assets/youtube_logo.svg" alt="youtube" />
       </a>
     </div>
 
