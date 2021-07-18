@@ -13,6 +13,8 @@
         <div class="profile-picture" >
           <img
             :src="testimonial.image_path"
+            width="100"
+            height="100"
             alt="testimonial image" />
         </div>
         <p class="profile-name">{{ testimonial.name }}</p>
@@ -121,6 +123,7 @@ export default {
 
 .profile-picture img {
   width: 100%;
+  height: auto;
   border-radius: 50%;
   object-fit: cover;
   object-position: center;
