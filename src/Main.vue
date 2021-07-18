@@ -222,6 +222,7 @@ export default {
   font-family: "exadrums-icons";
   src: local("exadrums-icons"),
    url(/fonts/exadrums_icons.ttf) format("truetype");
+  font-display: swap;
 }
 
 @font-face {
@@ -231,6 +232,7 @@ export default {
    url(/fonts/Ubuntu-Regular.ttf) format("truetype"),
    url(/fonts/Ubuntu-Medium.ttf) format("truetype"),
    url(/fonts/Ubuntu-Bold.ttf) format("truetype");
+   font-display: swap;
 }
 
 html,
