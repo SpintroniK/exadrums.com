@@ -1,14 +1,17 @@
 <template>
-  <div class="modal-background">
+  <div class="modal-background" @click="closeModal">
     <div class="modal-container">
       <h2>{{ title }}</h2>
       <div class="modal-content">
-        <img v-if="image_path" :src="image_path" alt="pikapika" />
+        <div class="modal-picture">
+          <img v-if="image_path" :src="image_path" alt="pikapika" />
+        </div>
         <div class="modal-texts">
           <p v-for="text in texts" :key="text">
             {{ text }}
           </p>
         </div>
+      </div>
       <span class="modal-close" @click="closeModal">✕</span>
     </div>
   </div>
@@ -19,7 +22,7 @@ export default {
   props: {
     title: { type: String, required: true },
     image_path: { type: String, required: false },
-    text: { type: String, required: false },
+    texts: { type: Array, required: true },
   },
   methods: {
     closeModal() {
@@ -45,10 +48,10 @@ export default {
 
 .modal-container {
   position: relative;
-  width: clamp(30ch, 80%, 70ch);
+  width: clamp(30ch, 90%, 70ch);
   padding: var(--spacer);
   background-color: var(--clr-background);
-  border-radius: var(--spacer);
+  border-radius: calc(var(--spacer) / 2);
   box-shadow: 0 0.5em 1em -0.5em var(--clr-primary);
 }
 
@@ -57,10 +60,20 @@ export default {
   overflow-y: auto;
 }
 
-.modal-content img {
-  max-width: 100%;
+.modal-picture {
+  width: 100%;
   height: auto;
+  margin: auto;
   text-align: center;
+}
+
+.modal-picture img {
+  width: 60%;
+  height: auto;
+}
+
+.modal-texts {
+  text-align: justify;
 }
 
 .modal-close {
@@ -73,5 +86,29 @@ export default {
 
 .modal-close:hover {
   color: var(--clr-ascent);
+}
+
+@media only screen and (min-width: 85ch) {
+  .modal-container {
+    width: clamp(50ch, 90%, 85ch);
+  }
+
+  .modal-content {
+    display: flex;
+    flex-direction: columns;
+    overflow-y: hidden;
+  }
+
+  .modal-picture {
+    flex-basis: 40%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-texts {
+    flex-basis: 60%;
+    max-height: 60vh;
+    overflow-y: auto;
+  }
 }
 </style>
