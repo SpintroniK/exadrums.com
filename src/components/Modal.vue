@@ -1,5 +1,5 @@
 <template>
-  <div class="modal-background">
+  <div class="modal-background" @click="closeModal">
     <div class="modal-container">
       <h2>{{ title }}</h2>
       <div class="modal-content">
