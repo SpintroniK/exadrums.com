@@ -23,6 +23,11 @@
   <About
     :observer="observer">
   </About>
+  <Modal
+    :title="modal.title"
+    :image_path="modal.image_path"
+    :text="modal.text">
+  </Modal>
 </template>
 
 <script>
@@ -30,11 +35,13 @@ import Header from "./components/Header.vue";
 import Hero from "./components/Hero.vue";
 import Content from "./components/Content.vue";
 import About from "./components/About.vue";
+import Modal from "./components/Modal.vue";
 
 export default {
   data() {
     return {
       about: { id: "about", title: "About", icon: "" },
+      modal: { title: "Modal title", image_path: "https://www.pokepedia.fr/images/e/e7/Pikachu-RFVF.png", text: "Hello!" },
       contents: [
         {
           id: "software",
@@ -160,6 +167,7 @@ export default {
     Hero,
     Content,
     About,
+    Modal,
   },
   created() {
     this.observer = new IntersectionObserver(this.onElementObserved, {
