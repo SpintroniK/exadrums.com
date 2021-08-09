@@ -27,7 +27,9 @@
     v-if="triggerModal"
     :title="modal.title"
     :image_path="modal.image_path"
-    :texts="modal.texts">
+    :texts="modal.texts"
+    :isOpen="modal.isOpen"
+    @close="modal.isOpen = false">
   </Modal>
 </template>
 
@@ -73,7 +75,7 @@ export default {
               text: "It also brings high sound quality and very low latency, that are comparable to those of professional drum modules.",
             },
           ],
-          image_path: "./assets/software.png",
+          image_path: "./assets/software.gif",
           buttons: [
             {
               name: "More About the Software",
@@ -85,7 +87,8 @@ export default {
               name: "More About Performance",
               icon: "",
               class: "btn-light",
-              link: "#",
+              link: null,
+              click: _ => { this.modal.isOpen = true }
             },
           ],
         },
@@ -212,7 +215,7 @@ export default {
   --clr-primary: #0e232e;
   --clr-secondary: #25424f;
   --clr-ternary: #eeeeec;
-  --clr-ascent: #ef2929;
+  --clr-ascent: #d23232;
   --clr-background: white;
   --clr-semi-transparent: rgba(238, 239, 237, 0.66);
   --spacer: 1rem;

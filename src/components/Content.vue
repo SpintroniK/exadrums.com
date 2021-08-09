@@ -37,7 +37,8 @@
         :key="button.name"
         :data-btn-icon="button.icon"
         :class="button.class"
-        :href="button.link"
+        :href="button.link ? button.link : 'javascript:;'"
+        @click="button.click"
         class="button">
         {{ button.name }}
       </a>

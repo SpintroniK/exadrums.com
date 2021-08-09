@@ -1,19 +1,21 @@
 <template>
-  <div class="modal-background" @click="closeModal">
-    <div class="modal-container">
-      <h2>{{ title }}</h2>
-      <div class="modal-content">
-        <div class="modal-picture">
-          <img v-if="image_path" :src="image_path" alt="pikapika" />
-        </div>
-        <div class="modal-texts">
-          <p v-for="text in texts" :key="text">
-            {{ text }}
-          </p>
+  <div>
+    <transition name="fade">
+      <div class="modal-background" v-show="isOpen" @click="closeModal">
+        <div class="modal-container">
+          <h2>{{ title }}</h2>
+          <div class="modal-content">
+            <img v-if="image_path" :src="image_path" alt="pikapika" />
+            <div class="modal-texts">
+              <p v-for="text in texts" :key="text">
+                {{ text }}
+              </p>
+            </div>
+          </div>
+          <span class="modal-close" @click="closeModal">✕</span>
         </div>
       </div>
-      <span class="modal-close" @click="closeModal">✕</span>
-    </div>
+    </transition>
   </div>
 </template>
 
@@ -23,16 +25,43 @@ export default {
     title: { type: String, required: true },
     image_path: { type: String, required: false },
     texts: { type: Array, required: true },
+    isOpen: { type: Boolean, required: true, default: false}
+  },
+  data()
+  {
+    return {
+      show: false
+    }
   },
   methods: {
-    closeModal() {
-      console.log("Close modal");
+    closeModal() 
+    {
+      this.show = false
+      this.$emit('close')
     },
-  },
+  }
 };
 </script>
 
 <style>
+
+.fade-enter-active,
+.fade-leave-active 
+{
+  transition: opacity .25s;
+}
+
+.fade-enter,
+.fade-leave-to
+{
+  opacity: 0;
+}
+
+.fade-enter-from
+{
+    opacity: 0;
+}
+
 .modal-background {
   position: fixed;
   display: flex;
