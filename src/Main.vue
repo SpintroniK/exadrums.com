@@ -26,7 +26,7 @@
   <Modal
     :title="modal.title"
     :image_path="modal.image_path"
-    :text="modal.text">
+    :texts="modal.texts">
   </Modal>
 </template>
 

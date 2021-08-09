@@ -1,13 +1,14 @@
 <template>
-  <div class="modal-background" @click="closeModal">
+  <div class="modal-background">
     <div class="modal-container">
       <h2>{{ title }}</h2>
       <div class="modal-content">
         <img v-if="image_path" :src="image_path" alt="pikapika" />
-        <p class="plain-text">
-          {{ text }}
-        </p>
-      </div>
+        <div class="modal-texts">
+          <p v-for="text in texts" :key="text">
+            {{ text }}
+          </p>
+        </div>
       <span class="modal-close" @click="closeModal">✕</span>
     </div>
   </div>
