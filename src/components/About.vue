@@ -38,7 +38,8 @@ import Testimonial from "./Testimonial.vue";
 export default {
   data() {
     return {
-      testimonials: [
+      testimonials: []
+      /* [
         {
           name: "Toto1",
           image_path:
@@ -81,7 +82,7 @@ export default {
           comment:
             "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
         },
-      ],
+      ] */,
     };
   },
   components: {
