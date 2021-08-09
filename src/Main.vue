@@ -24,9 +24,10 @@
     :observer="observer">
   </About>
   <Modal
+    v-if="triggerModal"
     :title="modal.title"
     :image_path="modal.image_path"
-    :texts="modal.texts">
+    :text="modal.text">
   </Modal>
 </template>
 
