@@ -27,7 +27,7 @@
     v-if="triggerModal"
     :title="modal.title"
     :image_path="modal.image_path"
-    :text="modal.text">
+    :texts="modal.texts">
   </Modal>
 </template>
 
@@ -42,7 +42,7 @@ export default {
   data() {
     return {
       about: { id: "about", title: "About", icon: "" },
-      modal: { title: "Modal title", image_path: "https://www.pokepedia.fr/images/e/e7/Pikachu-RFVF.png", text: "Hello!" },
+      modal: { title: "Modal title", image_path: "https://www.pokepedia.fr/images/e/e7/Pikachu-RFVF.png", texts: ["Hello!", "exaDrums"] },
       contents: [
         {
           id: "software",
@@ -160,6 +160,7 @@ export default {
           ],
         },
       ],
+      triggerModal: true,
       observer: null,
     };
   },
