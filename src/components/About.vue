@@ -133,7 +133,7 @@ export default {
 .social-container a::after {
   content: attr(data-link) " ";
   position: absolute;
-  bottom: 0;
+  bottom: calc( -1 * var(--spacer) / 3);
   left: 50%;
   transform: translate(-50%, 100%);
   font-size: 0.8em;
