@@ -5,7 +5,9 @@
         <div class="modal-container">
           <h2>{{ title }}</h2>
           <div class="modal-content">
-            <img v-if="image_path" :src="image_path" alt="pikapika" />
+            <div class="modal-picture">
+              <img v-if="image_path" :src="image_path" alt="pikapika" />
+            </div>
             <div class="modal-texts">
               <p v-for="text in texts" :key="text">
                 {{ text }}
