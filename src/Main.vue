@@ -1,8 +1,7 @@
 <template>
-  <section id="top" style="height:0; padding:0"></section>
   <Header :menus="menus" :about="about" />
   <main>
-    <Hero :observer="observer" />
+    <Hero id="top" :observer="observer" />
     <Content v-for="menu in menus" :key="menu.id" :content="menu" :observer="observer" />
   </main>
   <About :observer="observer" />

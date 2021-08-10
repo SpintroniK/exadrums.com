@@ -48,7 +48,7 @@ export default {
 .fade-enter-active,
 .fade-leave-active 
 {
-  transition: opacity .25s;
+  transition: opacity var(--delay);
 }
 
 .fade-enter,
@@ -59,7 +59,7 @@ export default {
 
 .fade-enter-from
 {
-    opacity: 0;
+  opacity: 0;
 }
 
 .modal-background {
@@ -85,7 +85,7 @@ export default {
 }
 
 .modal-container > h2 {
-  padding-bottom: 1.5em;
+  padding-bottom: calc(1.5 * var(--spacer));
 }
 
 .modal-content {

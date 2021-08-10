@@ -4,7 +4,6 @@
 
     <!-- <p class="e-mail">contact@exadrums.com</p> -->
 
-
     <p class="plain-text">
       You can find more information or seek help on social media.
     </p>
@@ -164,7 +163,7 @@ export default {
       ". title title ."
       ". hr hr ."
       ". text text ."
-      ". email social ."
+      ". social social ."
       ". testimonials testimonials ."
       ". signature signature .";
     grid-template-columns: auto auto 200px auto;
