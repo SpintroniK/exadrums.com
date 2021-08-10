@@ -1,19 +1,19 @@
 <template>
   <section class="hero-banner">
     <div class="hero-animation-container">
-      <video width="100%" height="auto" controls="controls" preload="true" autoplay playsinline loop poster="/assets/hero_img.jpg">
-        <source src="/assets/exadrums_hero_video.mp4" type="video/mp4">
+      <video width="100%" height="auto" controls muted autoplay playsinline loop poster="/assets/hero_img.jpg">
         <source src="/assets/exadrums_hero_video.ogv" type="video/ogg">
         <source src="/assets/exadrums_hero_video.webm" type="video/webm">
+        <source src="/assets/exadrums_hero_video.mp4" type="video/mp4">
         Your browser does not support the video tag.
       </video>
     </div>
     <hr />
-    <h1>Open Source Drum Module<br />Professional Specs</h1>
+    <h1>Open Source Drum Module<br></h1>
     <div class="text-container">
       <p class="plain-text">
         eXaDrums is an open source <b>drum module</b> you can build and customize yourself. 
-        It aims to bring together low latency and high sound quality.
+        It aims to bring together low latency and high quality audio.
       </p>
       <p class="plain-text">
         With a 7 inch <b>touch screen</b> and a user-friendly interface, it offers a seamless experience and is more accessible than ever.
