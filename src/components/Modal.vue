@@ -3,14 +3,14 @@
     <transition name="fade">
       <div class="modal-background" v-show="isOpen" @click="closeModal">
         <div class="modal-container">
-          <h2>{{ title }}</h2>
+          <h2>{{ data.title }}</h2>
           <div class="modal-content">
             <div class="modal-picture">
-              <img v-if="image_path" :src="image_path" alt="pikapika" />
+              <img v-if="data.image_path" :src="data.image_path" alt="pikapika" />
             </div>
             <div class="modal-texts">
-              <p v-for="text in texts" :key="text">
-                {{ text }}
+              <p v-for="p in data.paragraphs" :key="p">
+                {{ p }}
               </p>
             </div>
           </div>
@@ -24,9 +24,7 @@
 <script>
 export default {
   props: {
-    title: { type: String, required: true },
-    image_path: { type: String, required: false },
-    texts: { type: Array, required: true },
+    data: { type: Object, required: true },
     isOpen: { type: Boolean, required: true, default: false}
   },
   data()
@@ -84,6 +82,10 @@ export default {
   background-color: var(--clr-background);
   border-radius: calc(var(--spacer) / 2);
   box-shadow: 0 0.5em 1em -0.5em var(--clr-primary);
+}
+
+.modal-container > h2 {
+  padding-bottom: 1.5em;
 }
 
 .modal-content {

@@ -1,39 +1,28 @@
 <template>
-  <section
-    class="content-section"
-    :class="[alignment == 'left' ? 'align-left' : 'align-right']"
-    :id="id">
-    <h1>{{ title }}</h1>
+  <section class="content-section" :class="[content.alignment == 'left' ? 'align-left' : 'align-right']" :id="content.id">
+    <h1>{{ content.title }}</h1>
     <div class="image-container">
-      <img class="lazy-image"
-        width="640"
-        height="480"
-        :data-src="image_path"
-        src=""
-        alt="content-section image" />
+      <img class="lazy-image" width="640" height="480" :data-src="content.image_path" src="" alt="content-section image" />
     </div>
     <hr>
     <div class="icons-container">
       <img class="lazy-image"
         width="50"
         height="50"
-        v-for="icon in icons"
+        v-for="icon in content.icons"
         :key="icon.name"
         :data-src="icon.path"
         src=""
         :alt="icon.name" />
     </div>
     <div class="text-container">
-      <p
-        v-for="description in descriptions"
-        :key="description.id"
-        class="plain-text">
+      <p v-for="description in content.descriptions" :key="description.id" class="plain-text">
         {{ description.text }}
       </p>
     </div>
     <div class="btn-container">
       <a
-        v-for="button in buttons"
+        v-for="button in content.buttons"
         :key="button.name"
         :data-btn-icon="button.icon"
         :class="button.class"
@@ -49,13 +38,7 @@
 <script>
 export default {
   props: {
-    id: { type: String, required: true },
-    title: { type: String, required: true },
-    alignment: { type: String, required: true },
-    icons: { type: Array, required: true },
-    descriptions: { type: Array, required: true },
-    image_path: { type: String, required: true },
-    buttons: { type: Array, required: true },
+    content: { type: Object, required: true }
   },
 };
 </script>

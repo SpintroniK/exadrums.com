@@ -1,15 +1,13 @@
 <template>
   <header>
-    <a href="#" @click="closeMenu" class="logo">
-      <img width="275" height="38" src="assets/eXa_logo_text.svg" alt="logo" onclick="#" />
+    <a @click="closeMenu" href="#top" class="logo">
+      <img width="275" height="38" src="assets/eXa_logo_text.svg" alt="logo" />
     </a>
     <input type="checkbox" class="nav-toggle" id="nav-toggle" ref="menu" />
     <nav>
       <ul>
         <li v-for="menu in menuItems" :key="menu.id">
-          <a :href="`#${menu.id}`"
-            :data-menu-icon="menu.icon"
-            @click="closeMenu">
+          <a :href="`#${menu.id}`" :data-menu-icon="menu.icon" @click="closeMenu">
             {{ menu.title }}
           </a>
         </li>
@@ -24,7 +22,7 @@
 <script>
   export default {
     props: {
-      contents: { type: Array, required: true },
+      menus: { type: Array, required: true },
       about: { type: Object, required: true },
     },
     methods: {
@@ -34,7 +32,7 @@
     },
     computed: {
       newContents: function () {
-        return [...this.contents]
+        return [...this.menus]
       },
       menuItems: function () {
         this.newContents.push(this.about)
@@ -66,6 +64,7 @@
   header .logo > img {
     width: 20ch;
     height: auto;
+    cursor: pointer;
   }
 
   header label {
@@ -125,7 +124,7 @@
     left: 0;
     width: 100%;
     height: 95vw;
-    max-height: 60ch;
+    max-height: calc(calc(100vh - 38px) - 0.3rem);
     background-color: var(--clr-semi-transparent);
     backdrop-filter: blur(3px);
     transform: scaleY(0);

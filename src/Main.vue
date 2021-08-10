@@ -1,36 +1,13 @@
 <template>
-  <Header
-    :contents="contents"
-    :about="about">
-  </Header>
+  <section id="top" style="height:0; padding:0"></section>
+  <Header :menus="menus" :about="about" />
   <main>
-    <Hero
-      :observer="observer">
-    </Hero>
-    <Content
-      v-for="content in contents"
-      :key="content.id"
-      :id="content.id"
-      :title="content.title"
-      :alignment="content.alignment"
-      :icons="content.icons"
-      :descriptions="content.descriptions"
-      :image_path="content.image_path"
-      :buttons="content.buttons"
-      :observer="observer">
-    </Content>
+    <Hero :observer="observer" />
+    <Content v-for="menu in menus" :key="menu.id" :content="menu" :observer="observer" />
   </main>
-  <About
-    :observer="observer">
-  </About>
-  <Modal
-    v-if="triggerModal"
-    :title="modal.title"
-    :image_path="modal.image_path"
-    :texts="modal.texts"
-    :isOpen="modal.isOpen"
-    @close="modal.isOpen = false">
-  </Modal>
+  <About :observer="observer" />
+  <Modal v-for="modal in modals" :key="modal.title"
+         :data="modal" :isOpen="modal.isOpen" @close="modal.isOpen = false" />
 </template>
 
 <script>
@@ -44,8 +21,28 @@ export default {
   data() {
     return {
       about: { id: "about", title: "About", icon: "" },
-      modal: { title: "Modal title", image_path: "https://www.pokepedia.fr/images/e/e7/Pikachu-RFVF.png", texts: ["Hello!", "exaDrums"] },
-      contents: [
+      modals: {
+        perf: { title: "About eXaDrums performance", 
+                image_path: "https://www.pokepedia.fr/images/e/e7/Pikachu-RFVF.png", 
+                paragraphs: ["Latency", 
+                             "Trade-off"
+                            ] 
+              },
+        soft: { title: "How the software works", 
+                image_path: "https://www.pokepedia.fr/images/e/e7/Pikachu-RFVF.png", 
+                paragraphs: ["Ui and library"] 
+              },
+        hard: { title: "What hardware do I need to make the module?", 
+                image_path: "https://www.pokepedia.fr/images/e/e7/Pikachu-RFVF.png", 
+                paragraphs: ["Soundcard"] 
+              },
+        case: { title: "A 3D-printable enclosure!", 
+                image_path: "https://www.pokepedia.fr/images/e/e7/Pikachu-RFVF.png", 
+                paragraphs: ["3D"] 
+              }
+      },
+      menus: 
+      [
         {
           id: "software",
           title: "Software",
@@ -81,14 +78,15 @@ export default {
               name: "More About the Software",
               icon: "",
               class: "btn-dark",
-              link: "#",
+              link: null,
+              click: _ => { this.modals.soft.isOpen = true }
             },
             {
               name: "More About Performance",
               icon: "",
               class: "btn-light",
               link: null,
-              click: _ => { this.modal.isOpen = true }
+              click: _ => { this.modals.perf.isOpen = true }
             },
           ],
         },
@@ -127,7 +125,8 @@ export default {
               name: "More About the Hardware",
               icon: "",
               class: "btn-dark",
-              link: "#",
+              link: null,
+              click: _ => { this.modals.hard.isOpen = true }
             },
           ],
         },
@@ -158,12 +157,12 @@ export default {
               name: "More About the Enclosure",
               icon: "",
               class: "btn-dark",
-              link: "#",
+              link: null,
+              click: _ => { this.modals.case.isOpen = true }
             },
           ],
         },
       ],
-      triggerModal: true,
       observer: null,
     };
   },

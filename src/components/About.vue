@@ -2,11 +2,11 @@
   <section class="about" id="about">
     <h1>About</h1>
 
-    <p class="e-mail">contact@exadrums.com</p>
+    <!-- <p class="e-mail">contact@exadrums.com</p> -->
 
 
     <p class="plain-text">
-      You can find more information or seek help on social media:
+      You can find more information or seek help on social media.
     </p>
 
     <div class="social-container">

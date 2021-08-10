@@ -1,25 +1,29 @@
 <template>
   <section class="hero-banner">
     <div class="hero-animation-container">
-      <video width="100%" height="100%" controls="controls" preload="true" muted autoplay loop poster="/assets/hero_img.jpg">
-        <source src="assets/exadrums_hero_video.mp4" type="video/mp4">
+      <video width="100%" height="auto" controls="controls" preload="true" autoplay playsinline loop poster="/assets/hero_img.jpg">
+        <source src="/assets/exadrums_hero_video.mp4" type="video/mp4">
+        <source src="/assets/exadrums_hero_video.ogv" type="video/ogg">
+        <source src="/assets/exadrums_hero_video.webm" type="video/webm">
         Your browser does not support the video tag.
       </video>
     </div>
     <hr />
-    <h1>An Open Source Drum Module<br />With Professional Specs</h1>
+    <h1>Open Source Drum Module<br />Professional Specs</h1>
     <div class="text-container">
       <p class="plain-text">
-        EXADRUMS is a fully functional <b>drum module</b>, with professional
-        specs, that you can build yourself and customize.
+        eXaDrums is an open source <b>drum module</b> you can build and customize yourself. 
+        It aims to bring together low latency and high sound quality.
       </p>
       <p class="plain-text">
-        With a 7 inch <b>touch screen</b> and a user-friendly interface, it offers a seamless experience that
-        makes drumming a joy.
+        With a 7 inch <b>touch screen</b> and a user-friendly interface, it offers a seamless experience and is more accessible than ever.
+      </p>
+      <p class="plain-text">
+        If you wish to make your own eXaDrums module, click the "Make Your Own" button below.
       </p>
     </div>
-    <a href="#" class="button btn-dark" data-btn-icon="">Make Your Own</a>
-    <a href="#" class="button btn-light" data-btn-icon="">Documentation</a>
+    <a href="https://configure.exadrums.com" class="button btn-dark" data-btn-icon="">Make Your Own</a>
+    <a href="https://make.exadrums.com" class="button btn-light" data-btn-icon="">Documentation</a>
   </section>
 </template>
 
@@ -34,15 +38,16 @@
   width: 100%;
   height: 95vw;
   max-height: 60ch;
+  background-color: black;
 }
 
 .hero-animation-container video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
   background: url(/assets/hero_img.jpg);
-  background-size: cover;
+  background-size: contain;
   background-position: left center;
   background-repeat: no-repeat;
 }
