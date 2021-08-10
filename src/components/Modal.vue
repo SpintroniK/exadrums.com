@@ -2,11 +2,11 @@
   <div>
     <transition name="fade">
       <div class="modal-background" v-show="isOpen" @click="closeModal">
-        <div class="modal-container">
+        <div class="modal-container" @click="click">
           <h2>{{ data.title }}</h2>
           <div class="modal-content">
-            <div class="modal-picture">
-              <img v-if="data.image_path" :src="data.image_path" alt="pikapika" />
+            <div class="modal-picture" v-if="data.image_path">
+              <img :src="data.image_path" alt="pikapika" />
             </div>
             <div class="modal-texts">
               <p v-for="p in data.paragraphs" :key="p">
@@ -39,6 +39,10 @@ export default {
       this.show = false
       this.$emit('close')
     },
+    click(e)
+    {
+      e.stopPropagation();
+    }
   }
 };
 </script>

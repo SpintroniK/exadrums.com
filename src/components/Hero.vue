@@ -9,7 +9,7 @@
       </video>
     </div>
     <hr />
-    <h1>Open Source Drum Module<br></h1>
+    <h1>Open Source Drum Module<br>Low latency &amp; superb audio</h1>
     <div class="text-container">
       <p class="plain-text">
         eXaDrums is an open source <b>drum module</b> you can build and customize yourself. 

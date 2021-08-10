@@ -28,7 +28,7 @@ export default {
                             ] 
               },
         soft: { title: "How the software works", 
-                image_path: "https://www.pokepedia.fr/images/e/e7/Pikachu-RFVF.png", 
+                image_path: "/assets/software.gif", 
                 paragraphs: ["Ui and library"] 
               },
         hard: { title: "What hardware do I need to make the module?", 
