@@ -95,7 +95,10 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 100vh;
   margin: auto 0;
+  color: var(--clr-background);
+  background-color: var(--clr-secondary);
 }
 
 .e-mail {
@@ -167,8 +170,6 @@ export default {
       ". testimonials testimonials ."
       ". signature signature .";
     grid-template-columns: auto auto 200px auto;
-    color: var(--clr-background);
-    background-color: var(--clr-secondary);
     min-height: 100vh;
     padding-bottom: 0;
   }
