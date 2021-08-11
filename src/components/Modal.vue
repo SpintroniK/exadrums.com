@@ -6,11 +6,10 @@
           <h2>{{ data.title }}</h2>
           <div class="modal-content">
             <div class="modal-picture" v-if="data.image_path">
-              <img :src="data.image_path" alt="pikapika" />
+              <img :src="data.image_path" :alt="data.image_path" />
             </div>
             <div class="modal-texts">
-              <p v-for="p in data.paragraphs" :key="p">
-                {{ p }}
+              <p v-for="p in data.paragraphs" :key="p" v-html="p">
               </p>
             </div>
           </div>
@@ -105,12 +104,16 @@ export default {
 }
 
 .modal-picture img {
-  width: 60%;
+  width: 66%;
   height: auto;
 }
 
 .modal-texts {
   text-align: justify;
+}
+
+.modal-texts p {
+  padding: .33em;
 }
 
 .modal-close {
@@ -127,7 +130,7 @@ export default {
 
 @media only screen and (min-width: 85ch) {
   .modal-container {
-    width: clamp(50ch, 90%, 85ch);
+    width: clamp(75ch, 90%, 95ch);
   }
 
   .modal-content {
@@ -137,13 +140,18 @@ export default {
   }
 
   .modal-picture {
-    flex-basis: 40%;
+    flex-basis: 50%;
     justify-content: center;
     align-items: center;
   }
 
+  .modal-picture img {
+    width: 90%;
+    height: auto;
+  }
+
   .modal-texts {
-    flex-basis: 60%;
+    flex-basis: 50%;
     max-height: 60vh;
     overflow-y: auto;
   }

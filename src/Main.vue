@@ -4,6 +4,7 @@
     <Hero id="top" :observer="observer" />
     <Content v-for="menu in menus" :key="menu.id" :content="menu" :observer="observer" />
   </main>
+  <!-- <a href="#top" style="position: fixed; bottom: 1em;">&#128640; To the top!</a> -->
   <About :observer="observer" />
   <Modal v-for="modal in modals" :key="modal.title"
          :data="modal" :isOpen="modal.isOpen" @close="modal.isOpen = false" />
@@ -22,14 +23,18 @@ export default {
       about: { id: "about", title: "About", icon: "" },
       modals: {
         perf: { title: "About eXaDrums performance", 
-                image_path: "https://www.pokepedia.fr/images/e/e7/Pikachu-RFVF.png", 
+                image_path: "./assets/perf.png", 
                 paragraphs: ["Latency", 
                              "Trade-off"
                             ] 
               },
         soft: { title: "How the software works", 
-                image_path: "/assets/software.gif", 
-                paragraphs: ["Ui and library"] 
+                image_path: "./assets/software.gif", 
+                paragraphs: [`The eXaDrums software is made of several different parts. 
+                              At its core, there's the libexadrums library, which controls everything.`,
+                              `It is written in C++ for maximum performance, and makes eXaDrums very flexible and useable in other programming languages.
+                              That means you don't have to use the default C++ Graphical User Interface (GUI).`,
+                              `For instance, there's an electron GUI under development.`] 
               },
         hard: { title: "What hardware do I need to make the module?", 
                 image_path: "https://www.pokepedia.fr/images/e/e7/Pikachu-RFVF.png", 
