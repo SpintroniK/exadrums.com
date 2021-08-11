@@ -4,6 +4,10 @@
     <Hero id="top" :observer="observer" />
     <Content v-for="menu in menus" :key="menu.id" :content="menu" :observer="observer" />
   </main>
+  <div class="conversion">
+    <a href="https://configure.exadrums.com" class="button btn-dark conversion-button" data-btn-icon="" >Start now</a>
+    <p class="conversion-background-text">MAKE YOUR OWN</p>
+  </div>
   <About :observer="observer" />
   <Modal v-for="modal in modals" :key="modal.title"
          :data="modal" :isOpen="modal.isOpen" @close="modal.isOpen = false" />
@@ -272,6 +276,32 @@ section {
   min-height: calc(100vh - calc(3 * var(--spacer)));
 }
 
+.conversion {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  margin: 15vh 0vw;
+}
+
+.conversion-background-text {
+  width: 90%;
+  max-height: 11vw;
+  text-align: justify;
+  font-size: 10vw;
+  color: var(--clr-ternary);
+  transition: color var(--delay);
+}
+
+.conversion-background-text:after {
+  content: "";
+  display: inline-block;
+  width: 100%;
+}
+
+.conversion-button:hover + .conversion-background-text {
+  color: var(--clr-ascent);
+}
+
 hr {
   background-color: var(--clr-ascent);
   border: 0px solid transparent;
@@ -436,6 +466,11 @@ b:hover::before {
 
   .plain-text {
     margin: calc(var(--spacer) / 2) 2%;
+  }
+
+  .conversion .button {
+    max-width: 25ch;
+    padding: calc(var(--spacer) / 2) 0;
   }
 }
 </style>
