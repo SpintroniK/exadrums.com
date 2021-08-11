@@ -4,6 +4,7 @@ const { VueLoaderPlugin } = require('vue-loader')
 const TerserPlugin = require('terser-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin')
+const CopyWebpackPlugin = require('copy-webpack-plugin');
 
 const dev = process.env.NODE_ENV === 'dev'
 const dist = path.resolve(__dirname, 'dist')
@@ -59,6 +60,12 @@ const appConfig =
     plugins: 
     [
         //new CleanWebpackPlugin(),
+        new CopyWebpackPlugin({
+            patterns: [
+                { from: 'assets', to: 'assets'},
+                { from: 'fonts', to: 'fonts'}
+            ]
+        }),
         new HtmlWebpackPlugin( { template: 'index.html' } ),
         //new WasmPackPlugin( { crateDirectory: path.resolve(__dirname, 'crate') } ),
         new VueLoaderPlugin(),
