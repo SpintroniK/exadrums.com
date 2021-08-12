@@ -13,8 +13,7 @@
         :data-src="icon.path"
         src=""
         :alt="icon.name" />
-        <span v-if="icon.description" class="tooltip" v-html="icon.description">
-        </span>
+        <div v-if="icon.description" class="tooltip" v-html="icon.description"></div>
         </div>
     </div>
     <div class="text-container">
@@ -98,10 +97,11 @@ export default {
 
 .tooltip {
   position: absolute;
-  display: block;
-  top: 115%;
+  opacity: 0;
+  top: 120%;
   left: 0;
-  width: 150px;
+  width: max-content;
+  max-width: 200px;
   text-justify: justify;
   height: auto;
   padding: calc(0.75 * var(--spacer));
@@ -109,6 +109,11 @@ export default {
   background-color: var(--clr-primary);
   color: var(--clr-background);
   z-index: 10;
+  transition: opacity var(--delay) ease-in-out;
+}
+
+.content-icons:hover + .tooltip {
+  opacity: 1;
 }
 
 .tooltip:after {

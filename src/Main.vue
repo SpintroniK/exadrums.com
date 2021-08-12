@@ -67,15 +67,17 @@ export default {
             {
               name: "Linux",
               path: "./assets/tux_logo.svg",
-              description: "<b>exaDrums</b> HTML tooltip text.",
+              description: "<b>Linux</b> HTML tooltip text.",
             },
             {
               name: "Debian",
               path: "./assets/debian_logo.svg",
+              description: "<b>Debian</b> HTML tooltip text.",
             },
             {
               name: "C++",
               path: "./assets/cpp_logo.svg",
+              description: "<b>C++</b> HTML tooltip text.",
             },
           ],
           descriptions: [
