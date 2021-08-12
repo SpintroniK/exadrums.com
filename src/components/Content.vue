@@ -6,14 +6,16 @@
     </div>
     <hr>
     <div class="icons-container">
-      <img class="lazy-image"
+      <div v-for="icon in content.icons" :key="icon.name" class="icon-container" >
+        <img class="lazy-image content-icons"
         width="50"
         height="50"
-        v-for="icon in content.icons"
-        :key="icon.name"
         :data-src="icon.path"
         src=""
         :alt="icon.name" />
+        <span v-if="icon.description" class="tooltip" v-html="icon.description">
+        </span>
+        </div>
     </div>
     <div class="text-container">
       <p v-for="description in content.descriptions" :key="description.id" class="plain-text">
@@ -73,7 +75,7 @@ export default {
   justify-content: space-evenly;
 }
 
-.content-section .icons-container img {
+.content-section .icons-container .content-icons {
   width: calc(3 * var(--spacer));
   height: calc(3 * var(--spacer));
   transform: translateY(-25%) scaleY(90%);
@@ -84,10 +86,40 @@ export default {
   cursor: pointer;
 }
 
-.icons-container img:hover {
+.content-section .icons-container .content-icons:hover {
   transform: scale(1.2) !important;
   transform-origin: center;
   transition: transform var(--delay);
+}
+
+.content-section .icon-container {
+  position: relative;
+}
+
+.tooltip {
+  position: absolute;
+  display: block;
+  top: 115%;
+  left: 0;
+  width: 150px;
+  text-justify: justify;
+  height: auto;
+  padding: calc(0.75 * var(--spacer));
+  border-radius: calc(var(--spacer) / 4);
+  background-color: var(--clr-primary);
+  color: var(--clr-background);
+  z-index: 10;
+}
+
+.tooltip:after {
+  content: "";
+  position: absolute;
+  bottom: 100%;  /* At the top of the tooltip */
+  left: calc(1.5 * var(--spacer));
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent var(--clr-primary) transparent;
 }
 
 @media only screen and (min-width: 85ch) {

@@ -67,6 +67,7 @@ export default {
             {
               name: "Linux",
               path: "./assets/tux_logo.svg",
+              description: "<b>exaDrums</b> HTML tooltip text.",
             },
             {
               name: "Debian",
