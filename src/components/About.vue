@@ -27,6 +27,8 @@
       class="testimonials">
     </Testimonial>
 
+    <a href="#top" class="button btn-dark top-button" alt="scroll back to top" data-btn-icon="🡱">top</a>
+
     <p class="signature">by Jérémy Oden</p>
   </section>
 </template>
@@ -154,6 +156,12 @@ export default {
   height: auto;
 }
 
+.top-button {
+  color: var(--clr-background);
+  text-decoration: none;
+  max-width: 2vw;
+}
+
 .signature {
   text-align: center;
   padding: var(--spacer);
@@ -216,6 +224,10 @@ export default {
 
   .testimonials {
     grid-area: testimonials;
+  }
+
+  .top-button {
+    display: none;
   }
 
   .signature {
