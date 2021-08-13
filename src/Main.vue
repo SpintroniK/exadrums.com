@@ -5,8 +5,9 @@
     <Content v-for="menu in menus" :key="menu.id" :content="menu" :observer="observer" />
   </main>
   <div class="conversion">
-    <a href="https://configure.exadrums.com" class="button btn-dark conversion-button" data-btn-icon="" >Start now</a>
-    <p class="conversion-background-text">MAKE YOUR OWN</p>
+    <a href="https://configure.exadrums.com">
+      <img alt="make your own" src="assets/conversion_image.svg" />
+    </a>
   </div>
   <About :observer="observer" />
   <Modal v-for="modal in modals" :key="modal.title"
@@ -68,16 +69,19 @@ export default {
               name: "Linux",
               path: "./assets/tux_logo.svg",
               description: "<b>Linux</b> HTML tooltip text.",
+              position: "left",
             },
             {
               name: "Debian",
               path: "./assets/debian_logo.svg",
               description: "<b>Debian</b> HTML tooltip text.",
+              position: "middle",
             },
             {
               name: "C++",
               path: "./assets/cpp_logo.svg",
               description: "<b>C++</b> HTML tooltip text.",
+              position: "right",
             },
           ],
           descriptions: [
@@ -117,10 +121,14 @@ export default {
             {
               name: "Raspberry pi",
               path: "./assets/raspberry_pi_logo.svg",
+              description: "<b>Raspberry pi</b> HTML tooltip text.",
+              position: "left",
             },
             {
               name: "Osh Park",
-              path: "./assets/oshpark_logo.svg"
+              path: "./assets/oshpark_logo.svg",
+              description: "<b>Osh Park</b> HTML tooltip text.",
+              position: "right",
             },
           ],
           descriptions: [
