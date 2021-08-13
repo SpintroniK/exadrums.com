@@ -1,12 +1,13 @@
 <template>
-  <div class="tooltip" v-if="description" v-html="description"></div>
+  <div :class="['tooltip', `tooltip-${position}`]" v-if="description" v-html="description"></div>
 </template>
 
 <script>
 export default {
   props: {
     description: { type: String, required: true },
-  },
+    position: {type: String, required: false, default: 'center'}
+  }
 };
 </script>
 
@@ -28,15 +29,15 @@ export default {
   transition: opacity var(--delay) ease-in-out;
 }
 
-.tooltip-middle {
+.tooltip-center {
   left: calc(-100% - 25px);
 }
 
-.tooltip-left {
+.tooltip-right {
   left: 0;
 }
 
-.tooltip-right {
+.tooltip-left {
   right: 0;
 }
 
@@ -50,17 +51,17 @@ export default {
   border-color: transparent transparent var(--clr-primary) transparent;
 }
 
-.tooltip-middle:after {
+.tooltip-center:after {
   content: "";
   left: 50%;
 }
 
-.tooltip-left:after {
+.tooltip-right:after {
   content: "";
   left: calc(1.5 * var(--spacer));
 }
 
-.tooltip-right:after {
+.tooltip-left:after {
   content: "";
   right: calc(1.5 * var(--spacer));
 }
