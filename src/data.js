@@ -84,14 +84,14 @@ export const getMenus = app => { return [
     [
       {
         name: "More About the Software",
-        icon: "",
+        icon: "",
         class: "btn-dark",
         link: null,
         click: _ => { app.modals.soft.isOpen = true }
       },
       {
         name: "More About Performance",
-        icon: "",
+        icon: "",
         class: "btn-light",
         link: null,
         click: _ => { app.modals.perf.isOpen = true }
@@ -139,7 +139,7 @@ export const getMenus = app => { return [
     [
       {
         name: "More About the Hardware",
-        icon: "",
+        icon: "",
         class: "btn-dark",
         link: null,
         click: _ => { app.modals.hard.isOpen = true }
@@ -187,7 +187,7 @@ export const getMenus = app => { return [
     [
       {
         name: "More About the Enclosure",
-        icon: "",
+        icon: "",
         class: "btn-dark",
         link: null,
         click: _ => { app.modals.case.isOpen = true }
