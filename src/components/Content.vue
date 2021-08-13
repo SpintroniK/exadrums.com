@@ -13,7 +13,7 @@
         :data-src="icon.path"
         src=""
         :alt="icon.name" />
-        <Tooltip :description="icon.description" :class="`tooltip-` + icon.position" />
+        <Tooltip v-if="icon.description" :description="icon.description" :position="icon.position" />
         </div>
     </div>
     <div class="text-container">
