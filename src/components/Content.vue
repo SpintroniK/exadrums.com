@@ -7,13 +7,13 @@
     <hr>
     <div class="icons-container">
       <div v-for="icon in content.icons" :key="icon.name" class="icon-container" >
-        <img class="lazy-image content-icons"
+        <img class="lazy-image content-icons enable-tooltip"
         width="50"
         height="50"
         :data-src="icon.path"
         src=""
         :alt="icon.name" />
-        <div v-if="icon.description" class="tooltip" v-html="icon.description"></div>
+        <Tooltip :description="icon.description" :class="`tooltip-` + icon.position" />
         </div>
     </div>
     <div class="text-container">
@@ -37,7 +37,10 @@
 </template>
 
 <script>
+import Tooltip from './Tooltip.vue';
+
 export default {
+  components: { Tooltip },
   props: {
     content: { type: Object, required: true }
   },
@@ -93,38 +96,6 @@ export default {
 
 .content-section .icon-container {
   position: relative;
-}
-
-.tooltip {
-  position: absolute;
-  opacity: 0;
-  top: 120%;
-  left: 0;
-  width: max-content;
-  max-width: 200px;
-  text-justify: justify;
-  height: auto;
-  padding: calc(0.75 * var(--spacer));
-  border-radius: calc(var(--spacer) / 4);
-  background-color: var(--clr-primary);
-  color: var(--clr-background);
-  z-index: 10;
-  transition: opacity var(--delay) ease-in-out;
-}
-
-.content-icons:hover + .tooltip {
-  opacity: 1;
-}
-
-.tooltip:after {
-  content: "";
-  position: absolute;
-  bottom: 100%;  /* At the top of the tooltip */
-  left: calc(1.5 * var(--spacer));
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: transparent transparent var(--clr-primary) transparent;
 }
 
 @media only screen and (min-width: 85ch) {

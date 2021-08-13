@@ -157,10 +157,14 @@ export default {
             {
               name: "3d-printed",
               path: "./assets/3d_printed_logo.svg",
+              description: "<b>3d-Printed</b> HTML tooltip text.",
+              position: "left",
             },
             {
               name: "thingiverse",
               path: "./assets/thingiverse_logo.svg",
+              description: "<b>Thingiverse</b> HTML tooltip text.",
+              position: "right",
             },
           ],
           descriptions: [
