@@ -98,14 +98,14 @@ export default {
           buttons: [
             {
               name: "More About the Software",
-              icon: "",
+              icon: "",
               class: "btn-dark",
               link: null,
               click: _ => { this.modals.soft.isOpen = true }
             },
             {
               name: "More About Performance",
-              icon: "",
+              icon: "",
               class: "btn-light",
               link: null,
               click: _ => { this.modals.perf.isOpen = true }
@@ -149,7 +149,7 @@ export default {
           buttons: [
             {
               name: "More About the Hardware",
-              icon: "",
+              icon: "",
               class: "btn-dark",
               link: null,
               click: _ => { this.modals.hard.isOpen = true }
@@ -193,7 +193,7 @@ export default {
           buttons: [
             {
               name: "More About the Enclosure",
-              icon: "",
+              icon: "",
               class: "btn-dark",
               link: null,
               click: _ => { this.modals.case.isOpen = true }
@@ -315,26 +315,14 @@ section {
   display: flex;
   flex-direction: column-reverse;
   align-items: center;
-  margin: 15vh 0vw;
+  padding: 20vh 0vw;
+  background-image: url('/assets/conversion_background.png');
+  background-repeat: space;
 }
 
-.conversion-background-text {
-  width: 90%;
-  max-height: 11vw;
-  text-align: justify;
-  font-size: 10vw;
-  color: var(--clr-ternary);
-  transition: color var(--delay);
-}
-
-.conversion-background-text:after {
-  content: "";
-  display: inline-block;
-  width: 100%;
-}
-
-.conversion-button:hover + .conversion-background-text {
-  color: var(--clr-ascent);
+.conversion img {
+  width: 50vw;
+  max-width: 45ch;
 }
 
 hr {
