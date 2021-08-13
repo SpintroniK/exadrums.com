@@ -31,7 +31,7 @@ export const modals =
     },
     case: 
     { 
-        title: "A 3D-printable enclosure.", 
+        title: "3D-printable enclosure.", 
         image_path: "./assets/casing.png", 
         paragraphs: [`The enclosure is made of 4 different parts, and has been designed to be printed on small printers (15x15x15cm).`,
                     `Eight 3D-printed screws hold the enclosure together.`,
@@ -53,19 +53,19 @@ export const getMenus = app => { return [
         name: "Linux",
         path: "./assets/tux_logo.svg",
         position: "right",
-        description: "<b>Linux</b> HTML tooltip text.",
+        description: "eXaDrums runs on Linux",
       },
       {
         name: "Debian",
         path: "./assets/debian_logo.svg",
         position: "center",
-        description: "<b>Debian</b> HTML tooltip text.",
+        description: "eXaDrums is available in Debian (bullseye)",
       },
       {
         name: "C++",
         path: "./assets/cpp_logo.svg",
         position: "left",
-        description: "<b>C++</b> HTML tooltip text.",
+        description: "The core of eXaDrums is written in C++",
       },
     ],
     descriptions: 
@@ -110,13 +110,13 @@ export const getMenus = app => { return [
         name: "Raspberry pi",
         path: "./assets/raspberry_pi_logo.svg",
         position: "right",
-        description: "<b>Raspberry Pi</b> HTML tooltip text.",
+        description: "eXaDrums is available in Raspberry Pi OS",
       },
       {
         name: "Osh Park",
         path: "./assets/oshpark_logo.svg",
         position: "left",
-        description: "<b>OSH Park</b> HTML tooltip text.",
+        description: "eXaDrums sensor board is shared on OSHPark",
       },
     ],
     descriptions: 
@@ -135,7 +135,8 @@ export const getMenus = app => { return [
       },
     ],
     image_path: "./assets/hardware.jpg",
-    buttons: [
+    buttons: 
+    [
       {
         name: "More About the Hardware",
         icon: "",
@@ -156,13 +157,13 @@ export const getMenus = app => { return [
       {
         name: "3d-printed",
         path: "./assets/3d_printed_logo.svg",
-        description: "<b>3d-Printed</b> HTML tooltip text.",
+        description: "The enclosure is fully 3D-printed!",
         position: "right",
       },
       {
         name: "thingiverse",
         path: "./assets/thingiverse_logo.svg",
-        description: "<b>Thingiverse</b> HTML tooltip text.",
+        description: "Enclosure stl files are available at Thingiverse.",
         position: "left",
       },
     ],
