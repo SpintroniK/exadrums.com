@@ -65,6 +65,7 @@ export default {
 
 .content-section .image-container img {
   width: 100%;
+  padding: 5%;
   max-height: 75vw;
   object-fit: contain;
   object-position: center;
@@ -143,6 +144,10 @@ export default {
     grid-area: hr;
     justify-self: center;
     width: 80%;
+  }
+
+  .content-section .image-container img {
+    padding: 0;
   }
 
   .content-section .icons-container {
