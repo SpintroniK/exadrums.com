@@ -182,7 +182,8 @@ export const getMenus = app => { return [
         text: "Every piece of the enclosure is 3D printed, even the screws.",
       },
     ],
-    image_path: "./assets/casing.png",
+    /* image_path: "./assets/casing.png", */
+    model_path: "./assets/enclosure_model.glb",
     buttons: 
     [
       {

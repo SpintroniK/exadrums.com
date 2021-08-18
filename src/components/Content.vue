@@ -2,7 +2,8 @@
   <section class="content-section" :class="[content.alignment == 'left' ? 'align-left' : 'align-right']" :id="content.id">
     <h1>{{ content.title }}</h1>
     <div class="image-container">
-      <img class="lazy-image" width="640" height="480" :data-src="content.image_path" src="" alt="content-section image" />
+      <img v-if="content.image_path" class="lazy-image" width="640" height="480" :data-src="content.image_path" src="" alt="content-section image" />
+      <Canvas v-else :model-path="content.model_path" />
     </div>
     <hr>
     <div class="icons-container">
@@ -38,9 +39,10 @@
 
 <script>
 import Tooltip from './Tooltip.vue';
+import Canvas from './Canvas.vue';
 
 export default {
-  components: { Tooltip },
+  components: { Tooltip, Canvas },
   props: {
     content: { type: Object, required: true }
   },
@@ -127,7 +129,8 @@ export default {
   .content-section .image-container {
     all: unset;
     grid-area: image;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     width: 90%;
   }
 
