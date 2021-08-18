@@ -11,7 +11,7 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 const scene = new Three.Scene();
 let camera = new Three.PerspectiveCamera()
 let model = null
-const renderer = new Three.WebGLRenderer({ antialias: true });
+const renderer = new Three.WebGLRenderer({ antialias: true, alpha: true });
 
 export default {
   name: "threejs-test",
@@ -45,7 +45,6 @@ export default {
       renderer.render(scene, camera);
     },
     initScene: function () {
-      scene.background = new Three.Color(0xffffff);
       scene.fog = new Three.Fog(0xffffff, 10, 200);
     },
     initLights: function () {
