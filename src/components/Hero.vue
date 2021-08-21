@@ -2,9 +2,9 @@
   <section class="hero-banner">
     <div class="hero-animation-container">
       <video width="100%" height="auto" controls muted autoplay playsinline loop poster="/assets/hero_img.jpg">
-        <source src="/assets/exadrums_hero_video.ogv" type="video/ogg">
         <source src="/assets/exadrums_hero_video.webm" type="video/webm">
         <source src="/assets/exadrums_hero_video.mp4" type="video/mp4">
+        <source src="/assets/exadrums_hero_video.ogv" type="video/ogg">
         Your browser does not support the video tag.
       </video>
     </div>

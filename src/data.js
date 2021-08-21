@@ -134,7 +134,7 @@ export const getMenus = app => { return [
         text: "You can use any Raspberry Pi-compatible soundcard or DAC to achieve the best sound quality you can get.",
       },
     ],
-    image_path: "./assets/hardware.jpg",
+    image_path: "./assets/hw.gif",
     buttons: 
     [
       {
