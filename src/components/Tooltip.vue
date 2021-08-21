@@ -16,8 +16,8 @@ export default {
   position: absolute;
   opacity: 0;
   top: 120%;
-  width: max-content;
-  max-width: 200px;
+  width: 150%;
+  max-width: max-content;
   height: auto;
   border-radius: calc(var(--spacer) / 4);
   background-color: var(--clr-primary);
@@ -30,15 +30,20 @@ export default {
 }
 
 .tooltip-center {
-  left: calc(-100% - 25px);
+  left: 50%;
+  transform: translateX(-50%);
 }
 
 .tooltip-right {
-  left: 0;
+  left: calc(50% + 3em);
+  transform: translateX(-50%);
+
 }
 
 .tooltip-left {
-  right: 0;
+  left: calc(50% - 3em);
+  transform: translateX(-50%);
+
 }
 
 .tooltip:after {
@@ -58,12 +63,12 @@ export default {
 
 .tooltip-right:after {
   content: "";
-  left: calc(1.5 * var(--spacer));
+  left: calc(50% - 3em);
 }
 
 .tooltip-left:after {
   content: "";
-  right: calc(1.5 * var(--spacer));
+  left: calc(50% + 3em);
 }
 
 .enable-tooltip:hover + .tooltip {

@@ -77,7 +77,8 @@ export default {
 .content-section .icons-container {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
+  width: 90%;
+  margin: auto;
 }
 
 .content-section .icons-container .content-icons {
@@ -99,6 +100,8 @@ export default {
 
 .content-section .icon-container {
   position: relative;
+  flex-basis: 100%;
+  text-align: center;
 }
 
 @media only screen and (min-width: 85ch) {
