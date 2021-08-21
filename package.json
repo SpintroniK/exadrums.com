@@ -40,6 +40,7 @@
     "webpack-dev-server": "^3.11.0"
   },
   "dependencies": {
-    "polyfill-library": "^3.105.0"
+    "polyfill-library": "^3.105.0",
+    "vue-3d-model": "^1.4.0"
   }
 }
