@@ -25,7 +25,18 @@
     <a href="https://configure.exadrums.com" class="button btn-dark" data-btn-icon="">Make Your Own</a>
     <a href="https://make.exadrums.com" class="button btn-light" data-btn-icon="">Documentation</a>
   </section>
+  <LatestNews :news="news" />
 </template>
+
+<script>
+  import LatestNews from './LatestNews.vue';
+  export default {
+    props: {
+      news: { type: Object, required: true }
+    },
+    components: { LatestNews },
+  }
+</script>
 
 <style>
 .hero-banner {

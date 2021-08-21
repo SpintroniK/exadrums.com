@@ -1,7 +1,7 @@
 <template>
   <Header :menus="menus" :about="about" />
   <main>
-    <Hero id="top" :observer="observer" />
+    <Hero id="top" :observer="observer" :news="news" />
     <Content v-for="menu in menus" :key="menu.id" :content="menu" :observer="observer" />
   </main>
   <div class="conversion">
@@ -43,6 +43,7 @@ export default {
       modals: modals,
       menus: getMenus(this),
       observer: null,
+      news: {},
     };
   },
   components: {
@@ -56,6 +57,7 @@ export default {
     this.observer = new IntersectionObserver(this.onElementObserved, {
       threshold: 1.0,
     });
+    this.fetchLastNews()
   },
   mounted() {
     const animElements = document.querySelectorAll(".lazy-image, .icon, hr, h1");
@@ -80,6 +82,20 @@ export default {
           target.classList.add("h1-slide__in");
         }
       });
+    },
+    fetchLastNews() {
+      fetch("https://news.exadrums.com/latest.json")
+        .then((stream) => stream.json())
+        .then((data) => {
+           this.news = {
+            'title': data.items[0].title,
+            'url' : data.items[0].url,
+            'description' : data.description,
+            'summary' : data.items[0].summary,
+            'date' : data.items[0].date_published
+           }
+        })
+        .catch((error) => console.error(error))
     },
   },
   destroy() {
@@ -187,9 +203,9 @@ section {
   transition: fill var(--delay) ease-in-out;
 }
 
-.conversion:hover svg path{
-  fill:var(--clr-ascent);
-  }
+.conversion:hover svg path {
+  fill: var(--clr-ascent);
+}
 
 hr {
   background-color: var(--clr-ascent);
@@ -221,10 +237,10 @@ b {
 b::before {
   content: "";
   position: absolute;
-  top: 0;
+  bottom: -10%;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 60%;
   background-color: var(--clr-ascent);
   border-radius: 3px;
   padding: 3px;
@@ -321,7 +337,7 @@ b:hover::before {
 
 @media only screen and (min-width: 85ch) {
   html {
-    background-image: url('/assets/background.svg');
+    background-image: url("/assets/background.svg");
     background-size: 100%;
     background-position: top;
     background-repeat: no-repeat;
