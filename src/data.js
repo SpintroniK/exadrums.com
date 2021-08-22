@@ -32,7 +32,7 @@ export const modals =
     case: 
     { 
         title: "3D-printable enclosure.", 
-        image_path: "./assets/casing.png", 
+        image_path: "./assets/enclosure.gif", 
         paragraphs: [`The enclosure is made of 4 different parts, and has been designed to be printed on small printers (15x15x15cm).`,
                     `Eight 3D-printed screws hold the enclosure together.`,
                     `It takes about 10 hours to print, but it's well worth the wait, as you can mount it on a Roland TD4-KP portable drum kit.`,

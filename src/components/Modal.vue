@@ -1,7 +1,7 @@
 <template>
   <div>
     <transition name="fade">
-      <div class="modal-background" v-show="isOpen" @click="closeModal">
+      <div class="modal-background" v-if="isOpen" @click="closeModal">
         <div class="modal-container" @click="click">
           <h2>{{ data.title }}</h2>
           <div class="modal-content">
