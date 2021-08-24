@@ -24,8 +24,8 @@
     </div>
     <a href="https://configure.exadrums.com" class="button btn-dark" data-btn-icon="">Make Your Own</a>
     <a href="https://make.exadrums.com" class="button btn-light" data-btn-icon="">Documentation</a>
+    <LatestNews :news="news" id="news" />
   </section>
-  <LatestNews :news="news" />
 </template>
 
 <script>
@@ -79,10 +79,12 @@
       "title title"
       "hr image"
       "text image"
+      "news news"
       "btn-left btn-right";
     gap: var(--spacer);
-    grid-template-rows: auto auto minmax(1fr, 200px) auto;
+    grid-template-rows: auto auto minmax(1fr, 200px) auto auto;
     grid-template-columns: 1fr 1fr;
+    padding-top: 12%;
   }
 
   .hero-banner h1 {
@@ -137,6 +139,10 @@
     align-self: center;
     justify-self: center;
     max-height: 3rem;
+  }
+
+  #news {
+    grid-area: news;
   }
 }
 </style>
