@@ -349,7 +349,6 @@ b:hover::before {
   }
 
   section {
-    padding: 12% 0 12% 0;
     min-height: unset;
   }
 

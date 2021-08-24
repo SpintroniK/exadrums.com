@@ -108,32 +108,35 @@ export default {
   .content-section {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto auto 0.5fr 0.5fr;
+    grid-template-rows: 20vh auto auto auto 0.5fr 0.5fr 20vh;
   }
 
   .align-left {
     grid-template-areas:
+      ". image"
       "title image"
       "hr image"
       "icons image"
       "text image"
-      "button image";
+      "button image"
+      ". image";
   }
 
   .align-right {
     grid-template-areas:
+      "image ."
       "image title"
       "image hr"
       "image icons"
       "image text"
-      "image button";
+      "image button"
+      "image .";
   }
 
   .content-section .image-container {
     all: unset;
     grid-area: image;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
     width: 90%;
   }
 
@@ -157,6 +160,7 @@ export default {
   }
 
   .content-section .icons-container {
+    grid-area: icons;
     margin: auto;
     width: 80%;
   }
