@@ -92,7 +92,7 @@ export default {
             'url' : data.items[0].url,
             'description' : data.description,
             'summary' : data.items[0].summary,
-            'date' : data.items[0].date_published
+            'date' : data.items[0].date_published.split("T")[0]
            }
         })
         .catch((error) => console.error(error))
