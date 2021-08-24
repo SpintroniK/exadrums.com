@@ -50,7 +50,7 @@ export default {
     initLights: function () {
       const ambientLight = new Three.AmbientLight(0xffffff);
       const pointLight = new Three.PointLight(0xffffff, 1, 100);
-      pointLight.position.set(5, 5, 5);
+      pointLight.position.set(10, 10, 10);
       scene.add(ambientLight, pointLight);
     },
     initCamera: function () {
@@ -60,7 +60,7 @@ export default {
         0.01,
         100
       );
-      camera.position.set(0, 0, 12);
+      camera.position.set(0, 0, 20);
     },
     initRenderer: function () {
       renderer.setPixelRatio(window.devicePixelRatio);
@@ -83,7 +83,7 @@ export default {
         (gltf) => {
           model = gltf.scene;
           model.position.set(0, 0, 0);
-          model.scale.set(2, 2, 2);
+          model.scale.set(4, 4, 4);
           scene.add(model);
         },
         function (progress) {
@@ -99,7 +99,7 @@ export default {
     animate: function () {
       requestAnimationFrame(this.animate);
       if (model) {
-        model.rotation.y += 0.01;
+        model.rotation.y += 0.005;
       }
       camera.lookAt(scene.position);
       renderer.render(scene, camera);
@@ -116,7 +116,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 #canvas {
   position: relative;
   top: 0;
