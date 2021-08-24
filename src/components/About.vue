@@ -2,8 +2,6 @@
   <section class="about" id="about">
     <h1>About</h1>
 
-    <!-- <p class="e-mail">contact@exadrums.com</p> -->
-
     <p class="plain-text">
       You can find more information or seek help on social media.
     </p>
@@ -20,6 +18,8 @@
       </a>
     </div>
 
+    <p class="e-mail">contact@exadrums.com</p>
+    
     <hr>
 
     <Testimonial v-if="testimonials.length > 0"
@@ -165,6 +165,10 @@ export default {
   padding: var(--spacer);
 }
 
+.about hr {
+  margin-bottom: 25vh;
+}
+
 @media only screen and (min-width: 85ch) {
   .about {
     display: grid;
@@ -172,7 +176,7 @@ export default {
       ". title title ."
       ". hr hr ."
       ". text text ."
-      ". social social ."
+      ". email social ."
       ". testimonials testimonials ."
       ". signature signature .";
     grid-template-columns: auto auto 200px auto;
@@ -207,7 +211,7 @@ export default {
   .e-mail {
     color: unset;
     grid-area: email;
-    font-size: clamp(1.3em, 4vw, 3em);
+    font-size: clamp(1.15em, 4vw, 2em);
     align-self: center;
   }
 
@@ -231,6 +235,10 @@ export default {
   .signature {
     grid-area: signature;
     align-self: center;
+  }
+
+  .about hr {
+    margin-bottom: unset;
   }
 }
 </style>
