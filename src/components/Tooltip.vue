@@ -50,7 +50,7 @@ export default {
   content: "";
   position: absolute;
   bottom: 100%;
-  margin-left: -5px;
+  transform: translateX(-50%);
   border-width: 5px;
   border-style: solid;
   border-color: transparent transparent var(--clr-primary) transparent;
