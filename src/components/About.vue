@@ -18,7 +18,47 @@
       </a>
     </div>
 
-    <p class="e-mail">contact@exadrums.com</p>
+    <p class="e-mail">
+      <span>c</span>
+      <span>g</span>
+      <span>o</span>
+      <span>j</span>
+      <span>n</span>
+      <span>a</span>
+      <span>t</span>
+      <span>2</span>
+      <span>a</span>
+      <span>f</span>
+      <span>c</span>
+      <span>w</span>
+      <span>t</span>
+      <span>r</span>
+      <span>@</span>
+      <span>8</span>
+      <span>e</span>
+      <span>v</span>
+      <span>x</span>
+      <span>f</span>
+      <span>a</span>
+      <span>e</span>
+      <span>d</span>
+      <span>i</span>
+      <span>r</span>
+      <span>p</span>
+      <span>u</span>
+      <span>a</span>
+      <span>m</span>
+      <span>u</span>
+      <span>s</span>
+      <span>z</span>
+      <span>.</span>
+      <span>n</span>
+      <span>c</span>
+      <span>e</span>
+      <span>o</span>
+      <span>t</span>
+      <span>m</span>
+    </p>
     
     <hr>
 
@@ -106,6 +146,10 @@ export default {
   font-size: clamp(1.2em, 8vw, 2.5em);
   color: var(--clr-ascent);
   margin: var(--spacer) auto;
+}
+
+.e-mail > span:nth-child(even) {
+  display: none;
 }
 
 .social-container {
