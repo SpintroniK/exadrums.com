@@ -21,8 +21,11 @@
       <p class="plain-text">
         If you wish to make your own eXaDrums module, click the "Make Your Own" button below.
       </p>
+      <p class="plain-text">
+        If you wish to know more about the current state of the project, check out the latest news ({{ news.title }}).
+      </p>
     </div>
-    <a href="https://configure.exadrums.com" class="button btn-dark" data-btn-icon="">Make Your Own</a>
+    <a href="https://configure.exadrums.com" target="_blank" class="button btn-dark" data-btn-icon="">Make Your Own</a>
     <!-- <a href="https://make.exadrums.com" class="button btn-light" data-btn-icon="">Documentation</a> -->
     <LatestNews :news="news" id="news" />
   </section>

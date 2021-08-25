@@ -20,44 +20,45 @@
 
     <p class="e-mail">
       <span>c</span>
-      <span>g</span>
-      <span>o</span>
-      <span>j</span>
       <span>n</span>
-      <span>a</span>
-      <span>t</span>
-      <span>2</span>
-      <span>a</span>
-      <span>f</span>
-      <span>c</span>
-      <span>w</span>
-      <span>t</span>
-      <span>r</span>
-      <span>@</span>
-      <span>8</span>
-      <span>e</span>
-      <span>v</span>
-      <span>x</span>
-      <span>f</span>
-      <span>a</span>
-      <span>e</span>
-      <span>d</span>
-      <span>i</span>
-      <span>r</span>
-      <span>p</span>
-      <span>u</span>
-      <span>a</span>
-      <span>m</span>
-      <span>u</span>
+      <span>o</span>
+      <span>o</span>
+      <span>n</span>
       <span>s</span>
-      <span>z</span>
-      <span>.</span>
-      <span>n</span>
-      <span>c</span>
-      <span>e</span>
-      <span>o</span>
       <span>t</span>
+      <span>p</span>
+      <span>a</span>
+      <span>a</span>
+      <span>c</span>
       <span>m</span>
+      <span>t</span>
+      <span>.</span>
+      <span>@</span>
+      <span>p</span>
+      <span>e</span>
+      <span>l</span>
+      <span>x</span>
+      <span>e</span>
+      <span>a</span>
+      <span>a</span>
+      <span>d</span>
+      <span>s</span>
+      <span>r</span>
+      <span>e</span>
+      <span>u</span>
+      <span>@</span>
+      <span>m</span>
+      <span>t</span>
+      <span>s</span>
+      <span>h</span>
+      <span>.</span>
+      <span>a</span>
+      <span>c</span>
+      <span>n</span>
+      <span>o</span>
+      <span>k</span>
+      <span>m</span>
+      <span>s</span>
     </p>
     
     <hr>
