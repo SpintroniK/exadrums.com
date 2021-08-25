@@ -1,9 +1,7 @@
 <template>
   <div class="news-container">
     <span>{{ news.date }}</span>
-    <div>
-      <a :href="news.url" :alt="news.description" class="news-title">❝ {{ news.title }} ❞</a>
-    </div>
+    <a :href="news.url" :alt="news.description" class="news-title">❝ {{ news.title }} ❞</a>
   </div>
 </template>
 
@@ -17,47 +15,46 @@ export default {
 
 <style>
 .news-container {
-  position: relative;
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
-  text-align: center;
-  width: 100%;
+  width: 90%;
+  margin: auto;
+  padding: calc(var(--spacer) / 3) var(--spacer);
+}
+
+.news-container:before {
+  content: url(/assets/megaphone_icon.svg);
+  color: var(--clr-ascent);
+  transform: scale(0.75);
 }
 
 .news-title {
-  font-size: clamp(1.25em, 3vw, 1.5em);
+  font-size: clamp(1.15em, 3vw, 1.25em);
   text-decoration: none;
   color: currentColor;
   width: max-content;
-  max-width: 60ch;
+  max-width: 50ch;
+  margin-left: calc(var(--spacer) / 2);
+}
+
+.news-title:hover {
+  color: var(--clr-ascent);
 }
 
 @media only screen and (min-width: 85ch) {
   .news-container  {
+    position: relative;
     width: 90%;
     margin-right: 0;
     margin-left: auto;
-    color: var(--clr-primary);
     background-color: var(--clr-ternary);
-    padding: calc(var(--spacer) / 2);
-    border-radius: calc(var(--spacer) / 3);
+    border-radius: calc(var(--spacer) / 2);
+    border: 1px solid var(--clr-secondary);
   }
 
   .news-container:before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(-90%, -50%);
-    border-width: 5px;
-    border-style: solid;
-    border-color: transparent var(--clr-ternary) transparent transparent;
-  }
-
-  .news-container:after {
     content: url(/assets/megaphone_icon.svg);
     position: absolute;
     top: auto;
@@ -65,6 +62,19 @@ export default {
     left: 0;
     transform: translateX(calc(-100% - 10px));
     color: var(--clr-ascent);
+  }
+
+  .news-container:after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%) rotate(45deg);
+    width: 10px;
+    height: 10px;
+    background-color: var(--clr-ternary);
+    border-bottom: 1px solid var(--clr-secondary);
+    border-left: 1px solid var(--clr-secondary);
   }
 }
 </style>
