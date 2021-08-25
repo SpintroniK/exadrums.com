@@ -28,7 +28,7 @@ export default {
 .news-container:before {
   content: url(/assets/megaphone_icon.svg);
   color: var(--clr-ascent);
-  transform: scale(0.75);
+  transform: scale(0.8);
 }
 
 .news-title {
