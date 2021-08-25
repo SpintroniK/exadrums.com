@@ -18,6 +18,7 @@ export default {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-evenly;
   flex-wrap: wrap;
   width: 90%;
   margin: auto;
@@ -36,7 +37,6 @@ export default {
   color: currentColor;
   width: max-content;
   max-width: 50ch;
-  margin-left: calc(var(--spacer) / 2);
 }
 
 .news-title:hover {
