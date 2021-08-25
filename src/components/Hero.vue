@@ -23,7 +23,7 @@
       </p>
     </div>
     <a href="https://configure.exadrums.com" class="button btn-dark" data-btn-icon="">Make Your Own</a>
-    <a href="https://make.exadrums.com" class="button btn-light" data-btn-icon="">Documentation</a>
+    <!-- <a href="https://make.exadrums.com" class="button btn-light" data-btn-icon="">Documentation</a> -->
     <LatestNews :news="news" id="news" />
   </section>
 </template>
@@ -79,10 +79,9 @@
       "title title"
       "hr image"
       "text image"
-      "news news"
-      "btn-left btn-right";
+      "btn-left news";
     gap: var(--spacer);
-    grid-template-rows: auto auto minmax(1fr, 200px) auto auto;
+    grid-template-rows: auto auto minmax(1fr, 200px) auto;
     grid-template-columns: 1fr 1fr;
     padding-top: 12%;
   }
