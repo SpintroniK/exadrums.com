@@ -29,6 +29,7 @@ export default {
     onWindowResize: function () {
       camera.aspect = canvas.clientWidth / canvas.clientHeight;
       camera.updateProjectionMatrix();
+      camera.position.set(0, 0, 15540 / canvas.clientWidth);
       renderer.setSize(canvas.clientWidth, canvas.clientHeight);
     },
     init: function () {
@@ -51,20 +52,23 @@ export default {
       const ambientLight = new Three.AmbientLight(0xffffff);
       const pointLight = new Three.PointLight(0xffffff, 1, 100);
       pointLight.position.set(10, 10, 10);
-      scene.add(ambientLight, pointLight);
+      const hemiLight = new Three.HemisphereLight(0xffeeb1, 0x080820, 1)
+      scene.add(ambientLight, hemiLight, pointLight);
     },
     initCamera: function () {
       camera = new Three.PerspectiveCamera(
-        45,
+        35,
         canvas.clientWidth / canvas.clientHeight,
         0.01,
         100
       );
-      camera.position.set(0, 0, 20);
+      camera.position.set(0, 0, 15540 / canvas.clientWidth);
     },
     initRenderer: function () {
       renderer.setPixelRatio(window.devicePixelRatio);
       renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+      renderer.toneMapping = Three.ReinhardToneMapping;
+      renderer.toneMappingExposure = 4;
     },
     initControls: function () {
       const controls = new OrbitControls(camera, renderer.domElement);
@@ -83,7 +87,7 @@ export default {
         (gltf) => {
           model = gltf.scene;
           model.position.set(0, 0, 0);
-          model.scale.set(3.4, 3.4, 3.4);
+          model.scale.set(0.075, 0.075, 0.075);
           scene.add(model);
         },
         function (progress) {
@@ -99,7 +103,7 @@ export default {
     animate: function () {
       requestAnimationFrame(this.animate);
       if (model) {
-        model.rotation.y += 0.005;
+        model.rotation.y += 0.008;
       }
       camera.lookAt(scene.position);
       renderer.render(scene, camera);
