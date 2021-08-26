@@ -23,7 +23,7 @@ export const modals =
     hard: 
     { 
         title: "What hardware do I need to make the module?", 
-        image_path: "./assets/hw.png", 
+        image_path: "./assets/hw.gif", 
         paragraphs: [`eXaDrums comes with a DIY sensor board.
                     It has 8 trigger inputs, and is compatible with Raspberry Pi 2 and newer versions.`,
                     `To make the board compatible with as many triggers as possible, each input is software and hardware configurable.`,
@@ -31,7 +31,7 @@ export const modals =
     },
     case: 
     { 
-        title: "3D-printable enclosure.", 
+        title: "3D-printable enclosure", 
         image_path: "./assets/enclosure.gif", 
         paragraphs: [`The enclosure is made of 4 different parts, and has been designed to be printed on small printers (15x15x15cm).`,
                     `Eight 3D-printed screws hold the enclosure together.`,
@@ -134,7 +134,7 @@ export const getMenus = app => { return [
         text: "You can use any Raspberry Pi-compatible soundcard or DAC to achieve the best sound quality you can get.",
       },
     ],
-    image_path: "./assets/hw.gif",
+    image_path: "./assets/hw.png",
     buttons: 
     [
       {
