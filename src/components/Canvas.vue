@@ -106,7 +106,7 @@ export default {
         (gltf) => {
           model = gltf.scene;
           model.position.set(0, 0, 0);
-          model.scale.set(0.075, 0.075, 0.075);
+          model.scale.set(0.07, 0.07, 0.07);
           scene.add(model);
         },
         function (progress) {
