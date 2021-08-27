@@ -145,6 +145,7 @@
 
   #news {
     grid-area: news;
+    align-self: center;
   }
 }
 </style>
