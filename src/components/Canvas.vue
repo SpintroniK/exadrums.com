@@ -36,8 +36,8 @@ export default {
       const canvas = document.getElementById("canvas");
 
       this.initScene();
-      this.initLights();
       this.initCamera();
+      this.initLights();
       this.initRenderer();
       this.initControls();
       this.addGLTFModel();
@@ -48,13 +48,6 @@ export default {
     initScene: function () {
       scene.fog = new Three.Fog(0xffffff, 10, 200);
     },
-    initLights: function () {
-      const ambientLight = new Three.AmbientLight(0xffffff);
-      const pointLight = new Three.PointLight(0xffffff, 1, 100);
-      pointLight.position.set(10, 10, 10);
-      const hemiLight = new Three.HemisphereLight(0xffeeb1, 0x080820, 1)
-      scene.add(ambientLight, hemiLight, pointLight);
-    },
     initCamera: function () {
       camera = new Three.PerspectiveCamera(
         35,
@@ -63,6 +56,20 @@ export default {
         100
       );
       camera.position.set(0, 0, 15540 / canvas.clientWidth);
+    },
+    initLights: function () {
+      const ambientLight = new Three.AmbientLight(0xffffff, 0.5);
+
+      const light = new Three.DirectionalLight( 0xffffff, 1, 100 );
+      light.position.set( 0, 30, 0 );
+      light.castShadow = true;
+
+      const pointLight = new Three.PointLight(0xffffff, 1, 45);
+      pointLight.position.set(0, 5, 5);
+      camera.add(pointLight)
+
+      const hemiLight = new Three.HemisphereLight(0xffeeb1, 0x080820, 1)
+      scene.add(ambientLight, hemiLight, light, camera);
     },
     initRenderer: function () {
       renderer.setPixelRatio(window.devicePixelRatio);
