@@ -5,7 +5,7 @@
     <Content v-for="menu in menus" :key="menu.id" :content="menu" :observer="observer" :loadCanvas="loadCanvas" />
   </main>
   <div class="conversion">
-    <a href="https://configure.exadrums.com">
+    <a href="https://configure.exadrums.com" target="_blank" rel="noopener" >
       <svg
         xmlns:svg="http://www.w3.org/2000/svg"
         viewBox="0 0 954.6672 429.7838">
