@@ -2,7 +2,7 @@
   <Header :menus="menus" :about="about" />
   <main>
     <Hero id="top" :observer="observer" :news="news" />
-    <Content v-for="menu in menus" :key="menu.id" :content="menu" :observer="observer" />
+    <Content v-for="menu in menus" :key="menu.id" :content="menu" :observer="observer" :loadCanvas="loadCanvas" />
   </main>
   <div class="conversion">
     <a href="https://configure.exadrums.com">
@@ -44,6 +44,7 @@ export default {
       menus: getMenus(this),
       observer: null,
       news: {},
+      loadCanvas: false,
     };
   },
   components: {
@@ -60,7 +61,7 @@ export default {
     this.fetchLastNews()
   },
   mounted() {
-    const animElements = document.querySelectorAll(".lazy-image, .icon, hr, h1");
+    const animElements = document.querySelectorAll(".lazy-image, .icon, hr, h1, #canvas");
     animElements.forEach((element) => {
       this.observer.observe(element);
     });
@@ -80,6 +81,11 @@ export default {
 
         if (target.tagName == "H1") {
           target.classList.add("h1-slide__in");
+        }
+
+        if (target.id == "canvas") {
+          console.log("Load 3d scene.");
+          this.loadCanvas = true
         }
       });
     },

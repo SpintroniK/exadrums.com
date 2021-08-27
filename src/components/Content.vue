@@ -3,7 +3,7 @@
     <h1>{{ content.title }}</h1>
     <div class="image-container">
       <img v-if="content.image_path" class="lazy-image" width="640" height="480" :data-src="content.image_path" src="" alt="content-section image" />
-      <Canvas v-else :model-path="content.model_path" />
+      <Canvas v-else :model-path="content.model_path" :loadCanvas="loadCanvas" />
     </div>
     <hr>
     <div class="icons-container">
@@ -44,7 +44,8 @@ import Canvas from './Canvas.vue';
 export default {
   components: { Tooltip, Canvas },
   props: {
-    content: { type: Object, required: true }
+    content: { type: Object, required: true },
+    loadCanvas: { type: Boolean, required: true }
   },
 };
 </script>

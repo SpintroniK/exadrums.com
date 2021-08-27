@@ -24,6 +24,18 @@ export default {
   },
   props: {
     modelPath: { type: String, required: true },
+    loadCanvas: { type: Boolean, required: true }
+  },
+  watch: {
+    loadCanvas: {
+      immediate: true, 
+      handler (val) {
+        if (val == true) {
+          this.init();
+          this.animate();
+        }
+      }
+    }
   },
   methods: {
     onWindowResize: function () {
@@ -117,8 +129,6 @@ export default {
     },
   },
   mounted() {
-    this.init();
-    this.animate();
     window.addEventListener("resize", this.onWindowResize, false);
   },
   beforeUnmount() {
