@@ -29,16 +29,20 @@ export default {
   width: 90%;
   margin: auto;
   padding: calc(var(--spacer) / 3) var(--spacer);
+  transition:
+    color var(--delay),
+    background-color var(--delay);
+}
+
+
+.news-container:hover {
+  color: var(--clr-ascent);
+  background-color: var(--clr-background);
 }
 
 .news-container > * {
   padding-left: var(--spacer);
   padding-right: var(--spacer);
-}
-
-.news-container:hover {
-  color: var(--clr-ascent);
-  background-color: var(--clr-background);
 }
 
 .news-container:before {
