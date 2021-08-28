@@ -52,7 +52,7 @@ export default {
 @media only screen and (min-width: 85ch) {
   .news-container  {
     position: relative;
-    width: 90%;
+    width: calc(100% - 50px);
     margin-right: 0;
     margin-left: auto;
     justify-content: space-evenly;
