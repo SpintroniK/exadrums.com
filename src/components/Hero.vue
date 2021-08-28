@@ -27,7 +27,7 @@
     </div>
     <a href="https://configure.exadrums.com" target="_blank" rel="noopener" class="button btn-dark" data-btn-icon="">Make Your Own</a>
     <!-- <a href="https://make.exadrums.com" class="button btn-light" data-btn-icon="">Documentation</a> -->
-    <LatestNews :news="news" id="news" />
+    <LatestNews v-if="news.url" :news="news" id="news" />
   </section>
 </template>
 
@@ -75,7 +75,7 @@
   margin: var(--spacer) 2.5%;
 }
 
-@media only screen and (min-width: 85ch) {
+@media only screen and (min-width: 100ch) {
   .hero-banner {
     display: grid;
     grid-template-areas:
@@ -146,6 +146,7 @@
   #news {
     grid-area: news;
     align-self: center;
+    width: 100%;
   }
 }
 </style>

@@ -106,7 +106,7 @@ export default {
   text-align: center;
 }
 
-@media only screen and (min-width: 85ch) {
+@media only screen and (min-width: 100ch) {
   .content-section {
     display: grid;
     grid-template-columns: 1fr 1fr;

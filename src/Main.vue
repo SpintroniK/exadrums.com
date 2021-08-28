@@ -340,7 +340,7 @@ b:hover::before {
     opacity initial linear;
 }
 
-@media only screen and (min-width: 85ch) {
+@media only screen and (min-width: 100ch) {
   html {
     background-image: url("/assets/background.svg");
     background-size: 100%;
