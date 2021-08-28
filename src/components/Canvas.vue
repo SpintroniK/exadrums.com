@@ -1,4 +1,5 @@
 <template>
+  <div id="loader" class="visible"></div>
   <div id="canvas"></div>
 </template>
 
@@ -7,10 +8,9 @@ import * as Three from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 
-
 const scene = new Three.Scene();
-let camera = new Three.PerspectiveCamera()
-let model = null
+let camera = new Three.PerspectiveCamera();
+let model = null;
 const renderer = new Three.WebGLRenderer({ antialias: true, alpha: true });
 
 export default {
@@ -20,28 +20,28 @@ export default {
       vscene: null,
       vcamera: null,
       vrenderer: null,
-      };
+    };
   },
   props: {
     modelPath: { type: String, required: true },
-    loadCanvas: { type: Boolean, required: true }
+    loadCanvas: { type: Boolean, required: true },
   },
   watch: {
     loadCanvas: {
-      immediate: true, 
-      handler (val) {
+      immediate: true,
+      handler(val) {
         if (val == true) {
           this.init();
           this.animate();
         }
-      }
-    }
+      },
+    },
   },
   methods: {
     onWindowResize: function () {
       camera.aspect = canvas.clientWidth / canvas.clientHeight;
       camera.updateProjectionMatrix();
-      camera.position.set(0, 0, 15540 / canvas.clientWidth);
+      camera.position.set(0, 0, 16000 / canvas.clientWidth);
       renderer.setSize(canvas.clientWidth, canvas.clientHeight);
     },
     init: function () {
@@ -67,20 +67,20 @@ export default {
         0.01,
         100
       );
-      camera.position.set(0, 0, 15540 / canvas.clientWidth);
+      camera.position.set(0, 0, 16000 / canvas.clientWidth);
     },
     initLights: function () {
       const ambientLight = new Three.AmbientLight(0xffffff, 0.5);
 
-      const light = new Three.DirectionalLight( 0xffffff, 1, 100 );
-      light.position.set( 0, 30, 0 );
+      const light = new Three.DirectionalLight(0xffffff, 1, 100);
+      light.position.set(0, 30, 0);
       light.castShadow = true;
 
-      const pointLight = new Three.PointLight(0xffffff, 1, 45);
+      const pointLight = new Three.PointLight(0xffffff, 1, 55);
       pointLight.position.set(0, 5, 5);
-      camera.add(pointLight)
+      camera.add(pointLight);
 
-      const hemiLight = new Three.HemisphereLight(0xffeeb1, 0x080820, 1)
+      const hemiLight = new Three.HemisphereLight(0xffeeb1, 0x080820, 1);
       scene.add(ambientLight, hemiLight, light, camera);
     },
     initRenderer: function () {
@@ -111,7 +111,8 @@ export default {
         },
         function (progress) {
           if (progress.loaded / progress.total == 1) {
-            console.log("GLTF LOADED!");
+            canvas.classList.toggle("visible")
+            document.getElementById("loader").style.display="none";
           }
         },
         function (error) {
@@ -140,12 +141,46 @@ export default {
 <style scoped>
 #canvas {
   position: relative;
+  opacity: 0;
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
-  min-height: 250px;
+  height: clamp(300px, 80vw, 500px);
   background-color: transparent;
   cursor: move;
+  border: 1px dashed grey;
 }
+
+#loader {
+  position: relative;
+  opacity: 0.75;
+  top: 50%;
+  left: 50%;
+  width: calc(2 * var(--spacer));
+  height: calc(2 * var(--spacer));
+  transform: translate(-50%, -50%);
+  background-image: url("/assets/exadrums_logo.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  animation: bounce calc(3 * var(--delay)) infinite ease-out;
+}
+
+@keyframes bounce {
+  0% {transform: scale(1.35);}
+  15% {transform: scale(1.55); opacity: 1;}
+  100% {transform: scale(1.35);}
+}
+
+.visible {
+  opacity: 1 !important;
+  transition: opacity calc(2 * var(--delay)) ease-in;
+}
+
+@media only screen and (min-width: 100ch) {
+  #canvas {
+    max-width: 50vw;
+  }
+}
+
 </style>
