@@ -343,7 +343,7 @@ b:hover::before {
 @media only screen and (min-width: 100ch) {
   html {
     background-image: url("/assets/background.svg");
-    background-size: 100%;
+    background-size: clamp(1200px, 100%, 100vw);
     background-position: top;
     background-repeat: no-repeat;
   }
