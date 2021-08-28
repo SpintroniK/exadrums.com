@@ -46,7 +46,6 @@
   header {
     position: fixed;
     display: flex;
-    align-items: center;
     justify-content: space-between;
     top: 0;
     left: 0;
@@ -55,10 +54,6 @@
     backdrop-filter: blur(5px);
     padding: calc(var(--spacer) / 2);
     z-index: 100;
-  }
-
-  header a {
-    display: flex;
   }
 
   header .logo > img {
