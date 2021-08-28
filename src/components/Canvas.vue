@@ -1,6 +1,5 @@
 <template>
-  <div id="loader" class="visible"></div>
-  <div id="canvas"></div>
+  <div id="canvas" class="loading"></div>
 </template>
 
 <script>
@@ -41,8 +40,11 @@ export default {
     onWindowResize: function () {
       camera.aspect = canvas.clientWidth / canvas.clientHeight;
       camera.updateProjectionMatrix();
-      camera.position.set(0, 0, 16000 / canvas.clientWidth);
+      this.updateCameraPosition()
       renderer.setSize(canvas.clientWidth, canvas.clientHeight);
+    },
+    updateCameraPosition: function () {
+      camera.position.set(0, 0, 16000 / canvas.clientWidth);
     },
     init: function () {
       const canvas = document.getElementById("canvas");
@@ -67,7 +69,7 @@ export default {
         0.01,
         100
       );
-      camera.position.set(0, 0, 16000 / canvas.clientWidth);
+      this.updateCameraPosition()
     },
     initLights: function () {
       const ambientLight = new Three.AmbientLight(0xffffff, 0.5);
@@ -111,8 +113,7 @@ export default {
         },
         function (progress) {
           if (progress.loaded / progress.total == 1) {
-            canvas.classList.toggle("visible")
-            document.getElementById("loader").style.display="none";
+            ["visible", "loading"].map(c => canvas.classList.toggle(c) )
           }
         },
         function (error) {
@@ -141,7 +142,6 @@ export default {
 <style scoped>
 #canvas {
   position: relative;
-  opacity: 0;
   top: 0;
   left: 0;
   width: 100%;
@@ -151,25 +151,11 @@ export default {
   border: 1px dashed grey;
 }
 
-#loader {
-  position: relative;
-  opacity: 0.75;
-  top: 50%;
-  left: 50%;
-  width: calc(2 * var(--spacer));
-  height: calc(2 * var(--spacer));
-  transform: translate(-50%, -50%);
+.loading {
   background-image: url("/assets/exadrums_logo.svg");
   background-repeat: no-repeat;
   background-position: center;
-  background-size: contain;
-  animation: bounce calc(3 * var(--delay)) infinite ease-out;
-}
-
-@keyframes bounce {
-  0% {transform: scale(1.35);}
-  15% {transform: scale(1.55); opacity: 1;}
-  100% {transform: scale(1.35);}
+  background-size: 40px;
 }
 
 .visible {
