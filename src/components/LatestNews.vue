@@ -49,7 +49,7 @@ export default {
   max-width: 50ch;
 }
 
-@media only screen and (min-width: 85ch) {
+@media only screen and (min-width: 1000px) {
   .news-container  {
     position: relative;
     width: calc(100% - 50px);
