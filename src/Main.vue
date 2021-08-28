@@ -56,7 +56,7 @@ export default {
   },
   created() {
     this.observer = new IntersectionObserver(this.onElementObserved, {
-      threshold: 1.0,
+      threshold: 0.5,
     });
     this.fetchLastNews()
   },
@@ -84,7 +84,6 @@ export default {
         }
 
         if (target.id == "canvas") {
-          console.log("Load 3d scene.");
           this.loadCanvas = true
         }
       });
