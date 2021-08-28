@@ -13,7 +13,7 @@
         </li>
       </ul>
     </nav>
-    <label for="nav-toggle" class="nav-toggle-label">
+    <label for="nav-toggle">
       <span></span>
     </label>
   </header>
@@ -127,15 +127,12 @@
     max-height: 60ch;
     background-color: var(--clr-semi-transparent);
     backdrop-filter: blur(3px);
-    transform: scaleY(0);
     transform-origin: top;
     opacity: 0;
     visibility: hidden;
+    transform: scaleY(0);
     z-index: 10;
     overflow: hidden;
-    transition: opacity calc(var(--delay) / 2) ease calc(1.25 * var(--delay)),
-      visibility calc(var(--delay) / 2) ease calc(1.25 * var(--delay)),
-      transform calc(var(--delay) / 2) ease calc(1.25 * var(--delay));
   }
 
   .nav-toggle:checked ~ nav {
@@ -143,6 +140,23 @@
     visibility: visible;
     transform: scaleY(1);
     transition: opacity var(--delay) ease, transform var(--delay) ease;
+  }
+
+  .nav-toggle:not(:checked) ~ nav {
+    animation: closeMenu var(--delay) ease calc(1.25 * var(--delay)) backwards;
+  }
+
+  @keyframes closeMenu {
+    from {
+      opacity: 1;
+      visibility: visible;
+      transform: scaleY(1);
+    }
+    to {
+      opacity: 0;
+      visibility: hidden;
+      transform: scaleY(0);
+    }
   }
 
   nav ul {
