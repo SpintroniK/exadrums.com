@@ -31,6 +31,11 @@ export default {
   padding: calc(var(--spacer) / 3) var(--spacer);
 }
 
+.news-container > * {
+  padding-left: var(--spacer);
+  padding-right: var(--spacer);
+}
+
 .news-container:hover {
   color: var(--clr-ascent);
   background-color: var(--clr-background);
