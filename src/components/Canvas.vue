@@ -148,7 +148,6 @@ export default {
   height: clamp(300px, 80vw, 500px);
   background-color: transparent;
   cursor: move;
-  border: 1px dashed grey;
 }
 
 .loading {
