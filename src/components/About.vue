@@ -199,12 +199,6 @@ export default {
   height: auto;
 }
 
-/* .top-button {
-  color: var(--clr-background);
-  text-decoration: none;
-  max-width: 2vw;
-} */
-
 .signature {
   text-align: center;
   padding: var(--spacer);
@@ -272,10 +266,6 @@ export default {
   .testimonials {
     grid-area: testimonials;
   }
-
-  /* .top-button {
-    display: none;
-  } */
 
   .signature {
     grid-area: signature;
