@@ -44,7 +44,12 @@ export default {
       renderer.setSize(canvas.clientWidth, canvas.clientHeight);
     },
     updateCameraPosition: function () {
-      camera.position.set(0, 0, 16000 / canvas.clientWidth);
+      if (canvas.clientWidth < 400) {
+        camera.position.set(0, 0, 36);
+      }
+      else {
+        camera.position.set(0, 0, 28);
+      }
     },
     init: function () {
       const canvas = document.getElementById("canvas");
@@ -144,7 +149,7 @@ export default {
   position: relative;
   top: 0;
   left: 0;
-  width: 100%;
+  width: clamp(300px, 100%, 600px);
   height: clamp(300px, 80vw, 500px);
   background-color: transparent;
   cursor: move;

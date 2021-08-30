@@ -3,7 +3,7 @@
     <h1>{{ content.title }}</h1>
     <div class="image-container">
       <img v-if="content.image_path" class="lazy-image" width="640" height="480" :data-src="content.image_path" src="" alt="content-section image" />
-      <Canvas v-else :model-path="content.model_path" :loadCanvas="loadCanvas" />
+      <Canvas v-else :model-path="content.model_path" :loadCanvas="loadCanvas" class="canvas-container" />
     </div>
     <hr>
     <div class="icons-container">
@@ -64,6 +64,9 @@ export default {
 .content-section .image-container {
   width: 100%;
   height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .content-section .image-container img {
