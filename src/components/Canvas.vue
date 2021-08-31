@@ -149,7 +149,8 @@ export default {
   position: relative;
   top: 0;
   left: 0;
-  width: clamp(300px, 100%, 600px);
+  width: 80%;
+  min-width: 250px;
   height: clamp(300px, 80vw, 500px);
   background-color: transparent;
   cursor: move;
