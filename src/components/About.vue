@@ -145,7 +145,7 @@ export default {
 .e-mail {
   text-align: center;
   font-size: clamp(1.2em, 8vw, 2.5em);
-  color: var(--clr-ascent);
+  color: var(--clr-ternary);
   margin: var(--spacer) auto;
 }
 
@@ -191,7 +191,7 @@ export default {
 }
 
 .social-container a:hover::after {
-  color: var(--clr-ascent);
+  color: var(--clr-ternary);
 }
 
 .social-container img {
@@ -257,10 +257,6 @@ export default {
   .social-container {
     margin: unset;
     grid-area: social;
-  }
-
-  .social-container a:hover::after {
-    color: var(--clr-ternary);
   }
 
   .testimonials {
