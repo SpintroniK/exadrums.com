@@ -1,5 +1,5 @@
 <template>
-  <a :href="news.url" :alt="news.description" >
+  <a :href="news.url" :alt="news.description"  target="_blank" rel="noopener">
     <div class="news-container">
       <span>{{ news.date }}</span>
       <span class="news-title">❝ {{ news.title }} ❞</span>
