@@ -7,13 +7,13 @@
     </p>
 
     <div class="social-container">
-      <a href="https://github.com/SpintroniK/eXaDrums" data-link="github">
+      <a href="https://github.com/SpintroniK/eXaDrums" target="_blank" rel="noopener" data-link="github">
         <img width="30" height="30" src="assets/github_logo.svg" alt="github" />
       </a>
-      <a href="https://hackaday.io/project/9350-exadrums" data-link="hackaday">
+      <a href="https://hackaday.io/project/9350-exadrums" target="_blank" rel="noopener" data-link="hackaday">
         <img width="30" height="30" src="assets/hackaday_logo.svg" alt="hackaday" />
       </a>
-      <a href="https://www.youtube.com/channel/UCKlsf7RHYXHVrS000hyja3A" data-link="youtube">
+      <a href="https://youtube.com/playlist?list=PLLkwPhhEVhJUe0AelzuqNdIghLr7N7o8V" target="_blank" rel="noopener" data-link="youtube">
         <img width="30" height="30" src="assets/youtube_logo.svg" alt="youtube" />
       </a>
     </div>
