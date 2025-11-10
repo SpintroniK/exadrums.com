@@ -452,13 +452,25 @@
         }
 
         @media (max-width: 768px) {
-            .nav-links {
+            nav {
+                padding: 1rem 3%;
+                flex-wrap: wrap;
                 gap: 1rem;
-                font-size: 0.9rem;
+            }
+
+            .logo-img {
+                height: 32px;
+            }
+
+            .nav-links {
+                gap: 0.75rem;
+                font-size: 0.85rem;
+                flex-wrap: wrap;
+                justify-content: center;
             }
 
             .hero {
-                padding-top: 100px;
+                padding-top: 120px;
             }
 
             .cta-buttons {
@@ -471,6 +483,24 @@
 
             .tech-icons {
                 justify-content: center;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav {
+                padding: 1rem 4%;
+            }
+
+            .nav-links {
+                width: 100%;
+                justify-content: space-around;
+                gap: 0.5rem;
+                font-size: 0.8rem;
+            }
+
+            .nav-links li {
+                flex: 1;
+                text-align: center;
             }
         }
     </style>
